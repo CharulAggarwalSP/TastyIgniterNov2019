@@ -174,9 +174,6 @@ class Location extends Manager
         if (is_null($type))
             $type = $this->orderType();
 
-        if (is_null($format))
-            $format = setting('time_format');
-
         return $this->workingSchedule($type)->getOpenTime($format);
     }
 
@@ -184,9 +181,6 @@ class Location extends Manager
     {
         if (is_null($type))
             $type = $this->orderType();
-
-        if (is_null($format))
-            $format = setting('time_format');
 
         return $this->workingSchedule($type)->getCloseTime($format);
     }
@@ -208,10 +202,10 @@ class Location extends Manager
         return $this->getModel()->getOrderTimeInterval($this->orderType());
     }
 
-    public function lastOrderTime($timeFormat = null)
+    public function lastOrderTime()
     {
         $lastOrderMinutes = $this->getModel()->lastOrderMinutes() ?? 0;
-        $closeTime = $this->closeTime($this->orderType(), $timeFormat);
+        $closeTime = $this->closeTime($this->orderType());
 
         return Carbon::parse($closeTime)->subMinutes($lastOrderMinutes);
     }

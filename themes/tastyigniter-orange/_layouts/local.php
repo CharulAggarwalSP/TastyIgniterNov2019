@@ -2,61 +2,38 @@
 description: 'Local layout'
 
 '[session]':
-security: all
+    security: all
 
-'[pageNav]': { }
+'[pageNav]': {  }
 
-'[newsletter]': { }
+'[newsletter]': {  }
 
 '[localBox]':
-paramFrom: location
-showLocalThumb: 0
-menusPage: local/menus
-openTimeFormat: 'H:i'
-timePickerDateFormat: 'D d'
-timePickerTimeFormat: 'H:i'
-timePickerDateTimeFormat: 'D d H:i'
+    paramFrom: location
+    showLocalThumb: 0
+    menusPage: local/menus
 
 '[categories]':
-menusPage: local/menus
+    menusPage: local/menus
 
 '[cartBox]':
-timeFormat: 'D H:i a'
-checkStockCheckout: 1
-pageIsCheckout: 0
-pageIsCart: 0
-checkoutPage: checkout/checkout
+    timeFormat: 'D H:i a'
+    checkStockCheckout: 1
+    showCartItemThumb: 1
+    pageIsCheckout: 0
+    pageIsCart: 0
+    checkoutPage: checkout/checkout
 
 ---
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="<?= App::getLocale(); ?>">
-
 <head>
     <?= partial('head'); ?>
 </head>
+<body class="<?= $this->page->bodyClass; ?>">
 
-<body class="<?= $this->page->bodyClass; ?> inner_pages">
-    <div id="cookingLoader" style="display:none">
-        <!--h1 class="loaderHq">Cooking in progress..</h1-->
-        <div id="cooking">
-            <div class="bubble"></div>
-            <div class="bubble"></div>
-            <div class="bubble"></div>
-            <div class="bubble"></div>
-            <div class="bubble"></div>
-            <div id="area">
-                <div id="sides">
-                    <div id="pan"></div>
-                    <div id="handle"></div>
-                </div>
-                <div id="pancake">
-                    <div id="pastry"></div>
-                </div>
-            </div>
-        </div>
-    </div>
     <header class="header">
-        <?= partial('nav/menu_inner'); ?>
+        <?= partial('nav/menu'); ?>
     </header>
 
     <main role="main">
@@ -103,7 +80,7 @@ checkoutPage: checkout/checkout
     <div id="notification">
         <?= partial('flash'); ?>
     </div>
+    <?= partial('eucookiebanner'); ?>
     <?= partial('scripts'); ?>
 </body>
-
 </html>

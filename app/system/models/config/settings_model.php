@@ -124,12 +124,6 @@ $config['form']['general'] = [
                     'default' => FALSE,
                     'comment' => 'lang:system::lang.settings.help_detect_language',
                 ],
-                'wifi_password' => [
-                    'label' => 'lang:system::lang.settings.label_wifi_password',
-                    'tab' => 'lang:system::lang.settings.text_tab_site',
-                    'type' => 'text',
-                    'span' => 'left',                    
-                ],
                 'currency' => [
                     'label' => 'lang:system::lang.settings.text_tab_title_currency',
                     'tab' => 'lang:system::lang.settings.text_tab_site',

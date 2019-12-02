@@ -404,12 +404,12 @@
         "source": {
             "type": "git",
             "url": "https://github.com/thephpleague/omnipay-common.git",
-            "reference": "c4567f786d283851be12319214ac7be7a0a0ee69"
+            "reference": "3d5bead99b65507b8776598f8f59e76d65614cf8"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/thephpleague/omnipay-common/zipball/c4567f786d283851be12319214ac7be7a0a0ee69",
-            "reference": "c4567f786d283851be12319214ac7be7a0a0ee69",
+            "url": "https://api.github.com/repos/thephpleague/omnipay-common/zipball/3d5bead99b65507b8776598f8f59e76d65614cf8",
+            "reference": "3d5bead99b65507b8776598f8f59e76d65614cf8",
             "shasum": ""
         },
         "require": {
@@ -418,7 +418,7 @@
             "php-http/client-implementation": "^1",
             "php-http/discovery": "^1.2.1",
             "php-http/message": "^1.5",
-            "symfony/http-foundation": "^2.1||^3||^4"
+            "symfony/http-foundation": "^2.1|^3|^4|^5"
         },
         "require-dev": {
             "omnipay/tests": "^3",
@@ -429,7 +429,7 @@
         "suggest": {
             "league/omnipay": "The default Omnipay package provides a default HTTP Adapter."
         },
-        "time": "2019-03-13T09:56:08+00:00",
+        "time": "2019-11-24T11:40:40+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -459,15 +459,15 @@
                 "email": "barryvdh@gmail.com"
             },
             {
-                "name": "Omnipay Contributors",
-                "homepage": "https://github.com/thephpleague/omnipay-common/contributors"
-            },
-            {
                 "name": "Jason Judge",
                 "email": "jason.judge@consil.co.uk"
             },
             {
                 "name": "Del"
+            },
+            {
+                "name": "Omnipay Contributors",
+                "homepage": "https://github.com/thephpleague/omnipay-common/contributors"
             }
         ],
         "description": "Common components for Omnipay payment processing library",
@@ -483,17 +483,17 @@
     },
     {
         "name": "omnipay/mollie",
-        "version": "dev-master",
-        "version_normalized": "9999999-dev",
+        "version": "v5.2.0",
+        "version_normalized": "5.2.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/thephpleague/omnipay-mollie.git",
-            "reference": "93d4803958dd3406d5373b9c9ddf1112c5b3402f"
+            "reference": "d966a6a113a8b1671c996befb4e075ebb00b443e"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/thephpleague/omnipay-mollie/zipball/93d4803958dd3406d5373b9c9ddf1112c5b3402f",
-            "reference": "93d4803958dd3406d5373b9c9ddf1112c5b3402f",
+            "url": "https://api.github.com/repos/thephpleague/omnipay-mollie/zipball/d966a6a113a8b1671c996befb4e075ebb00b443e",
+            "reference": "d966a6a113a8b1671c996befb4e075ebb00b443e",
             "shasum": ""
         },
         "require": {
@@ -507,14 +507,14 @@
             "phpro/grumphp": "^0.14",
             "squizlabs/php_codesniffer": "^3"
         },
-        "time": "2019-08-22T09:28:16+00:00",
+        "time": "2019-11-04T15:05:02+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
                 "dev-master": "5.1.x-dev"
             }
         },
-        "installation-source": "source",
+        "installation-source": "dist",
         "autoload": {
             "psr-4": {
                 "Omnipay\\Mollie\\": "src/"
@@ -997,23 +997,26 @@
         "source": {
             "type": "git",
             "url": "https://github.com/php-http/promise.git",
-            "reference": "1cc44dc01402d407fc6da922591deebe4659826f"
+            "reference": "a3395344eaf0b9ba50ff8d21771d013bc28fa45d"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/php-http/promise/zipball/1cc44dc01402d407fc6da922591deebe4659826f",
-            "reference": "1cc44dc01402d407fc6da922591deebe4659826f",
+            "url": "https://api.github.com/repos/php-http/promise/zipball/a3395344eaf0b9ba50ff8d21771d013bc28fa45d",
+            "reference": "a3395344eaf0b9ba50ff8d21771d013bc28fa45d",
             "shasum": ""
+        },
+        "require": {
+            "php": "^7.1"
         },
         "require-dev": {
             "henrikbjorn/phpspec-code-coverage": "^1.0",
             "phpspec/phpspec": "^2.4"
         },
-        "time": "2017-11-22T21:24:54+00:00",
+        "time": "2019-11-18T08:43:25+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
-                "dev-master": "1.0-dev"
+                "dev-master": "1.1-dev"
             }
         },
         "installation-source": "source",
@@ -1028,12 +1031,12 @@
         ],
         "authors": [
             {
-                "name": "Márk Sági-Kazár",
-                "email": "mark.sagikazar@gmail.com"
-            },
-            {
                 "name": "Joel Wurtz",
                 "email": "joel.wurtz@gmail.com"
+            },
+            {
+                "name": "Márk Sági-Kazár",
+                "email": "mark.sagikazar@gmail.com"
             }
         ],
         "description": "Promise used for asynchronous HTTP requests",
@@ -1194,12 +1197,12 @@
         "source": {
             "type": "git",
             "url": "https://github.com/square/connect-php-sdk.git",
-            "reference": "c401d5dbef8ad18c593243b9aa57be1138e9fff4"
+            "reference": "12053024c2a6ce3514594dfbf2ad0d630c304d78"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/square/connect-php-sdk/zipball/c401d5dbef8ad18c593243b9aa57be1138e9fff4",
-            "reference": "c401d5dbef8ad18c593243b9aa57be1138e9fff4",
+            "url": "https://api.github.com/repos/square/connect-php-sdk/zipball/12053024c2a6ce3514594dfbf2ad0d630c304d78",
+            "reference": "12053024c2a6ce3514594dfbf2ad0d630c304d78",
             "shasum": ""
         },
         "require": {
@@ -1213,7 +1216,7 @@
             "satooshi/php-coveralls": "~0.6.1",
             "squizlabs/php_codesniffer": "~2.0"
         },
-        "time": "2019-10-23T23:42:29+00:00",
+        "time": "2019-11-21T00:19:47+00:00",
         "type": "library",
         "installation-source": "source",
         "autoload": {
@@ -1242,33 +1245,33 @@
     },
     {
         "name": "symfony/http-foundation",
-        "version": "4.4.x-dev",
-        "version_normalized": "4.4.9999999.9999999-dev",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/http-foundation.git",
-            "reference": "6ac78f1d7506a7e5a47126b6df3113584135e32b"
+            "reference": "8d06ac07f299445eef7c4dc8094d90e7e6be6eff"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/symfony/http-foundation/zipball/6ac78f1d7506a7e5a47126b6df3113584135e32b",
-            "reference": "6ac78f1d7506a7e5a47126b6df3113584135e32b",
+            "url": "https://api.github.com/repos/symfony/http-foundation/zipball/8d06ac07f299445eef7c4dc8094d90e7e6be6eff",
+            "reference": "8d06ac07f299445eef7c4dc8094d90e7e6be6eff",
             "shasum": ""
         },
         "require": {
-            "php": "^7.1.3",
-            "symfony/mime": "^4.3|^5.0",
+            "php": "^7.2.5",
+            "symfony/mime": "^4.4|^5.0",
             "symfony/polyfill-mbstring": "~1.1"
         },
         "require-dev": {
             "predis/predis": "~1.0",
-            "symfony/expression-language": "^3.4|^4.0|^5.0"
+            "symfony/expression-language": "^4.4|^5.0"
         },
-        "time": "2019-10-30T13:23:44+00:00",
+        "time": "2019-11-21T07:02:52+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
-                "dev-master": "4.4-dev"
+                "dev-master": "5.1-dev"
             }
         },
         "installation-source": "source",
@@ -1304,16 +1307,16 @@
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/mime.git",
-            "reference": "c4457ae2453d8d2a10b15fc4adefea517131047a"
+            "reference": "66e990493251892530b0173d493005296b6bebb8"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/symfony/mime/zipball/c4457ae2453d8d2a10b15fc4adefea517131047a",
-            "reference": "c4457ae2453d8d2a10b15fc4adefea517131047a",
+            "url": "https://api.github.com/repos/symfony/mime/zipball/66e990493251892530b0173d493005296b6bebb8",
+            "reference": "66e990493251892530b0173d493005296b6bebb8",
             "shasum": ""
         },
         "require": {
-            "php": "^7.2.9",
+            "php": "^7.2.5",
             "symfony/polyfill-intl-idn": "^1.10",
             "symfony/polyfill-mbstring": "^1.0"
         },
@@ -1324,11 +1327,11 @@
             "egulias/email-validator": "^2.1.10",
             "symfony/dependency-injection": "^4.4|^5.0"
         },
-        "time": "2019-10-30T13:25:47+00:00",
+        "time": "2019-11-21T07:02:52+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
-                "dev-master": "5.0-dev"
+                "dev-master": "5.1-dev"
             }
         },
         "installation-source": "source",

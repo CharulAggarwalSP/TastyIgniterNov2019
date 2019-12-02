@@ -45,10 +45,10 @@ class Contact extends BaseComponent
     {
         try {
             $rules = [
-                ['subject', 'lang:igniter.frontend::default.contact.text_select_subject', 'required|not_in:blank'],
+                ['subject', 'lang:igniter.frontend::default.contact.text_select_subject', 'required|max:128'],
                 ['email', 'lang:igniter.frontend::default.contact.label_email', 'required|email'],
                 ['full_name', 'lang:igniter.frontend::default.contact.label_full_name', 'required|min:6|max:255'],
-                ['telephone', 'lang:igniter.frontend::default.contact.label_telephone', 'required|regex:/^[0-9]+$/|digits_between:10,20'],
+                ['telephone', 'lang:igniter.frontend::default.contact.label_telephone', 'required'],
                 ['comment', 'lang:igniter.frontend::default.contact.label_comment', 'max:1500'],
             ];
 
@@ -59,7 +59,6 @@ class Contact extends BaseComponent
                 'contact_topic' => post('subject'),
                 'contact_telephone' => post('telephone'),
                 'contact_message' => post('comment'),
-                'contact_email' => post('email'),
             ];
 
             Mail::send('igniter.frontend::mail.contact', $data, function ($message) {

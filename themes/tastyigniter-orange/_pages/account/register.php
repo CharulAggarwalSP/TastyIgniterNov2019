@@ -2,19 +2,13 @@
 title: 'main::lang.account.register.title'
 permalink: /register
 description: ''
-layout: layout
+layout: default
 
 '[session]':
     security: guest
 
 '[account]':
     accountPage: account/account
-    detailsPage: account/details
-    addressPage: account/address
-    ordersPage: account/orders
-    reservationsPage: account/reservations
-    reviewsPage: account/reviews
-    inboxPage: account/inbox
     redirectPage: account/account
     loginPage: account/login
     agreeRegistrationTermsPage: 12

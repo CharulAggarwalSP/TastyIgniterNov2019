@@ -10,7 +10,7 @@
         value="<?= set_value($fieldName.'['.$index.'][customer_id]', isset($address['customer_id']) ? $address['customer_id'] : null); ?>"/>
 
     <div class="form-group span-left <?= form_error($fieldName.'['.$index.'][address_1]') != '' ? 'has-error' : ''; ?>">
-        <label class="control-label"><?= lang('admin::lang.customers.label_address_1'); ?> *</label>
+        <label class="control-label"><?= lang('admin::lang.customers.label_address_1'); ?></label>
         <input type="text"
                name="<?= $fieldName; ?>[<?= $index; ?>][address_1]"
                class="form-control"
@@ -24,7 +24,7 @@
                value="<?= set_value($fieldName.'['.$index.'][address_2]', $address['address_2']); ?>"/>
     </div>
     <div class="form-group span-left <?= form_error($fieldName.'['.$index.'][city]') != '' ? 'has-error' : ''; ?>">
-        <label class="control-label"><?= lang('admin::lang.customers.label_city'); ?> *</label>
+        <label class="control-label"><?= lang('admin::lang.customers.label_city'); ?></label>
         <input type="text"
                name="<?= $fieldName; ?>[<?= $index; ?>][city]"
                class="form-control"
@@ -38,7 +38,7 @@
                value="<?= set_value($fieldName.'['.$index.'][state]', $address['state']); ?>"/>
     </div>
     <div class="form-group span-left <?= form_error($fieldName.'['.$index.'][postcode]') != '' ? 'has-error' : ''; ?>">
-        <label class="control-label"><?= lang('admin::lang.customers.label_postcode'); ?> *</label>
+        <label class="control-label"><?= lang('admin::lang.customers.label_postcode'); ?></label>
         <input type="text"
                name="<?= $fieldName; ?>[<?= $index; ?>][postcode]"
                class="form-control"

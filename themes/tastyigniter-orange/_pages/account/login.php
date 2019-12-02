@@ -1,17 +1,12 @@
 ---
 title: main::lang.account.login.title
-layout: layout
+layout: default
 permalink: /login
 
 '[session]':
     security: guest
 
 '[account]':
-
-'[socialite]':
-    errorPage: account/login
-    successPage: account/account
-
 ---
 <div class="container">
     <div class="row">
@@ -23,13 +18,6 @@ permalink: /login
                     </h1>
 
                     <?= partial('account::login'); ?>
-                    <?php // component('socialite'); ?>
-                    <?php 
-                    foreach($socialiteLinks as $name => $link) { 
-                        if($name == 'facebook') { ?>
-                        <a href="<?= $link; ?>"><i class="fab fa-2x fa-<?= $name; ?>"></i> Login with facebook</a>
-                    <?php }} ?>
-
 
                     <div class="row">
                         <div class="col-md-5 p-sm-0">

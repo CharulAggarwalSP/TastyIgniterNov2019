@@ -11,6 +11,7 @@ use Event;
 use Igniter\Cart\Models\Orders_model;
 use Igniter\Flame\Cart\CartCondition;
 use Igniter\Flame\Traits\Singleton;
+use Igniter\Local\Classes\CoveredArea;
 use Location;
 use Request;
 use Session;
@@ -51,10 +52,15 @@ class OrderManager
         return $this->customer->getKey();
     }
 
+    public function getOrder()
+    {
+        return $this->loadOrder();
+    }
+
     /**
      * @return \Igniter\Cart\Models\Orders_model
      */
-    public function getOrder()
+    public function loadOrder()
     {
         $id = $this->getCurrentOrderId();
 
@@ -71,9 +77,14 @@ class OrderManager
         return $order;
     }
 
-    public function getOrderByHash($code)
+    public function getOrderByHash($hash, $customer = null)
     {
-        return Orders_model::whereHash($code)->first();
+        $query = Orders_model::whereHash($hash);
+
+        if (!is_null($customer))
+            $query->where('customer_id', $customer->getKey());
+
+        return $query->first();
     }
 
     /**
@@ -87,7 +98,47 @@ class OrderManager
 
     public function getPaymentGateways()
     {
-        return $this->location->current()->listAvailablePayments();
+        return $this->location->current()->listAvailablePayments()->sortBy('priority');
+    }
+
+    public function findDeliveryAddress($addressId)
+    {
+        if (empty($addressId))
+            return null;
+
+        return Addresses_model::find($addressId);
+    }
+
+    //
+    //
+    //
+
+    public function validateCustomer($customer)
+    {
+        if (!setting('guest_order') AND !$customer)
+            throw new ApplicationException(lang('igniter.cart::default.checkout.alert_customer_not_logged'));
+    }
+
+    public function validateDeliveryAddress(array $address)
+    {
+        if (!array_get($address, 'country'))
+            $address['country'] = app('country')->getCountryNameById($address['country_id']);
+
+        $addressString = implode(' ', array_only($address, [
+            'address_1', 'address_2', 'city', 'state', 'postcode', 'country',
+        ]));
+
+        $collection = app('geocoder')->geocode($addressString);
+        if (!$collection OR $collection->isEmpty())
+            throw new ApplicationException(lang('igniter.cart::default.alert_invalid_search_query'));
+
+        if (!$area = $this->location->current()->searchDeliveryArea($collection->first()->getCoordinates()))
+            throw new ApplicationException(lang('igniter.cart::default.checkout.error_covered_area'));
+
+        if (!$this->location->isCurrentAreaId($area->area_id)) {
+            $this->location->setCoveredArea(new CoveredArea($area));
+            throw new ApplicationException(lang('igniter.cart::default.checkout.alert_delivery_area_changed'));
+        }
     }
 
     /**
@@ -96,7 +147,7 @@ class OrderManager
      *
      * @return Orders_model
      */
-    public function saveOrder($order, $data)
+    public function saveOrder($order, array $data)
     {
         Event::fire('igniter.checkout.beforeSaveOrder', [$order, $data]);
 
@@ -126,7 +177,7 @@ class OrderManager
 
         $this->setCurrentOrderId($order->order_id);
 
-        $order->addOrderMenus(Cart::content()->toArray());
+        $order->addOrderMenus(Cart::content());
         $order->addOrderTotals($this->getCartTotals());
 
         // Lets log the coupon so we can redeem it later
@@ -136,7 +187,7 @@ class OrderManager
         return $order;
     }
 
-    public function processPayment($order, $data)
+    public function processPayment($order, array $data)
     {
         Event::fire('igniter.checkout.beforePayment', [$order, $data]);
 
@@ -218,9 +269,8 @@ class OrderManager
         if ($order->order_total > 0)
             return FALSE;
 
-        if ($order->markAsPaymentProcessed()) {
-            $order->updateOrderStatus(setting('default_order_status'), ['notify' => FALSE]);
-        }
+        $order->updateOrderStatus(setting('default_order_status'), ['notify' => FALSE]);
+        $order->markAsPaymentProcessed();
 
         return TRUE;
     }

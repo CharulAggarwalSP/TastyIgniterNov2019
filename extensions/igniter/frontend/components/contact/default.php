@@ -12,7 +12,7 @@
                 name="subject"
                 class="form-control"
             >
-                <option value="blank"><?= lang('igniter.frontend::default.contact.text_select_subject'); ?></option>
+                <option><?= lang('igniter.frontend::default.contact.text_select_subject'); ?></option>
                 <?php foreach ($__SELF__->subjects as $subject) { ?>
                     <option value="<?= $subject; ?>"><?= $subject; ?></option>
                 <?php } ?>

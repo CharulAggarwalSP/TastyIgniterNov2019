@@ -28,6 +28,12 @@ class Session extends BaseComponent
                 'type' => 'string',
                 'default' => 'all',
             ],
+            'loginPage' => [
+                'label' => 'The account login page',
+                'type' => 'select',
+                'default' => 'account/login',
+                'options' => [static::class, 'getPageOptions'],
+            ],
             'redirectPage' => [
                 'label' => 'Page name to redirect to when access is restricted',
                 'type' => 'select',
@@ -55,6 +61,13 @@ class Session extends BaseComponent
         return Auth::getUser();
     }
 
+    public function loginUrl()
+    {
+        $currentUrl = str_replace(Request::root(), '', Request::fullUrl());
+
+        return $this->controller->pageUrl($this->property('loginPage')).'?redirect='.urlencode($currentUrl);
+    }
+
     public function onLogout()
     {
         $user = Auth::getUser();
@@ -65,11 +78,11 @@ class Session extends BaseComponent
             Event::fire('igniter.user.logout', [$user]);
         }
 
-        // $url = post('redirect', Request::fullUrl());
+        $url = post('redirect', Request::fullUrl());
 
         flash()->success(lang('igniter.user::default.alert_logout_success'));
 
-        return Redirect::to('/');
+        return Redirect::to($url);
     }
 
     protected function checkSecurity()
@@ -77,8 +90,6 @@ class Session extends BaseComponent
         $allowedGroup = $this->property('security', 'all');
         $isAuthenticated = Auth::check();
         if ($allowedGroup == 'customer' AND !$isAuthenticated) {
-            flash()->danger(lang('igniter.user::default.login.alert_expired_login'));
-
             return FALSE;
         }
 

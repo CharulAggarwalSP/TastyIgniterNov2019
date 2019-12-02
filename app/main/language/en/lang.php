@@ -1,21 +1,21 @@
 <?php
 return [
     'site_title' => '%s - %s',
-    'site_copyright' => '&copy;',
+    'site_copyright' => '&copy; %s %s - ',
 
     'text_free' => 'Free',
     'text_equals' => ' = ',
     'text_plus' => '+ ',
     'text_minutes' => 'minutes',
     'text_min' => 'min',
-    'text_my_account' => 'Quick Links',
+    'text_my_account' => 'My Account',
     'text_information' => 'Information',
     'text_follow_us' => 'Follow us on:',
 
     'text_maintenance_enabled' => 'Maintenance Enabled',
 
     'menu_home' => 'Home',
-    'menu_menu' => 'Order Online',
+    'menu_menu' => 'View Menu',
     'menu_reservation' => 'Reservation',
     'menu_login' => 'Login',
     'menu_logout' => 'Logout',
@@ -29,8 +29,6 @@ return [
     'menu_locations' => 'Our Locations',
     'menu_contact' => 'Contact Us',
     'menu_admin' => 'Administrator',
-    'menu_about' => 'Order Online',
-    'menu' => 'Menu',
 
     'alert_success' => '%s successfully.',
     'alert_error' => 'An error occurred, %s.',
@@ -122,7 +120,7 @@ return [
     ],
 
     'home' => [
-        'title' => 'Dosa North & South Indian Restaurant',
+        'title' => 'Welcome To TastyIgniter!',
         'text_step_one' => 'Search',
         'text_step_two' => 'Choose',
         'text_step_three' => 'Pay by cash or card',
@@ -131,19 +129,6 @@ return [
         'text_step_choose' => 'Browse hundreds of menus to find the food you like.',
         'text_step_pay' => 'It\'s quick, easy and secure. Pay by Cash on Delivery or PayPal.',
         'text_step_enjoy' => 'Food is prepared & delivered to your door step or ready for pick-up at the restaurant.',
-        'text_step_banner_headline_one' => 'Welcome',
-        'text_step_banner_text_one' => 'TO THE HONEST FOOD',
-        'text_step_banner_headline_two' => 'The Real',
-        'text_step_banner_text_two' => 'SPICY MASALAS',
-        'text_step_banner_headline_three' => 'Delicious',
-        'text_step_banner_text_three' => 'FRESH FOODS',
-        'text_ready_to_be_opened' => 'READY TO BE OPENED',
-        'honest' => 'Honest',
-        'food' => 'Food',
-        'section_data' => 'When Jazz starts to chase cars, the whole world stands still.',
-        'welcome' => 'Welcome',
-        'first_section_side_paragraph' => 'We can make a commitment to promote vegetables and fruits and whole grains on every part of every menu. We can make portion sizes smaller and emphasize quality over quantity. And we can help create a culture - imagine this - where our kids ask for healthy options instead of resisting them.',
-        'second_section_side_paragraph' => 'I mean, it\'s nice to get a dinner reservation ahead of other people, but when it comes down to it, the most important thing to me is the actual work.',
     ],
 
     'local' => [
@@ -151,8 +136,7 @@ return [
         'text_tab_review' => 'Reviews',
         'text_tab_info' => 'Info',
         'text_tab_gallery' => 'Gallery',
-        'text_tab_services' => 'Services',
-        'text_tab_chefs' => 'Chefs',
+
         'menus' => [
             'title' => 'Menu',
         ],
@@ -191,16 +175,11 @@ return [
 
     'contact' => [
         'title' => 'Contact',
-        'we_are_sharing' => 'We Are Sharing',
-        'delicious_treats' => 'DELICIOUS TREATS',
-        'contact_us_text' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry\'s standard dummy text ever since, Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s.',
-        'our_info' => 'Our Info',
-        'info_text' => 'Lorem ipsum Lorem Ipsum Lorem ipsum Lorem Ipsum Lorem ipsum Lorem Ipsum'
-
     ],
 
     'pages' => [
         'title' => 'Pages',
+        'text_theme_page' => 'Theme Page',
     ],
 
     'account' => [
@@ -266,52 +245,5 @@ return [
         'content' => 'The content [%s] is not found.',
         'method' => 'The method [:method] is not found in [:name].',
         'ajax_handler' => 'Ajax handler [%s] is not found.',
-    ],
-
-    'services' => [
-        'our_services' => 'Our Services',
-        'view_our_menu' => 'View our Menu',
-        'view_our_menu_text' => 'Lorem ipsum Nam libero tempore cum soluta nobis est eligendi optio cumque nihil impedit.',
-        'reservation' => 'Reservation',
-        'reservation_text' => 'Lorem ipsum Nam libero tempore cum soluta nobis est eligendi optio cumque nihil impedit.',
-        'fine_recipes' => 'Party Caterings',
-        'fine_recipes_text' => 'Lorem ipsum Nam libero tempore cum soluta nobis est eligendi optio cumque nihil impedit.',
-        'spicy_recipes' => 'Corporate Events',
-        'spicy_recipes_text' => 'Lorem ipsum Nam libero tempore cum soluta nobis est eligendi optio cumque nihil impedit.',
-    ],
-
-    'chefs' => [
-        'our_chefs' => 'Our Chefs',
-        'first_chef_title' => 'Vivamus moles tie gravida turpis',
-        'first_chef_para_one' => 'A wonderful serenity has taken possession of my entire soul,  I enjoy with my whole heart.',
-        'first_chef_para_two' => 'A wonderful serenity has taken possession of my entire soul, I enjoy with my whole heart.',
-        'second_chef_title' => 'Vivamus moles tie gravida turpis',
-        'second_chef_para_one' => 'A wonderful serenity has taken possession of my entire soul, I enjoy with my whole heart.',
-        'second_chef_para_two' => 'A wonderful serenity has taken possession of my entire soul, I enjoy with my whole heart.',
-        'third_chef_title' => 'Vivamus moles tie gravida turpis',
-        'third_chef_para_one' => 'A wonderful serenity has taken possession of my entire soul, I enjoy with my whole heart.',
-        'third_chef_para_two' => 'A wonderful serenity has taken possession of my entire soul, I enjoy with my whole heart.',
-        'fourth_chef_title' => 'Vivamus moles tie gravida turpis',
-        'fourth_chef_para_one' => 'A wonderful serenity has taken possession of my entire soul, I enjoy with my whole heart.',
-        'fourth_chef_para_two' => 'A wonderful serenity has taken possession of my entire soul, I enjoy with my whole heart.',
-    ],
-
-    'gallery' => [
-        'first_image_title' => 'Idli Sambar',
-        'first_image_text' => 'Sit accusamus, vel blanditiis iure minima ipsa molestias minus laborum velit, nulla nisi hic quasi enim.',
-        'second_image_title' => 'Butter Naan',
-        'second_image_text' => 'Sit accusamus, vel blanditiis iure minima ipsa molestias minus laborum velit, nulla nisi hic quasi enim.',
-        'third_image_title' => 'Mixed Kebab',
-        'third_image_text' => 'Sit accusamus, vel blanditiis iure minima ipsa.',
-        'fourth_image_title' => 'Meat Samosa',
-        'fourth_image_text' => 'Sit accusamus, vel blanditiis iure minima ipsa.',
-        'fifth_image_title' => 'Patila Gost',
-        'fifth_image_text' => 'Sit accusamus, vel blanditiis iure minima ipsa.',
-        'sixth_image_title' => 'Chicken Curry',
-        'sixth_image_text' => 'Sit accusamus, vel blanditiis iure minima ipsa.',
-        'seventh_image_title' => 'Lamb Nawabi',
-        'seventh_image_text' => 'Sit accusamus, vel blanditiis iure minima ipsa molestias minus laborum velit, nulla nisi hic quasi enim.',
-        'eighth_image_title' => 'Sambar Vada',
-        'eighth_image_text' => 'Sit accusamus, vel blanditiis iure minima ipsa molestias minus laborum velit, nulla nisi hic quasi enim.',
     ],
 ];

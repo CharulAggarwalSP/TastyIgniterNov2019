@@ -45,6 +45,11 @@
             this.$modalElement.modal('hide')
     }
 
+    RecordEditorModal.prototype.handleFormSetup = function (event, context) {
+        if (this.options.onFail !== undefined)
+            this.options.onFail.call(this, context)
+    }
+
     RecordEditorModal.prototype.handleFormError = function (event, dataOrXhr, textStatus, jqXHR) {
         $.ti.flashMessage({
             container: '#modal-notification',
@@ -53,20 +58,27 @@
             interval: 0
         })
 
+        if (this.options.onFail !== undefined)
+            this.options.onFail.call(this, dataOrXhr, jqXHR)
+
         event.preventDefault()
     }
 
-    RecordEditorModal.prototype.onRecordSaved = function (event, data, textStatus, jqXHR) {
+    RecordEditorModal.prototype.handleFormDone = function (event, data, textStatus, jqXHR) {
         if (this.options.onSave !== undefined)
             this.options.onSave.call(this, data, jqXHR)
     }
 
-    RecordEditorModal.prototype.onRecordLoaded = function (json) {
-        this.$modalElement.html(json);
-        $(window).trigger('ajaxUpdateComplete')
+    RecordEditorModal.prototype.onRecordLoaded = function (data) {
+        this.$modalElement.html(data);
 
+        var _event = jQuery.Event('recordEditorModalShown')
+        $(window).trigger(_event, [this.$modalElement])
+        if (_event.isDefaultPrevented()) return
+
+        this.$modalElement.find('form').on('ajaxSetup', $.proxy(this.handleFormSetup, this))
         this.$modalElement.find('form').on('ajaxError', $.proxy(this.handleFormError, this))
-        this.$modalElement.find('form').on('ajaxDone', $.proxy(this.onRecordSaved, this))
+        this.$modalElement.find('form').on('ajaxDone', $.proxy(this.handleFormDone, this))
     }
 
     RecordEditorModal.prototype.onModalHidden = function (event) {
@@ -83,17 +95,19 @@
         this.$modalElement = $(event.target)
 
         $.request(handler, {
-            data: {
-                recordId: this.options.recordId,
-            },
-            success: $.proxy(this.onRecordLoaded, this),
+            data: {recordId: this.options.recordId},
+        }).done($.proxy(this.onRecordLoaded, this)).fail(function () {
+            self.$modalElement.modal('hide')
         })
     }
 
     RecordEditorModal.DEFAULTS = {
         alias: undefined,
         recordId: undefined,
+        onLoad: undefined,
+        onSubmit: undefined,
         onSave: undefined,
+        onFail: undefined,
         onClose: undefined,
         attributes: {
             id: 'record-editor-modal',
