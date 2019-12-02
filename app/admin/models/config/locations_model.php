@@ -583,6 +583,15 @@ $config['form']['tabs'] = [
             'isMulti' => TRUE,
             'useAttachment' => TRUE,
         ],
+        'postcode' => [
+            'label' => 'lang:admin::lang.locations.text_postcode_area',
+            'tab' => 'lang:admin::lang.locations.text_tab_postcode',
+            'type' => 'maparea',
+            'latFrom' => 'location_lat',
+            'lngFrom' => 'location_lng',
+            'zoom' => '14',
+            'form' => 'location_areas_model',
+        ],
     ],
 ];
 

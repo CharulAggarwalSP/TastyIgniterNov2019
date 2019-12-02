@@ -431,6 +431,7 @@ return [
         'text_tab_delivery' => 'Delivery',
         'text_tab_gallery' => 'Gallery',
         'text_tab_title_address' => 'Address',
+        'text_tab_postcode' => 'Postcode',
         'text_filter_search' => 'Search by name, city or state.',
         'text_empty' => 'There are no locations available.',
         'text_24_7' => '24/7',
@@ -452,7 +453,7 @@ return [
         'text_all_orders' => 'all',
         'text_above_order_total' => 'above',
         'text_below_order_total' => 'below',
-
+        'text_postcode_area' => 'Postcode Areas',
         'column_city' => 'City',
         'column_state' => 'State',
         'column_postcode' => 'Postcode',
