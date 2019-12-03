@@ -93,7 +93,7 @@ class ResetPassword extends BaseComponent
         try {
             $namedRules = [
                 ['code', 'lang:igniter.user::default.reset.label_code', 'required'],
-                ['password', 'lang:igniter.user::default.reset.label_password', 'required|same:password_confirm'],
+                ['password', 'lang:igniter.user::default.reset.label_password', 'required|min:6|max:32|same:password_confirm'],
                 ['password_confirm', 'lang:igniter.user::default.reset.label_password_confirm', 'required'],
             ];
 
@@ -101,7 +101,7 @@ class ResetPassword extends BaseComponent
 
             $customer = Customers_model::whereResetCode($code = post('code'))->first();
 
-            if (!$customer OR $customer->completeResetPassword($code, post('password')))
+            if (!$customer OR !$customer->completeResetPassword($code, post('password')))
                 throw new ApplicationException(lang('igniter.user::default.reset.alert_reset_failed'));
 
             flash()->success(lang('igniter.user::default.reset.alert_reset_success'));
