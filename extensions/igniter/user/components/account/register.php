@@ -91,9 +91,9 @@
                 value="1"
                 class="custom-control-input" <?= set_checkbox('newsletter', '1'); ?>
             >
-            <!-- <label class="custom-control-label" for="newsletter">
+            <label class="custom-control-label" for="newsletter">
                 <?= lang('igniter.user::default.login.label_newsletter'); ?>
-            </label> -->
+            </label>
         </div>
         <?= form_error('newsletter', '<span class="text-danger">', '</span>'); ?>
     </div>
@@ -108,7 +108,7 @@
                     value="1"
                     class="custom-control-input" <?= set_checkbox('terms', '1'); ?>
                 >
-                <label class="custom-control-label" for="agree-terms" style="font-weight:unset;">
+                <label class="custom-control-label" for="agree-terms">
                     <?= sprintf(lang('igniter.user::default.login.label_terms'), $account->getRegistrationTermsUrl()); ?>
                 </label>
             </div>

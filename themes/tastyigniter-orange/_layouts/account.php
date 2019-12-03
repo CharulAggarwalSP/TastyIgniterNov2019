@@ -3,6 +3,7 @@ description: Account layout
 
 '[session]':
     security: customer
+    redirectPage: account/login
 
 '[account]':
 
@@ -11,12 +12,12 @@ description: Account layout
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="<?= App::getLocale(); ?>">
 <head>
-    <?= partial('head'); ?>    
+    <?= partial('head'); ?>
 </head>
-<body class="<?= $this->page->bodyClass; ?> inner_pages">
+<body class="<?= $this->page->bodyClass; ?>">
 
     <header class="header">
-        <?= partial('nav/menu_inner'); ?>
+        <?= partial('nav/menu'); ?>
     </header>
 
     <main role="main">

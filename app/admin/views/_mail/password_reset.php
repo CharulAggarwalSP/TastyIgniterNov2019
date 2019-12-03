@@ -5,9 +5,10 @@ Hi, {staff_name}
 Your password was changed successfully!
 
 If you think this password update was a mistake, reset your password immediately.
-
 ==
+Hi {staff_name},
 
+Your password was changed successfully!
 <!-- BODY -->
 <table class="body-wrap">
     <tr>
@@ -28,3 +29,4 @@ If you think this password update was a mistake, reset your password immediately
         <td></td>
     </tr>
 </table><!-- /BODY -->
+If you think this password update was a mistake, reset your password immediately.

@@ -1,6 +1,6 @@
 ---
 title: main::lang.reservation.title
-layout: layout
+layout: default
 permalink: /reservation
 
 '[account]':

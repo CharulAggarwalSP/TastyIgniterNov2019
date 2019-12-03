@@ -249,7 +249,7 @@ class MainController extends BaseController
         $this->pageObj->onInit();
 
         // Extensibility
-        if ($event = $this->fireSystemEvent('page.init', [$page])) {
+        if ($event = $this->fireSystemEvent('main.page.init', [$page])) {
             return $event;
         }
 
@@ -263,10 +263,15 @@ class MainController extends BaseController
             return $pageResponse;
         }
 
-        // Render the page
-        $this->loader->setSource($this->page);
-        $template = $this->template->load($this->page->getFilePath());
-        $this->pageContents = $template->render($this->vars);
+        if ($event = $this->fireSystemEvent('main.page.beforeRenderPage', [$page])) {
+            $this->pageContents = $event;
+        }
+        else {
+            // Render the page
+            $this->loader->setSource($this->page);
+            $template = $this->template->load($this->page->getFilePath());
+            $this->pageContents = $template->render($this->vars);
+        }
 
         // Render the layout
         $this->loader->setSource($this->layout);
@@ -287,7 +292,7 @@ class MainController extends BaseController
 
     protected function execPageCycle()
     {
-        if ($event = $this->fireEvent('main.page.start'))
+        if ($event = $this->fireSystemEvent('main.page.start'))
             return $event;
 
         // Run layout functions
@@ -320,7 +325,7 @@ class MainController extends BaseController
         }
 
         // Extensibility
-        if ($event = $this->fireEvent('main.page.end')) {
+        if ($event = $this->fireSystemEvent('main.page.end')) {
             return $event;
         }
 
@@ -337,10 +342,10 @@ class MainController extends BaseController
      */
     public function getHandler()
     {
-        if ($handler = Request::header('X-IGNITER-REQUEST-HANDLER'))
+        if (Request::ajax() AND $handler = Request::header('X-IGNITER-REQUEST-HANDLER'))
             return trim($handler);
 
-        if ($handler = input('_handler'))
+        if ($handler = post('_handler'))
             return trim($handler);
 
         return null;
@@ -578,7 +583,7 @@ class MainController extends BaseController
         $contents = $this->pageContents;
 
         // Extensibility
-        if ($event = $this->fireEvent('page.render', [$contents]))
+        if ($event = $this->fireSystemEvent('main.page.render', [$contents]))
             return $event;
 
         return $contents;
@@ -596,7 +601,7 @@ class MainController extends BaseController
         }
 
         // Extensibility
-        if ($event = $this->fireEvent('page.beforeRenderPartial', [$name])) {
+        if ($event = $this->fireSystemEvent('main.page.beforeRenderPartial', [$name])) {
             $partial = $event;
         }
         // Process Component partial
@@ -622,7 +627,7 @@ class MainController extends BaseController
         $this->vars = $vars;
 
         // Extensibility
-        if ($event = $this->fireEvent('page.renderPartial', [$name, &$partialContent]))
+        if ($event = $this->fireSystemEvent('main.page.renderPartial', [$name, &$partialContent]))
             return $event;
 
         return $partialContent;
@@ -641,7 +646,7 @@ class MainController extends BaseController
     public function renderContent($name, array $params = [])
     {
         // Extensibility
-        if ($event = $this->fireEvent('page.beforeRenderContent', [$name])) {
+        if ($event = $this->fireSystemEvent('main.page.beforeRenderContent', [$name])) {
             $content = $event;
         }
         // Load content from theme
@@ -665,7 +670,7 @@ class MainController extends BaseController
         }
 
         // Extensibility
-        if ($event = $this->fireEvent('page.renderContent', [$name, &$fileContent])) {
+        if ($event = $this->fireSystemEvent('main.page.renderContent', [$name, &$fileContent])) {
             return $event;
         }
 

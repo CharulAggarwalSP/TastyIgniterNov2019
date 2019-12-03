@@ -20,11 +20,6 @@ class Connector extends BaseFormWidget
 
     const SORT_PREFIX = '___dragged_';
 
-    /**
-     * @var bool Stops nested repeaters populating from previous sibling.
-     */
-    protected static $onAddItemCalled = FALSE;
-
     //
     // Object properties
     //
@@ -130,6 +125,9 @@ class Connector extends BaseFormWidget
         $recordId = post('recordId');
         $model = $this->getRelationModel()->find($recordId);
 
+        if (!$model)
+            throw new ApplicationException('Record not found');
+
         return $this->makePartial('recordeditor/form', [
             'formRecordId' => $recordId,
             'formTitle' => 'Edit '.lang($this->formName),
@@ -159,7 +157,7 @@ class Connector extends BaseFormWidget
 
         return [
             '#notification' => $this->makePartial('flash'),
-            '#'.$this->getId('items-container') => $this->makePartial('connector/connector'),
+            '#'.$this->getId('items') => $this->makePartial('connector/connector_items'),
         ];
     }
 

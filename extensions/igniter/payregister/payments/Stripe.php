@@ -3,6 +3,7 @@
 use Admin\Classes\BasePaymentGateway;
 use ApplicationException;
 use Exception;
+use Illuminate\Support\Facades\Log;
 use Omnipay\Omnipay;
 use Redirect;
 use Session;
@@ -73,10 +74,10 @@ class Stripe extends BasePaymentGateway
             $fields = $this->getPaymentFormFields($order, $data);
             $response = $gateway->purchase($fields)->send();
 
-            if ($response->getStatus() == 'requires_source_action') {
+            if ($response->isRedirect()) {
                 Session::put('ti_payregister_stripe_intent', $response->getPaymentIntentReference());
 
-                return Redirect::to($this->getRedirectUrl($response));
+                return Redirect::to($response->getRedirectUrl());
             }
 
             if (!$response->isSuccessful()) {
@@ -84,13 +85,12 @@ class Stripe extends BasePaymentGateway
                 throw new Exception($response->getMessage());
             }
 
-            if ($order->markAsPaymentProcessed()) {
-                $order->logPaymentAttempt('Payment successful', 1, $fields, $response->getData());
-                $order->updateOrderStatus($paymentMethod->order_status, ['notify' => FALSE]);
-            }
+            $order->logPaymentAttempt('Payment successful', 1, $fields, $response->getData());
+            $order->updateOrderStatus($host->order_status, ['notify' => FALSE]);
+            $order->markAsPaymentProcessed();
         }
         catch (Exception $ex) {
-            \Log::error($ex->getMessage());
+            Log::error($ex->getMessage());
             throw new ApplicationException('Sorry, there was an error processing your payment. Please try again later.');
         }
     }
@@ -124,10 +124,9 @@ class Stripe extends BasePaymentGateway
             if (!$response->isSuccessful())
                 throw new ApplicationException('Sorry, your payment was not successful. Please contact your bank or try again later.');
 
-            if ($order->markAsPaymentProcessed()) {
-                $order->logPaymentAttempt('Payment successful', 1, $fields, $response->getData());
-                $order->updateOrderStatus($paymentMethod->order_status, ['notify' => FALSE]);
-            }
+            $order->logPaymentAttempt('Payment successful', 1, $fields, $response->getData());
+            $order->updateOrderStatus($paymentMethod->order_status, ['notify' => FALSE]);
+            $order->markAsPaymentProcessed();
 
             return Redirect::to(page_url($redirectPage, [
                 'id' => $order->getKey(),
@@ -166,10 +165,5 @@ class Stripe extends BasePaymentGateway
             'returnUrl' => $returnUrl,
             'confirm' => TRUE,
         ];
-    }
-
-    protected function getRedirectUrl($response)
-    {
-        return array_get($response->getData(), 'next_action.redirect_to_url.url');
     }
 }

@@ -4,41 +4,31 @@ permalink: /
 description: ''
 layout: default
 
-'[slider]': { }
+'[slider]': {  }
 
-<!--  '[localSearch]':
+'[localSearch]':
     hideSearch: 0
-    menusPage: local/menus 
+    menusPage: local/menus
 
 '[featuredItems]':
     items: ['76', '77', '78', '79']
     limit: 3
     itemsPerRow: 3
     itemWidth: 400
-    itemHeight: 300 -->
-
-'[contact]':
+    itemHeight: 300
 
 ---
 <?php
-function onInit()
-{ }
+function onInit() {
+}
 
-function onStart()
-{ }
+function onStart() {
+}
 
-function onEnd()
-{ }
+function onEnd() {
+}
 ?>
 ---
-<?php //component('slider'); 
-?>
-
-<?php //component('localSearch'); 
-?>
-
-<?php //component('featuredItems'); 
-?>
 
 <!--/products-->
 <div class="about" id="about">
@@ -56,7 +46,6 @@ function onEnd()
 								<p><?= sprintf(lang('main::lang.home.section_data')) ?></p-->
 							</figcaption>
 						</figure>
-
 					</div>
 					<div class="h-f wow slideInLeft" data-wow-duration="1s" data-wow-delay=".2s">
 						<figure class="effect-jazz">
@@ -79,7 +68,6 @@ function onEnd()
 				<div class="start wow flipInX" data-wow-duration="1s" data-wow-delay=".3s">
 					<a href="<?= restaurant_url('local/menus'); ?>" class="hvr-bounce-to-bottom"><?= lang('main::lang.menu_menu'); ?></a>
 				</div>
-
 			</div>
 			<div class="clearfix"> </div>
 		</div>
@@ -106,7 +94,6 @@ function onEnd()
 								<p><?= sprintf(lang('main::lang.home.section_data')) ?></p-->
 							</figcaption>
 						</figure>
-
 					</div>
 					<div class="h-f  wow slideInRight" data-wow-duration="1s" data-wow-delay=".2s">
 						<figure class="effect-jazz">
@@ -164,7 +151,6 @@ function onEnd()
 			</div>
 			<div class="clearfix"> </div>
 		</div>
-
 	</div>
 </div>
 <!--end-service-section-->
@@ -196,7 +182,7 @@ function onEnd()
 			                        <p><?= sprintf(lang('main::lang.chefs.second_chef_para_one')) ?></p>
 			                         <p class="p2"><?= sprintf(lang('main::lang.chefs.second_chef_para_two')) ?></p>
 			                     </div>
-			               
+
 							</div>
 					</a>
 					<h3>Victoria</h3>
@@ -224,7 +210,7 @@ function onEnd()
 		                        <p><?= sprintf(lang('main::lang.chefs.fourth_chef_para_one')) ?></p>
 		                         <p class="p2"><?= sprintf(lang('main::lang.chefs.fourth_chef_para_two')) ?></p>
 		                     </div>
-		                   
+
 						</div>
 					</a>
 					<h3>Rosie Wilson</h3>
@@ -250,7 +236,6 @@ function onEnd()
 								<!--span class="separator"></span>
 								<p><?= sprintf(lang('main::lang.gallery.first_image_text')) ?></p>
 								<span class="separator"></span-->
-
 							</div>
 						</div>
 					</div>
@@ -266,7 +251,6 @@ function onEnd()
 								<!--span class="separator"></span>
 								<p><?= sprintf(lang('main::lang.gallery.second_image_text')) ?></p>
 								<span class="separator"></span-->
-
 							</div>
 						</div>
 					</div>
@@ -282,7 +266,6 @@ function onEnd()
 								<!--span class="separator"></span>
 								<p><?= sprintf(lang('main::lang.gallery.third_image_text')) ?></p>
 								<span class="separator"></span-->
-
 							</div>
 						</div>
 					</div>
@@ -298,7 +281,6 @@ function onEnd()
 								<!--span class="separator"></span>
 								<p><?= sprintf(lang('main::lang.gallery.fourth_image_text')) ?></p>
 								<span class="separator"></span-->
-
 							</div>
 						</div>
 					</div>
@@ -314,7 +296,6 @@ function onEnd()
 								<!--span class="separator"></span>
 								<p><?= sprintf(lang('main::lang.gallery.fifth_image_text')) ?></p>
 								<span class="separator"></span-->
-
 							</div>
 						</div>
 					</div>
@@ -330,7 +311,6 @@ function onEnd()
 								<!--span class="separator"></span>
 								<p><?= sprintf(lang('main::lang.gallery.sixth_image_text')) ?></p>
 								<span class="separator"></span-->
-
 							</div>
 						</div>
 					</div>
@@ -421,4 +401,10 @@ function onEnd()
 		<!--//map-->
 	</div>
 </div>
-<!--end-contact-us-section-->
+<!--end-contact-us-section--> 
+
+<?php // component('slider'); ?>
+
+<?php // component('localSearch'); ?>
+
+<?php // component('featuredItems'); ?>

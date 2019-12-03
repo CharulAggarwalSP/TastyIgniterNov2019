@@ -8,7 +8,6 @@ else { ?>
     <?= get_favicon(); ?>
 <?php } ?>
 <title><?= sprintf(lang(get_title()), setting('site_name')); ?></title>
-<!--title><?= sprintf(lang('main::lang.site_title'), lang(get_title()), setting('site_name')); ?></title-->
 <?= get_style_tags(); ?>
 <?= '<link rel="stylesheet" type="text/css" href="'.theme_url().'/tastyigniter-orange/assets/css/app.css"'.'>'; ?>
 <?= '<link rel="stylesheet" type="text/css" href="'.assets_url().'/vd-theme/css/animate.css"'.'>'; ?>
@@ -18,7 +17,6 @@ else { ?>
 <?= '<link rel="stylesheet" type="text/css" href="'.assets_url().'/vd-theme/css/swipebox.css"'.'>'; ?>
 
 <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap" rel="stylesheet">
-
 
 
 <?php if (!empty($this->theme->custom_css)) { ?>

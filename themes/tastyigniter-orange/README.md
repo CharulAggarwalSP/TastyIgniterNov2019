@@ -1,4 +1,4 @@
-Free Modern, Responsive and Clean Theme based on Bootstrap 4.
+Free Modern, Responsive and Clean TastyIgniter Theme based on Bootstrap 4.
 
 ### Required Plugins
 - Igniter Cart
@@ -23,3 +23,4 @@ Full documentation for this theme can be found on here [Bootstrap 4](https://get
 Simply run $ npm install in the theme's root folder
 
 ### License
+[The MIT License (MIT)](https://tastyigniter.com/licence/)

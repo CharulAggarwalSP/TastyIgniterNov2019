@@ -13,7 +13,6 @@ class AddressBook extends \System\Classes\BaseComponent
     {
         $this->page['addAddressEventHandler'] = $this->getEventHandler('onLoadAddForm');
         $this->page['submitAddressEventHandler'] = $this->getEventHandler('onSubmit');
-        $this->page['deleteAddressEventHandler'] = $this->getEventHandler('onDelete');
 
         $this->page['customer'] = Auth::customer();
         $this->page['customerAddresses'] = $this->loadAddressBook();
@@ -41,7 +40,7 @@ class AddressBook extends \System\Classes\BaseComponent
             ['address.city', 'lang:igniter.user::default.account.label_city', 'required|min:2|max:128'],
             ['address.state', 'lang:igniter.user::default.account.label_state', 'max:128'],
             ['address.postcode', 'lang:igniter.user::default.account.label_postcode', 'min:2|max:11]'],
-            ['address.country_id', 'lang:igniter.user::default.account.label_country', 'required|integer'],
+            ['address.country', 'lang:igniter.user::default.account.label_country', 'required|integer'],
         ];
 
         if (!$this->validatePasses($data, $rules))
@@ -73,31 +72,6 @@ class AddressBook extends \System\Classes\BaseComponent
         return [
             '#address-book' => $this->renderPartial('@default'),
         ];
-    }
-
-    public function onDelete(){
-        $data = post();        
-
-        $customer = Auth::customer();
-
-        $address = null;
-        if ($id = array_get($data, 'delete_address_id'))
-            $address = Addresses_model::find($id);
-
-        if (!$address OR $address->customer_id != $customer->customer_id)
-            $address = Addresses_model::make();
-
-        if (!$address->delete()) {
-            flash()->warning(lang('igniter.user::default.account.alert_deleted_error'));
-        }else{
-            flash()->warning(lang('igniter.user::default.account.alert_deleted_success'));
-        }
-
-        if (is_numeric($this->param('delete_address_id')))
-            return Redirect::to($this->controller->pageUrl(
-                $this->property('redirectPage', 'account/address'),
-                ['addressId' => null]
-            ));
     }
 
     protected function getAddress()

@@ -2,6 +2,7 @@
 
 use Admin\Models\Reservations_model;
 use Auth;
+use Igniter\Reservation\Classes\BookingManager;
 
 class Reservations extends \System\Classes\BaseComponent
 {
@@ -21,15 +22,20 @@ class Reservations extends \System\Classes\BaseComponent
                 'label' => 'Sort order',
                 'type' => 'string',
             ],
-            'addReviewsPage' => [
-                'label' => 'Add review page',
-                'type' => 'string',
-                'default' => 'account/reviews',
+            'reservationDateTimeFormat' => [
+                'label' => 'Date time format to use for displaying reservation date & time',
+                'type' => 'text',
+                'default' => 'DD MMM \a\t HH:mm',
             ],
             'reservationsPage' => [
                 'label' => 'Account Reservations Page',
                 'type' => 'string',
                 'default' => 'account/reservations',
+            ],
+            'hashParamName' => [
+                'label' => 'The parameter name used for the reservation hash code',
+                'type' => 'text',
+                'default' => 'hash',
             ],
         ];
     }
@@ -37,25 +43,20 @@ class Reservations extends \System\Classes\BaseComponent
     public function onRun()
     {
         $this->page['reservationsPage'] = $this->property('reservationsPage');
-        $this->page['addReviewsPage'] = $this->property('addReviewsPage');
         $this->page['showReviews'] = setting('allow_reviews') == 1;
         $this->page['customerReservations'] = $this->loadReservations();
+        $this->page['reservationDateTimeFormat'] = $this->property('reservationDateTimeFormat');
 
-        $this->page['reservationIdParam'] = $this->param('reservationId');
         $this->page['customerReservation'] = $this->getReservation();
     }
 
     protected function getReservation()
     {
-        if (!is_numeric($reservationIdParam = $this->param('reservationId')))
+        $hashParam = $this->param($this->property('hashParamName'));
+        if (!is_string($hashParam))
             return null;
 
-        $customer = Auth::customer();
-        $reservation = Reservations_model::find($reservationIdParam);
-        if (!$customer OR $reservation->customer_id != $customer->customer_id)
-            return null;
-
-        return $reservation;
+        return BookingManager::instance()->getReservationByHash($hashParam, Auth::customer());
     }
 
     protected function loadReservations()

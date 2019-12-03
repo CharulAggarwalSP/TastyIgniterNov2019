@@ -1,6 +1,6 @@
 ---
 title: main::lang.account.reset.title
-layout: layout
+layout: default
 permalink: /forgot-password/:code?
 
 '[session]':

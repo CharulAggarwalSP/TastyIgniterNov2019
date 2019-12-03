@@ -19,7 +19,7 @@ class Extension extends \System\Classes\BaseExtension
                 \Igniter\User\EventRules\Actions\SendMailTemplate::class,
             ],
             'conditions' => [
-                \Igniter\User\EventRules\Conditions\CustomerAttribute::class
+                \Igniter\User\EventRules\Conditions\CustomerAttribute::class,
             ],
         ];
     }
@@ -47,11 +47,6 @@ class Extension extends \System\Classes\BaseExtension
                 'name' => 'lang:igniter.user::default.addressbook.component_title',
                 'description' => 'lang:igniter.user::default.addressbook.component_desc',
             ],
-            'Igniter\User\Components\Reviews' => [
-                'code' => 'accountReviews',
-                'name' => 'lang:igniter.user::default.reviews.component_title',
-                'description' => 'lang:igniter.user::default.reviews.component_desc',
-            ],
             'Igniter\User\Components\Inbox' => [
                 'code' => 'accountInbox',
                 'name' => 'lang:igniter.user::default.inbox.component_title',
@@ -78,7 +73,7 @@ class Extension extends \System\Classes\BaseExtension
 
         \Igniter\EventRules\Classes\EventManager::instance()->registerCallback(function ($manager) {
             $manager->registerGlobalParams([
-                'customer' => Auth::customer()
+                'customer' => Auth::customer(),
             ]);
         });
     }

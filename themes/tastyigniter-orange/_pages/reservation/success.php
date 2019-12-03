@@ -1,6 +1,6 @@
 ---
 title: main::lang.reservation.success.title
-layout: layout
+layout: default
 permalink: /reservation/success/:hash?
 
 '[booking]':

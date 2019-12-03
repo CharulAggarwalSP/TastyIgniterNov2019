@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit8667160c5fc6dea549817169e41ca622
+class ComposerStaticInit85ba500f376412ffd0734fe0ccb6238f
 {
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
@@ -705,8 +705,10 @@ class ComposerStaticInit8667160c5fc6dea549817169e41ca622
         'SquareConnect\\Model\\Card' => __DIR__ . '/..' . '/square/connect/lib/Model/Card.php',
         'SquareConnect\\Model\\CardBrand' => __DIR__ . '/..' . '/square/connect/lib/Model/CardBrand.php',
         'SquareConnect\\Model\\CardPaymentDetails' => __DIR__ . '/..' . '/square/connect/lib/Model/CardPaymentDetails.php',
+        'SquareConnect\\Model\\CashPaymentDetails' => __DIR__ . '/..' . '/square/connect/lib/Model/CashPaymentDetails.php',
         'SquareConnect\\Model\\CatalogCategory' => __DIR__ . '/..' . '/square/connect/lib/Model/CatalogCategory.php',
         'SquareConnect\\Model\\CatalogDiscount' => __DIR__ . '/..' . '/square/connect/lib/Model/CatalogDiscount.php',
+        'SquareConnect\\Model\\CatalogDiscountModifyTaxBasis' => __DIR__ . '/..' . '/square/connect/lib/Model/CatalogDiscountModifyTaxBasis.php',
         'SquareConnect\\Model\\CatalogDiscountType' => __DIR__ . '/..' . '/square/connect/lib/Model/CatalogDiscountType.php',
         'SquareConnect\\Model\\CatalogIdMapping' => __DIR__ . '/..' . '/square/connect/lib/Model/CatalogIdMapping.php',
         'SquareConnect\\Model\\CatalogImage' => __DIR__ . '/..' . '/square/connect/lib/Model/CatalogImage.php',
@@ -733,7 +735,13 @@ class ComposerStaticInit8667160c5fc6dea549817169e41ca622
         'SquareConnect\\Model\\CatalogPricingType' => __DIR__ . '/..' . '/square/connect/lib/Model/CatalogPricingType.php',
         'SquareConnect\\Model\\CatalogProductSet' => __DIR__ . '/..' . '/square/connect/lib/Model/CatalogProductSet.php',
         'SquareConnect\\Model\\CatalogQuery' => __DIR__ . '/..' . '/square/connect/lib/Model/CatalogQuery.php',
+        'SquareConnect\\Model\\CatalogQueryCustomAttributeUsage' => __DIR__ . '/..' . '/square/connect/lib/Model/CatalogQueryCustomAttributeUsage.php',
         'SquareConnect\\Model\\CatalogQueryExact' => __DIR__ . '/..' . '/square/connect/lib/Model/CatalogQueryExact.php',
+        'SquareConnect\\Model\\CatalogQueryFilteredItems' => __DIR__ . '/..' . '/square/connect/lib/Model/CatalogQueryFilteredItems.php',
+        'SquareConnect\\Model\\CatalogQueryFilteredItemsCustomAttributeFilter' => __DIR__ . '/..' . '/square/connect/lib/Model/CatalogQueryFilteredItemsCustomAttributeFilter.php',
+        'SquareConnect\\Model\\CatalogQueryFilteredItemsCustomAttributeFilterFilterType' => __DIR__ . '/..' . '/square/connect/lib/Model/CatalogQueryFilteredItemsCustomAttributeFilterFilterType.php',
+        'SquareConnect\\Model\\CatalogQueryFilteredItemsNullableAttribute' => __DIR__ . '/..' . '/square/connect/lib/Model/CatalogQueryFilteredItemsNullableAttribute.php',
+        'SquareConnect\\Model\\CatalogQueryFilteredItemsStockLevel' => __DIR__ . '/..' . '/square/connect/lib/Model/CatalogQueryFilteredItemsStockLevel.php',
         'SquareConnect\\Model\\CatalogQueryItemVariationsForItemOptionValues' => __DIR__ . '/..' . '/square/connect/lib/Model/CatalogQueryItemVariationsForItemOptionValues.php',
         'SquareConnect\\Model\\CatalogQueryItemsForItemOptions' => __DIR__ . '/..' . '/square/connect/lib/Model/CatalogQueryItemsForItemOptions.php',
         'SquareConnect\\Model\\CatalogQueryItemsForModifierList' => __DIR__ . '/..' . '/square/connect/lib/Model/CatalogQueryItemsForModifierList.php',
@@ -755,12 +763,16 @@ class ComposerStaticInit8667160c5fc6dea549817169e41ca622
         'SquareConnect\\Model\\Country' => __DIR__ . '/..' . '/square/connect/lib/Model/Country.php',
         'SquareConnect\\Model\\CreateBreakTypeRequest' => __DIR__ . '/..' . '/square/connect/lib/Model/CreateBreakTypeRequest.php',
         'SquareConnect\\Model\\CreateBreakTypeResponse' => __DIR__ . '/..' . '/square/connect/lib/Model/CreateBreakTypeResponse.php',
+        'SquareConnect\\Model\\CreateCatalogImageRequest' => __DIR__ . '/..' . '/square/connect/lib/Model/CreateCatalogImageRequest.php',
+        'SquareConnect\\Model\\CreateCatalogImageResponse' => __DIR__ . '/..' . '/square/connect/lib/Model/CreateCatalogImageResponse.php',
         'SquareConnect\\Model\\CreateCheckoutRequest' => __DIR__ . '/..' . '/square/connect/lib/Model/CreateCheckoutRequest.php',
         'SquareConnect\\Model\\CreateCheckoutResponse' => __DIR__ . '/..' . '/square/connect/lib/Model/CreateCheckoutResponse.php',
         'SquareConnect\\Model\\CreateCustomerCardRequest' => __DIR__ . '/..' . '/square/connect/lib/Model/CreateCustomerCardRequest.php',
         'SquareConnect\\Model\\CreateCustomerCardResponse' => __DIR__ . '/..' . '/square/connect/lib/Model/CreateCustomerCardResponse.php',
         'SquareConnect\\Model\\CreateCustomerRequest' => __DIR__ . '/..' . '/square/connect/lib/Model/CreateCustomerRequest.php',
         'SquareConnect\\Model\\CreateCustomerResponse' => __DIR__ . '/..' . '/square/connect/lib/Model/CreateCustomerResponse.php',
+        'SquareConnect\\Model\\CreateLocationRequest' => __DIR__ . '/..' . '/square/connect/lib/Model/CreateLocationRequest.php',
+        'SquareConnect\\Model\\CreateLocationResponse' => __DIR__ . '/..' . '/square/connect/lib/Model/CreateLocationResponse.php',
         'SquareConnect\\Model\\CreateMobileAuthorizationCodeRequest' => __DIR__ . '/..' . '/square/connect/lib/Model/CreateMobileAuthorizationCodeRequest.php',
         'SquareConnect\\Model\\CreateMobileAuthorizationCodeResponse' => __DIR__ . '/..' . '/square/connect/lib/Model/CreateMobileAuthorizationCodeResponse.php',
         'SquareConnect\\Model\\CreateOrderRequest' => __DIR__ . '/..' . '/square/connect/lib/Model/CreateOrderRequest.php',
@@ -806,6 +818,7 @@ class ComposerStaticInit8667160c5fc6dea549817169e41ca622
         'SquareConnect\\Model\\ErrorCategory' => __DIR__ . '/..' . '/square/connect/lib/Model/ErrorCategory.php',
         'SquareConnect\\Model\\ErrorCode' => __DIR__ . '/..' . '/square/connect/lib/Model/ErrorCode.php',
         'SquareConnect\\Model\\ExcludeStrategy' => __DIR__ . '/..' . '/square/connect/lib/Model/ExcludeStrategy.php',
+        'SquareConnect\\Model\\ExternalPaymentDetails' => __DIR__ . '/..' . '/square/connect/lib/Model/ExternalPaymentDetails.php',
         'SquareConnect\\Model\\GetBreakTypeRequest' => __DIR__ . '/..' . '/square/connect/lib/Model/GetBreakTypeRequest.php',
         'SquareConnect\\Model\\GetBreakTypeResponse' => __DIR__ . '/..' . '/square/connect/lib/Model/GetBreakTypeResponse.php',
         'SquareConnect\\Model\\GetEmployeeWageRequest' => __DIR__ . '/..' . '/square/connect/lib/Model/GetEmployeeWageRequest.php',
@@ -1163,13 +1176,12 @@ class ComposerStaticInit8667160c5fc6dea549817169e41ca622
         'SquareConnect\\Model\\V1VariationPricingType' => __DIR__ . '/..' . '/square/connect/lib/Model/V1VariationPricingType.php',
         'SquareConnect\\Model\\VoidTransactionRequest' => __DIR__ . '/..' . '/square/connect/lib/Model/VoidTransactionRequest.php',
         'SquareConnect\\Model\\VoidTransactionResponse' => __DIR__ . '/..' . '/square/connect/lib/Model/VoidTransactionResponse.php',
-        'SquareConnect\\Model\\WebhookEvents' => __DIR__ . '/..' . '/square/connect/lib/Model/WebhookEvents.php',
         'SquareConnect\\Model\\Weekday' => __DIR__ . '/..' . '/square/connect/lib/Model/Weekday.php',
         'SquareConnect\\Model\\WorkweekConfig' => __DIR__ . '/..' . '/square/connect/lib/Model/WorkweekConfig.php',
         'SquareConnect\\ObjectSerializer' => __DIR__ . '/..' . '/square/connect/lib/ObjectSerializer.php',
+        'SquareConnect\\Util\\CaseInsensitiveArray' => __DIR__ . '/..' . '/square/connect/lib/Util/CaseInsensitiveArray.php',
         'Symfony\\Component\\HttpFoundation\\AcceptHeader' => __DIR__ . '/..' . '/symfony/http-foundation/AcceptHeader.php',
         'Symfony\\Component\\HttpFoundation\\AcceptHeaderItem' => __DIR__ . '/..' . '/symfony/http-foundation/AcceptHeaderItem.php',
-        'Symfony\\Component\\HttpFoundation\\ApacheRequest' => __DIR__ . '/..' . '/symfony/http-foundation/ApacheRequest.php',
         'Symfony\\Component\\HttpFoundation\\BinaryFileResponse' => __DIR__ . '/..' . '/symfony/http-foundation/BinaryFileResponse.php',
         'Symfony\\Component\\HttpFoundation\\Cookie' => __DIR__ . '/..' . '/symfony/http-foundation/Cookie.php',
         'Symfony\\Component\\HttpFoundation\\Exception\\ConflictingHeadersException' => __DIR__ . '/..' . '/symfony/http-foundation/Exception/ConflictingHeadersException.php',
@@ -1190,13 +1202,6 @@ class ComposerStaticInit8667160c5fc6dea549817169e41ca622
         'Symfony\\Component\\HttpFoundation\\File\\Exception\\UnexpectedTypeException' => __DIR__ . '/..' . '/symfony/http-foundation/File/Exception/UnexpectedTypeException.php',
         'Symfony\\Component\\HttpFoundation\\File\\Exception\\UploadException' => __DIR__ . '/..' . '/symfony/http-foundation/File/Exception/UploadException.php',
         'Symfony\\Component\\HttpFoundation\\File\\File' => __DIR__ . '/..' . '/symfony/http-foundation/File/File.php',
-        'Symfony\\Component\\HttpFoundation\\File\\MimeType\\ExtensionGuesser' => __DIR__ . '/..' . '/symfony/http-foundation/File/MimeType/ExtensionGuesser.php',
-        'Symfony\\Component\\HttpFoundation\\File\\MimeType\\ExtensionGuesserInterface' => __DIR__ . '/..' . '/symfony/http-foundation/File/MimeType/ExtensionGuesserInterface.php',
-        'Symfony\\Component\\HttpFoundation\\File\\MimeType\\FileBinaryMimeTypeGuesser' => __DIR__ . '/..' . '/symfony/http-foundation/File/MimeType/FileBinaryMimeTypeGuesser.php',
-        'Symfony\\Component\\HttpFoundation\\File\\MimeType\\FileinfoMimeTypeGuesser' => __DIR__ . '/..' . '/symfony/http-foundation/File/MimeType/FileinfoMimeTypeGuesser.php',
-        'Symfony\\Component\\HttpFoundation\\File\\MimeType\\MimeTypeExtensionGuesser' => __DIR__ . '/..' . '/symfony/http-foundation/File/MimeType/MimeTypeExtensionGuesser.php',
-        'Symfony\\Component\\HttpFoundation\\File\\MimeType\\MimeTypeGuesser' => __DIR__ . '/..' . '/symfony/http-foundation/File/MimeType/MimeTypeGuesser.php',
-        'Symfony\\Component\\HttpFoundation\\File\\MimeType\\MimeTypeGuesserInterface' => __DIR__ . '/..' . '/symfony/http-foundation/File/MimeType/MimeTypeGuesserInterface.php',
         'Symfony\\Component\\HttpFoundation\\File\\Stream' => __DIR__ . '/..' . '/symfony/http-foundation/File/Stream.php',
         'Symfony\\Component\\HttpFoundation\\File\\UploadedFile' => __DIR__ . '/..' . '/symfony/http-foundation/File/UploadedFile.php',
         'Symfony\\Component\\HttpFoundation\\HeaderBag' => __DIR__ . '/..' . '/symfony/http-foundation/HeaderBag.php',
@@ -1321,9 +1326,9 @@ class ComposerStaticInit8667160c5fc6dea549817169e41ca622
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit8667160c5fc6dea549817169e41ca622::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit8667160c5fc6dea549817169e41ca622::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInit8667160c5fc6dea549817169e41ca622::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit85ba500f376412ffd0734fe0ccb6238f::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit85ba500f376412ffd0734fe0ccb6238f::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit85ba500f376412ffd0734fe0ccb6238f::$classMap;
 
         }, null, ClassLoader::class);
     }

@@ -72,11 +72,8 @@ class ResetPassword extends BaseComponent
 
             if (!$customer = Customers_model::whereEmail(post('email'))->first())
                 throw new ApplicationException(lang('igniter.user::default.reset.alert_reset_error'));
-                
-            if(!$code = $customer->resetPassword())
-                throw new ApplicationException(lang('igniter.user::default.reset.alert_reset_disabled_error'));
 
-            $link = $this->makeResetUrl($code);
+            $link = $this->makeResetUrl($code = $customer->resetPassword());
 
             $this->sendResetPasswordMail($customer, $code, $link);
 
@@ -104,7 +101,7 @@ class ResetPassword extends BaseComponent
 
             $customer = Customers_model::whereResetCode($code = post('code'))->first();
 
-            if (!$customer or !$customer->completeResetPassword($code, post('password')))
+            if (!$customer OR !$customer->completeResetPassword($code, post('password')))
                 throw new ApplicationException(lang('igniter.user::default.reset.alert_reset_failed'));
 
             flash()->success(lang('igniter.user::default.reset.alert_reset_success'));

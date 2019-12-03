@@ -9,7 +9,6 @@ return [
     'text_address' => 'Address Book',
     'text_orders' => 'Recent Orders',
     'text_reservations' => 'Recent Reservations',
-    'text_reviews' => 'Recent Reviews',
     'text_inbox' => 'My Inbox',
     'text_welcome' => 'Welcome %s',
     'text_cart_summary' => 'You have %s items: %s',
@@ -27,7 +26,7 @@ return [
 
     'text_logout' => 'Logout',
     'text_logged_in' => 'Already have an account? <a href="%s">Login Here</a>',
-    'text_logged_out' => 'Welcome back <b>%s</b>, Not You? <a data-request="%s">Logout</a>',
+    'text_logged_out' => 'Welcome back <b>%s</b>, Not You? <a href="javascript:;" data-request="%s">Logout</a>',
 
     'label_heading' => 'Heading:',
     'label_template' => 'Mail template',
@@ -46,17 +45,6 @@ return [
     'text_send_to_customer_email' => 'Customer email address (if available)',
     'text_send_to_custom' => 'Specific email address',
     'text_send_to_staff_group' => 'Staff Group',
-
-    'label_first_name' => 'First Name',
-    'label_last_name' => 'Last Name',
-    'label_email' => 'Email Address',
-    'label_password' => 'New Password',
-    'label_password_confirm' => 'New Password Confirm',
-    'label_old_password' => 'Old Password',
-    'label_telephone' => 'Telephone',
-    'label_s_question' => 'Security Question',
-    'label_s_answer' => 'Security Answer',
-    'label_newsletter' => 'Keep me up-to-date with offers by email.',
 
     'login' => [
         'label_password' => 'Password',
@@ -78,7 +66,6 @@ return [
         'alert_logout_success' => 'You have been logged out successfully.',
         'alert_expired_login' => 'Session expired, please login',
         'alert_invalid_login' => 'Username and password not found!',
-        'alert_disabled_user_login' => 'Account disabled !',
         'alert_account_created' => 'Account created successfully, login below!',
         'alert_account_activation' => 'An activation email has been sent to your email address.',
         'alert_registration_disabled' => 'Registration is currently disabled by the site administrator.',
@@ -114,7 +101,6 @@ return [
 
         'alert_updated_success' => 'Address added/updated successfully.',
         'alert_deleted_success' => 'Address deleted successfully.',
-        'alert_deleted_error' => 'Address deleted failed.',
     ],
     'reset' => [
         'component_title' => 'Password Reset Component',
@@ -135,7 +121,6 @@ return [
         'alert_reset_request_success' => 'Password reset request successfully, please check your email on how to proceed.',
         'alert_reset_error' => 'Password reset unsuccessful, email not found or incorrect details entered.',
         'alert_reset_failed' => 'Password reset failed, reset code is either invalid or expired.',
-        'alert_reset_disabled_error' => 'Password reset failed, user account disabled.',
         'alert_activation_failed' => 'Account activation failed, please try again.',
         'alert_no_email_match' => 'No matching email address',
     ],
@@ -168,67 +153,5 @@ return [
         'error_password' => 'The %s you entered does not match.',
 
         'alert_updated_success' => 'Details updated successfully.',
-    ],
-    'inbox' => [
-        'component_title' => 'Account Inbox Component',
-        'component_desc' => 'Displays account inbox messages',
-        'text_heading' => 'My Inbox',
-        'text_my_account' => 'My Account',
-        'text_view_heading' => 'My Inbox Message',
-        'text_empty' => 'There are no message(s) in your inbox.',
-        'text_view' => 'View',
-
-        'column_date' => 'Date',
-        'column_time' => 'Time',
-        'column_subject' => 'Subject',
-        'column_text' => 'Text',
-        'column_action' => 'Action(s)',
-
-        'button_back' => 'Back',
-        'button_delete' => 'Delete Message',
-
-        'alert_unknown_error' => 'Sorry, an error has occurred.',
-        'alert_deleted_success' => 'Message deleted successfully.',
-    ],
-    'reviews' => [
-        'component_title' => 'Account Reviews Component',
-        'component_desc' => 'Displays account reviews',
-        'text_heading' => 'Recent Reviews',
-        'text_my_account' => 'My Account',
-        'text_empty' => 'There are no added review(s).',
-        'text_view' => 'View',
-        'text_write_review' => 'Write Review',
-        'text_view_review' => 'View Review',
-        'text_not_applicable' => 'not applicable',
-        'text_birthday' => 'birthday',
-        'text_anniversary' => 'anniversary',
-        'text_general_celebration' => 'general celebration',
-        'text_hen_party' => 'hen party',
-        'text_stag_party' => 'stag party',
-
-        'column_sale_type' => 'Sale Type',
-        'column_sale_id' => 'Sale ID',
-        'column_restaurant' => 'Restaurant',
-        'column_rating' => 'Rating',
-        'column_author' => 'Author',
-        'column_date' => 'Date',
-        'column_action' => 'Action(s)',
-
-        'button_back' => 'Back',
-        'button_review' => 'Send Review',
-
-        'label_restaurant' => 'Restaurant',
-        'label_customer_name' => 'Customer Name',
-        'label_quality' => 'Quality',
-        'label_delivery' => 'Delivery',
-        'label_service' => 'Service',
-        'label_review' => 'Review',
-        'label_date' => 'Review Date',
-
-        'alert_review_success' => 'Review sent successfully, it will be visible once approved.',
-        'alert_review_error' => 'An error has occurred, please try again.',
-        'alert_review_duplicate' => 'Sorry. Either you\'ve already left a review for this order, or an error has occurred.',
-        'alert_review_disabled' => 'Reviews has been disabled, please contact site administrator.',
-        'alert_review_status_history' => 'Review can not be added because order/reservation is not completed',
     ],
 ];

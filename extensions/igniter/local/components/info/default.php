@@ -39,13 +39,12 @@
         <?php if ($locationCurrent->hasDelivery()) { ?>
             <div class="list-group-item">
                 <?= lang('igniter.local::default.text_last_order_time'); ?>&nbsp;
-                <?= $location->lastOrderTime(); ?>
+                <?= $location->lastOrderTime()->isoFormat($lastOrderTimeFormat); ?>
             </div>
         <?php } ?>
         <?php if ($localPayments->isNotEmpty()) { ?>
             <div class="list-group-item">
-                <!-- <i class="fa fa-paypal fa-fw"></i>&nbsp;<b><?= lang('igniter.local::default.text_payments'); ?></b><br/> -->
-                <b><?= lang('igniter.local::default.text_payments'); ?></b><br/>
+                <i class="fa fa-paypal fa-fw"></i>&nbsp;<b><?= lang('igniter.local::default.text_payments'); ?></b><br/>
                 <?= implode(', ', $localPayments->pluck('name')->all()); ?>.
             </div>
         <?php } ?>

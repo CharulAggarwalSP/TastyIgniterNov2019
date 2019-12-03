@@ -9,9 +9,14 @@ The comments for your reservation are:
 
 To view your reservation progress, click the link below
 {reservation_view_url}
-
 ==
+Hi {first_name} {last_name},
 
+Your reservation **{reservation_number}** at **{location_name}** has been updated to the following status: <br>
+**{status_name}**
+
+The comments for your reservation are: <br>
+{status_comment}
 <!-- BODY -->
 <table class="body-wrap">
     <tr>
@@ -35,3 +40,6 @@ To view your reservation progress, click the link below
         <td></td>
     </tr>
 </table><!-- /BODY -->
+@partial('button', ['url' => '{reservation_view_url}', 'type' => 'primary'])
+View your reservation status
+@endpartial

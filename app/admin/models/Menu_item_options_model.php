@@ -26,7 +26,17 @@ class Menu_item_options_model extends Model
      */
     protected $primaryKey = 'menu_option_id';
 
-    protected $fillable = ['option_id', 'menu_id', 'required', 'priority'];
+    protected $fillable = ['option_id', 'menu_id', 'required', 'priority', 'min_selected', 'max_selected'];
+
+    public $casts = [
+        'menu_option_id' => 'integer',
+        'option_id' => 'integer',
+        'menu_id' => 'integer',
+        'required' => 'boolean',
+        'priority' => 'integer',
+        'min_selected' => 'integer',
+        'max_selected' => 'integer',
+    ];
 
     public $relation = [
         'hasMany' => [
@@ -46,24 +56,28 @@ class Menu_item_options_model extends Model
     public $appends = ['option_name', 'display_type'];
 
     public $rules = [
-        ['menu_id', 'lang:admin::lang.menus.label_option', 'required|integer'],
-        ['option_id', 'lang:admin::lang.menus.label_option_id', 'required|integer'],
-        ['priority', 'lang:admin::lang.menus.label_option', 'integer'],
-        ['required', 'lang:admin::lang.menus.label_option_required', 'integer'],
+        ['menu_id', 'admin::lang.menus.label_option', 'required|integer'],
+        ['option_id', 'admin::lang.menus.label_option_id', 'required|integer'],
+        ['priority', 'admin::lang.menus.label_option', 'integer'],
+        ['required', 'admin::lang.menus.label_option_required', 'boolean'],
+        ['min_selected', 'admin::lang.menus.label_min_selected', 'integer|lte:max_selected'],
+        ['max_selected', 'admin::lang.menus.label_max_selected', 'integer|gte:min_selected'],
     ];
 
-    public $purgeable = ['menu_option_values'];
+    protected $purgeable = ['menu_option_values'];
 
     public $with = ['option'];
 
     public function getOptionNameAttribute()
     {
-        return $this->option ? $this->option->option_name : null;
+        return $this->option instanceof \Igniter\Flame\Database\Model
+            ? $this->option->option_name : null;
     }
 
     public function getDisplayTypeAttribute()
     {
-        return $this->option ? $this->option->display_type : null;
+        return $this->option instanceof \Igniter\Flame\Database\Model
+            ? $this->option->display_type : null;
     }
 
     public function getOptionValueIdOptions()
@@ -97,6 +111,11 @@ class Menu_item_options_model extends Model
     public function isRequired()
     {
         return $this->required == 1;
+    }
+
+    public function isSelectDisplayType()
+    {
+        return $this->display_type === 'select';
     }
 
     /**
