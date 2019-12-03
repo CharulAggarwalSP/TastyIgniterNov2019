@@ -44,25 +44,32 @@ class Orders_model extends Model
      */
     protected $primaryKey = 'order_id';
 
-    protected $guarded = ['*'];
-
-    protected $fillable = ['customer_id', 'first_name', 'last_name', 'email', 'telephone', 'location_id', 'address_id',
-        'cart', 'total_items', 'comment', 'payment', 'order_type', 'order_time', 'order_date', 'order_total',
-        'status_id', 'ip_address', 'user_agent', 'notify', 'assignee_id',
-    ];
-
     protected $timeFormat = 'H:i';
+
+    public $guarded = ['ip_address', 'user_agent', 'hash'];
 
     /**
      * @var array The model table column to convert to dates on insert/update
      */
     public $timestamps = TRUE;
 
+    public $appends = ['customer_name', 'order_type_name'];
+
     public $casts = [
+        'customer_id' => 'integer',
+        'location_id' => 'integer',
+        'address_id' => 'integer',
+        'status_id' => 'integer',
+        'assignee_id' => 'integer',
+        'invoice_no' => 'integer',
+        'total_items' => 'integer',
         'cart' => 'serialize',
         'order_date' => 'date',
         'order_time' => 'time',
+        'order_total' => 'float',
         'invoice_date' => 'dateTime',
+        'notify' => 'boolean',
+        'processed' => 'boolean',
     ];
 
     public $relation = [
@@ -83,8 +90,6 @@ class Orders_model extends Model
             'status_history' => ['Admin\Models\Status_history_model', 'name' => 'object'],
         ],
     ];
-
-    public $appends = ['customer_name', 'order_type_name'];
 
     public static $allowedSortingColumns = [
         'order_id asc', 'order_id desc',
@@ -198,6 +203,16 @@ class Orders_model extends Model
     // Helpers
     //
 
+    public function isCompleted()
+    {
+        if (!$this->isPaymentProcessed())
+            return FALSE;
+
+        return $this->status_history()->where(
+            'status_id', setting('completed_order_status')
+        )->exists();
+    }
+
     /**
      * Check if an order was successfully placed
      *
@@ -207,7 +222,7 @@ class Orders_model extends Model
      */
     public function isPaymentProcessed()
     {
-        return $this->processed;
+        return $this->processed AND !empty($this->status_id);
     }
 
     public function isDeliveryType()
@@ -232,8 +247,7 @@ class Orders_model extends Model
 
     public function markAsPaymentProcessed()
     {
-        if ($this->processed)
-            return FALSE;
+        Event::fire('admin.order.beforePaymentProcessed', [$this]);
 
         $this->processed = 1;
         $this->save();
@@ -250,11 +264,9 @@ class Orders_model extends Model
 
     public function updateOrderStatus($id, $options = [])
     {
-        if (!$status = Statuses_model::find($id)) {
-            return;
-        }
-
-        return $this->addStatusHistory($status, $options);
+        return $this->addStatusHistory(
+            Statuses_model::find($id), $options
+        );
     }
 
     /**
@@ -339,7 +351,6 @@ class Orders_model extends Model
         $menus = $model->getOrderMenus();
         $menuOptions = $model->getOrderMenuOptions();
         foreach ($menus as $menu) {
-
             $optionData = [];
             if ($menuItemOptions = $menuOptions->get($menu->order_menu_id)) {
                 foreach ($menuItemOptions as $menuItemOption) {
@@ -384,8 +395,8 @@ class Orders_model extends Model
         $data['status_comment'] = $status ? $status->status_comment : null;
 
         $controller = MainController::getController() ?: new MainController;
-        $data['order_view_url'] = $controller->pageUrl('account/orders', [
-            'orderId' => $model->order_id,
+        $data['order_view_url'] = $controller->pageUrl('account/order', [
+            'hash' => $model->hash,
         ]);
 
         return $data;
