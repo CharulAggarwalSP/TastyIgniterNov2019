@@ -47,11 +47,19 @@ class Customers_model extends AuthUserModel
         ],
     ];
 
-    public $purgeable = ['addresses'];
+    protected $purgeable = ['addresses'];
 
     public $appends = ['full_name'];
 
     public $casts = [
+        'customer_id' => 'integer',
+        'address_id' => 'integer',
+        'customer_group_id' => 'integer',
+        'newsletter' => 'boolean',
+        'status' => 'boolean',
+        'is_activated' => 'boolean',
+        'last_login' => 'datetime',
+        'date_activated' => 'datetime',
         'reset_time' => 'datetime',
     ];
 
@@ -179,8 +187,8 @@ class Customers_model extends AuthUserModel
         $idsToKeep = [];
         foreach ($addresses as $address) {
             $customerAddress = $this->addresses()->updateOrCreate(
-                array_only($address, ['customer_id', 'address_id']),
-                $address
+                array_only($address, ['address_id']),
+                array_except($address, ['address_id', 'customer_id'])
             );
 
             $idsToKeep[] = $customerAddress->getKey();

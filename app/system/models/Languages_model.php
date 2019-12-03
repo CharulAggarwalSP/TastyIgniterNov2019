@@ -12,7 +12,12 @@ class Languages_model extends Language
 {
     use Purgeable;
 
-    public $purgeable = ['translations'];
+    protected $purgeable = ['translations'];
+
+    public $casts = [
+        'original_id' => 'integer',
+        'status' => 'boolean',
+    ];
 
     public $relation = [
         'hasMany' => [
@@ -24,7 +29,7 @@ class Languages_model extends Language
      *  List of variables that cannot be mass assigned
      * @var array
      */
-    protected $fillable = ['code', 'name'];
+    protected $guarded = [];
 
     public static function applySupportedLanguages()
     {
