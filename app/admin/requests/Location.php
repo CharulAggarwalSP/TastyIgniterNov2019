@@ -9,10 +9,10 @@ class Location extends FormRequest
     public function rules()
     {
         return [
-            ['location_name', 'admin::lang.label_name', 'required|between:2,32'],
-            ['location_email', 'admin::lang.label_email', 'required|email'],
-            ['location_telephone', 'admin::lang.locations.label_telephone', 'required|between:2,15'],
-            ['location_address_1', 'admin::lang.locations.label_address_1', 'required|between:2,128'],
+            ['location_name', 'admin::lang.label_name', 'required|between:2,50'],
+            ['location_email', 'admin::lang.label_email', 'sometimes|required|email'],
+            ['location_telephone', 'admin::lang.locations.label_telephone', 'sometimes|required|between:2,15'],
+            ['location_address_1', 'admin::lang.locations.label_address_1', 'sometimes|required|between:2,128'],
             ['location_address_2', 'admin::lang.locations.label_address_2', 'max:128'],
             ['location_city', 'admin::lang.locations.label_city', 'max:128'],
             ['location_state', 'admin::lang.locations.label_state', 'max:128'],

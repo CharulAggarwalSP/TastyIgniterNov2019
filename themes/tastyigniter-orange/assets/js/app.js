@@ -472,3 +472,16 @@ while(c.charAt(0)===' ')c=c.substring(1,c.length)
 if(c.indexOf(nameEQ)===0)return c.substring(nameEQ.length,c.length)}
 return null}
 function eraseCookie(name){createCookie(name,"",-1);}})
+$(document).ready(function(){
+        $('.delete_btn_address').on('click',function(){
+            var id = $(this).attr('data-id'); 
+            $('#deleteModal').modal('show');          
+            $('.popup_ok_delete').attr('data-id',id);
+            $('#delete_address_id').val(id);
+        });
+        
+        $('.popup_cancel_delete').click(function(){            
+            $('#deleteModal').modal('hide');            
+        });
+                
+});

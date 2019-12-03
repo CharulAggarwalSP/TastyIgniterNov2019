@@ -47,8 +47,8 @@ class Contact extends BaseComponent
             $rules = [
                 ['subject', 'lang:igniter.frontend::default.contact.text_select_subject', 'required|max:128'],
                 ['email', 'lang:igniter.frontend::default.contact.label_email', 'required|email'],
-                ['full_name', 'lang:igniter.frontend::default.contact.label_full_name', 'required|min:6|max:255'],
-                ['telephone', 'lang:igniter.frontend::default.contact.label_telephone', 'required'],
+                ['full_name', 'lang:igniter.frontend::default.contact.label_full_name', 'required|min:6|max:255|regex:/^(?!\*$)[A-Z-a-z\s]+$/i'],
+                ['telephone', 'lang:igniter.frontend::default.contact.label_telephone', 'required|regex:/^[0-9]+$/|digits_between:10,20'],
                 ['comment', 'lang:igniter.frontend::default.contact.label_comment', 'max:1500'],
             ];
 
