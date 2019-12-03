@@ -53,7 +53,7 @@ return [
     'label_location' => 'Location(s)',
     'label_description' => 'Description',
 
-    'column_id' => 'ID',
+    'column_id' => 'Order ID',
     'column_location' => 'Location(s)',
     'text_filter_location' => 'View all locations',
     'text_filter_status' => 'View all status',
