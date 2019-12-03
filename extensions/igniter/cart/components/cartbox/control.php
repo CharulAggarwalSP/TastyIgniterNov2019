@@ -1,4 +1,8 @@
 <?php if ($locationCurrent->hasDelivery() OR $locationCurrent->hasCollection()) { ?>
+    <?php
+    $deliveryTime = Carbon\Carbon::parse($location->deliverySchedule()->getOpenTime());
+    $collectionTime = Carbon\Carbon::parse($location->collectionSchedule()->getOpenTime());
+    ?>
     <div class="btn-group btn-group-toggle w-100 text-center order-type" data-toggle="buttons">
         <?php if ($locationCurrent->hasDelivery()) { ?>
             <label
@@ -9,14 +13,14 @@
                     data-cart-toggle="order-type"
                     value="delivery" <?= $location->orderTypeIsDelivery() ? 'checked="checked"' : ''; ?>
                 >&nbsp;&nbsp;
-                <strong><?= lang('igniter.cart::default.text_delivery'); ?></strong>
+                <strong><?= lang('igniter.local::default.text_delivery'); ?></strong>
                 <span
                     class="small center-block">
                         <?php if ($location->deliverySchedule()->isOpen()) { ?>
                             <?= sprintf(lang('igniter.cart::default.text_in_minutes'), $locationCurrent->deliveryMinutes()); ?>
                         <?php }
                         else if ($location->deliverySchedule()->isOpening()) { ?>
-                            <?= sprintf(lang('igniter.cart::default.text_starts'), $location->deliverySchedule()->getOpenTime($cartBoxTimeFormat)); ?>
+                            <?= sprintf(lang('igniter.cart::default.text_starts'), $deliveryTime->isoFormat($cartBoxTimeFormat)); ?>
                         <?php }
                         else { ?>
                             <?= lang('igniter.cart::default.text_is_closed'); ?>
@@ -33,14 +37,14 @@
                     data-cart-toggle="order-type"
                     value="collection" <?= ($location->orderType() == 'collection') ? 'checked="checked"' : ''; ?>
                 >&nbsp;&nbsp;
-                <strong><?= lang('igniter.cart::default.text_collection'); ?></strong>
+                <strong><?= lang('igniter.local::default.text_collection'); ?></strong>
                 <span
                     class="small center-block">
                         <?php if ($location->collectionSchedule()->isOpen()) { ?>
                             <?= sprintf(lang('igniter.cart::default.text_in_minutes'), $locationCurrent->collectionMinutes()); ?>
                         <?php }
                         else if ($location->collectionSchedule()->isOpening()) { ?>
-                            <?= sprintf(lang('igniter.cart::default.text_starts'), $location->collectionSchedule()->getOpenTime($cartBoxTimeFormat)); ?>
+                            <?= sprintf(lang('igniter.cart::default.text_starts'), $collectionTime->isoFormat($cartBoxTimeFormat)); ?>
                         <?php }
                         else { ?>
                             <?= lang('igniter.cart::default.text_is_closed'); ?>

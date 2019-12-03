@@ -13,10 +13,10 @@
         class="nav-item nav-link <?= ($activeTab === 'info') ? 'active' : ''; ?>"
         href="<?= restaurant_url('local/info'); ?>"
     ><?= lang('main::lang.local.text_tab_info'); ?></a>
-    <?php // if (isset($locationCurrent) AND $locationCurrent->hasGallery()) { ?>
-        <!-- <a
+    <?php if (isset($locationCurrent) AND $locationCurrent->hasGallery()) { ?>
+        <a
             class="nav-item nav-link <?= ($activeTab === 'gallery') ? 'active' : ''; ?>"
             href="<?= restaurant_url('local/gallery'); ?>"
-        ><?= lang('main::lang.local.text_tab_gallery'); ?></a> -->
-    <?php //} ?>
+        ><?= lang('main::lang.local.text_tab_gallery'); ?></a>
+    <?php } ?>
 </ul>

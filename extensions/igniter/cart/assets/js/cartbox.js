@@ -12,6 +12,21 @@
     CartBox.prototype.init = function () {
         $(document).on('click', '[data-cart-control]', $.proxy(this.onControlClick, this))
         this.$el.on('change', '[data-cart-toggle="order-type"]', $.proxy(this.onOrderTypeToggle, this))
+
+        $(document).on('change', 'input[name="payment"]', $.proxy(this.onChoosePayment, this))
+        $('input[name="payment"]:checked', document).trigger('change')
+
+        $(document)
+            .on('ajaxPromise', '.checkout-btn', function () {
+                $(this).prop('disabled', true)
+            })
+            .on('ajaxFail ajaxDone', '.checkout-btn', function () {
+                $(this).prop('disabled', false)
+            })
+            .on('ajaxPromise', '#checkout-form', $.proxy(this.onSubmitCheckoutForm, this))
+            .on('ajaxFail ajaxDone', '#checkout-form', function () {
+                $('.checkout-btn').prop('disabled', false)
+            })
     }
 
     CartBox.prototype.initAffix = function () {
@@ -34,7 +49,7 @@
 
     CartBox.prototype.loadItem = function ($el) {
         var modalOptions = $.extend({}, this.options, $el.data(), {
-            onSubmit: function () {
+            onSuccess: function () {
                 this.hide()
             }
         })
@@ -45,9 +60,6 @@
     CartBox.prototype.addItem = function ($el) {
         $.request(this.options.updateItemHandler, {
             data: $el.data(),
-            loading: function () {
-                console.log('loading')
-            }
         })
     }
 
@@ -72,11 +84,7 @@
     }
 
     CartBox.prototype.confirmCheckout = function ($el) {
-        var _event = jQuery.Event('submitCheckoutForm'),
-            $checkoutForm = $($el.data('request-form'))
-
-        $checkoutForm.trigger(_event)
-        if (_event.isDefaultPrevented()) return
+        var $checkoutForm = $($el.data('request-form'))
 
         $checkoutForm.request()
     }
@@ -116,10 +124,39 @@
     }
 
     CartBox.prototype.onOrderTypeToggle = function (event) {
-        var $el = $(event.currentTarget)
+        var $el = $(event.currentTarget),
+            $parentEl = $el.closest('#cart-control')
+
+        $parentEl.find('[data-cart-toggle="order-type"]').attr('disabled', true)
+        $parentEl.find('.btn').addClass('disabled')
         $.request(this.options.changeOrderTypeHandler, {
             data: {'type': $el.val()}
+        }).always(function () {
+            $parentEl.find('[data-cart-toggle="order-type"]').attr('disabled', false)
+            $parentEl.find('.btn').removeClass('disabled')
         })
+    }
+
+    CartBox.prototype.onChoosePayment = function (event) {
+        var $el = $(event.currentTarget),
+            $parentEl = $el.closest('.list-group')
+
+        $parentEl.find('.list-group-item').removeClass('bg-light')
+        $el.closest('.list-group-item').addClass('bg-light')
+    }
+
+    CartBox.prototype.onSubmitCheckoutForm = function (event) {
+        var _event = jQuery.Event('submitCheckoutForm'),
+            $checkoutForm = $(event.target),
+            $checkoutBtn = $('.checkout-btn')
+
+        $checkoutBtn.prop('disabled', true)
+
+        $checkoutForm.trigger(_event)
+        if (_event.isDefaultPrevented()) {
+            $checkoutBtn.prop('disabled', false)
+            return false;
+        }
     }
 
     CartBox.DEFAULTS = {

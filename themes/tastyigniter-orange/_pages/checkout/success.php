@@ -1,18 +1,17 @@
 ---
 title: main::lang.checkout.success.title
-layout: layout
+layout: default
 permalink: /checkout/success/:hash?
 
-'[checkout]':
+'[orderPage]':
+    hideReorderBtn: 1
+
+'[localReview]':
 ---
 <div class="container">
     <div class="row py-4">
-        <div class="col-12 m-auto">
-            <div class="card">
-                <div class="card-body">
-                    <?= partial('checkout::success'); ?>
-                </div>
-            </div>
+        <div class="col-sm-9 m-auto">
+            <?= component('orderPage'); ?>
         </div>
     </div>
 </div>

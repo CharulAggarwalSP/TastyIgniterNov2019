@@ -153,6 +153,7 @@ return [
         'text_tab_gallery' => 'Gallery',
         'text_tab_services' => 'Services',
         'text_tab_chefs' => 'Chefs',
+
         'menus' => [
             'title' => 'Menu',
         ],
@@ -196,7 +197,6 @@ return [
         'contact_us_text' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry\'s standard dummy text ever since, Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s.',
         'our_info' => 'Our Info',
         'info_text' => 'Lorem ipsum Lorem Ipsum Lorem ipsum Lorem Ipsum Lorem ipsum Lorem Ipsum'
-
     ],
 
     'pages' => [
@@ -268,8 +268,8 @@ return [
         'method' => 'The method [:method] is not found in [:name].',
         'ajax_handler' => 'Ajax handler [%s] is not found.',
     ],
-
-    'services' => [
+    
+        'services' => [
         'our_services' => 'Our Services',
         'view_our_menu' => 'View our Menu',
         'view_our_menu_text' => 'Lorem ipsum Nam libero tempore cum soluta nobis est eligendi optio cumque nihil impedit.',
@@ -280,7 +280,6 @@ return [
         'spicy_recipes' => 'Corporate Events',
         'spicy_recipes_text' => 'Lorem ipsum Nam libero tempore cum soluta nobis est eligendi optio cumque nihil impedit.',
     ],
-
     'chefs' => [
         'our_chefs' => 'Our Chefs',
         'first_chef_title' => 'Vivamus moles tie gravida turpis',
@@ -296,7 +295,6 @@ return [
         'fourth_chef_para_one' => 'A wonderful serenity has taken possession of my entire soul, I enjoy with my whole heart.',
         'fourth_chef_para_two' => 'A wonderful serenity has taken possession of my entire soul, I enjoy with my whole heart.',
     ],
-
     'gallery' => [
         'first_image_title' => 'Idli Sambar',
         'first_image_text' => 'Sit accusamus, vel blanditiis iure minima ipsa molestias minus laborum velit, nulla nisi hic quasi enim.',

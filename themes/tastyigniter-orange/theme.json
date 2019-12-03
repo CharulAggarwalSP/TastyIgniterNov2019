@@ -1,9 +1,9 @@
 {
-  "code": "Dosa-Restraunt",
-  "name": "Restaurant Dosa",
-  "description": " Modern, Responsive and Clean Theme based For Dosa Restaurant.",
-  "version": "v2.1.0-beta.7",
-  "author": "SP Dev Team",
+  "code": "tastyigniter-orange",
+  "name": "Orange Theme",
+  "description": "Free Modern, Responsive and Clean TastyIgniter Theme based on Bootstrap 4.",
+  "version": "v2.2.0",
+  "author": "TastyIgniter Dev Team",
   "require": {
     "igniter.cart": "*",
     "igniter.frontend": "*",

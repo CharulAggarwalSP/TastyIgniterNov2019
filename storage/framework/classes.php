@@ -258,4 +258,6 @@
   'Igniter\\User\\Components\\AddressBook' => 'extensions/igniter/user/components/AddressBook.php',
   'Igniter\\Reservation\\Components\\Reservations' => 'extensions/igniter/reservation/components/Reservations.php',
   'Igniter\\User\\Components\\Reviews' => 'extensions/igniter/user/components/Reviews.php',
+  'Igniter\\Cart\\Classes\\CartManager' => 'extensions/igniter/cart/classes/CartManager.php',
+  'Igniter\\Cart\\Classes\\CartConditionManager' => 'extensions/igniter/cart/classes/CartConditionManager.php',
 );

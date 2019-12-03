@@ -19,14 +19,6 @@ class Extension extends BaseExtension
 
         AliasLoader::getInstance()->alias('Cart', \Igniter\Flame\Cart\Facades\Cart::class);
 
-        $this->app->singleton('cart', function ($app) {
-            Config::set('cart.model', CartStore::class);
-            Config::set('cart.conditions', CartSettings::get('conditions'));
-            Config::set('cart.abandonedCart', CartSettings::get('abandoned_cart'));
-
-            return $app->make(\Igniter\Flame\Cart\Cart::class);
-        });
-
         $this->app->make(\Illuminate\Contracts\Http\Kernel::class)
                   ->pushMiddleware(\Igniter\Cart\Middleware\CartMiddleware::class);
     }
@@ -35,6 +27,7 @@ class Extension extends BaseExtension
     {
         $this->bindCartEvents();
         $this->bindCheckoutEvents();
+        $this->bindOrderStatusEvent();
     }
 
     public function registerCartConditions()
@@ -86,6 +79,11 @@ class Extension extends BaseExtension
                 'code' => 'accountOrders',
                 'name' => 'lang:igniter.cart::default.orders.component_title',
                 'description' => 'lang:igniter.cart::default.orders.component_desc',
+            ],
+            'Igniter\Cart\Components\Order' => [
+                'code' => 'orderPage',
+                'name' => 'lang:igniter.cart::default.orders.order_component_title',
+                'description' => 'lang:igniter.cart::default.orders.order_component_desc',
             ],
         ];
     }
@@ -148,6 +146,12 @@ class Extension extends BaseExtension
 
     protected function bindCartEvents()
     {
+        Event::listen('cart.beforeRegister', function () {
+            Config::set('cart.model', CartStore::class);
+            Config::set('cart.conditions', CartSettings::get('conditions'));
+            Config::set('cart.abandonedCart', CartSettings::get('abandoned_cart'));
+        });
+
         Event::listen('igniter.user.login', function () {
             if (CartSettings::get('abandoned_cart')
                 AND Cart::content()->isEmpty()

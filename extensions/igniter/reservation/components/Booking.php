@@ -31,11 +31,11 @@ class Booking extends BaseComponent
      */
     protected $manager;
 
-    public $reservation;
+    protected $reservation;
 
-    public $dateFormat;
+    protected $dateFormat;
 
-    public $timeFormat;
+    protected $timeFormat;
 
     public $pickerStep;
 
@@ -52,6 +52,11 @@ class Booking extends BaseComponent
                 'type' => 'number',
                 'default' => 20,
             ],
+            'datePickerNoOfDays' => [
+                'label' => 'The number of days to list for the date picker',
+                'type' => 'number',
+                'default' => 30,
+            ],
             'timePickerInterval' => [
                 'label' => 'The interval to use for the time picker',
                 'type' => 'number',
@@ -62,20 +67,20 @@ class Booking extends BaseComponent
                 'type' => 'number',
                 'default' => 15,
             ],
-            'dateFormat' => [
+            'bookingDateFormat' => [
                 'label' => 'Date format to use for the date picker',
                 'type' => 'text',
-                'default' => 'M d, yyyy',
+                'default' => 'MMM DD, YYYY',
             ],
-            'timeFormat' => [
+            'bookingTimeFormat' => [
                 'label' => 'Time format to use for the time dropdown',
                 'type' => 'text',
-                'default' => 'H:i',//'h:i a',
+                'default' => 'hh:mm a',
             ],
-            'dateTimeFormat' => [
-                'label' => 'Date time format to use for the book summary',
+            'bookingDateTimeFormat' => [
+                'label' => 'Date time format to use for displaying reservation date & time',
                 'type' => 'text',
-                'default' => 'l, F j, Y \\a\\t h:i a',
+                'default' => 'dddd, MMMM D, YYYY \a\t hh:mm a',
             ],
             'showLocationThumb' => [
                 'label' => 'Show Location Image Thumbnail',
@@ -126,16 +131,18 @@ class Booking extends BaseComponent
 
     public function onRun()
     {
-        $this->loadAssets();
+        $this->addCss('css/booking.css', 'booking-css');
+        $this->addJs('js/booking.js', 'booking-js');
+
         $this->prepareVars();
     }
 
     protected function prepareVars()
     {
         $this->page['pickerStep'] = $this->pickerStep;
-        $this->page['bookingDateFormat'] = $this->dateFormat = $this->property('dateFormat');
-        $this->page['bookingTimeFormat'] = $this->timeFormat = $this->property('timeFormat');
-        $this->page['bookingDateTimeFormat'] = $this->property('dateTimeFormat');
+        $this->page['bookingDateFormat'] = $this->dateFormat = $this->property('bookingDateFormat');
+        $this->page['bookingTimeFormat'] = $this->timeFormat = $this->property('bookingTimeFormat');
+        $this->page['bookingDateTimeFormat'] = $this->property('bookingDateTimeFormat');
 
         $this->page['reservation'] = $this->getReservation();
         $this->page['bookingLocation'] = $this->getLocation();
@@ -174,6 +181,20 @@ class Booking extends BaseComponent
         return array_get($options, $noOfGuests);
     }
 
+    public function getDatePickerOptions()
+    {
+        $options = [];
+
+        $noOfDays = $this->property('datePickerNoOfDays');
+        $start = Carbon::now()->startOfDay();
+        $end = Carbon::now()->addDays($noOfDays);
+        for ($date = $start; $date->lte($end); $date->addDay()) {
+            $options[] = $date->copy();
+        }
+
+        return $options;
+    }
+
     public function getTimePickerOptions()
     {
         $options = [];
@@ -182,7 +203,7 @@ class Booking extends BaseComponent
         $interval = new DateInterval("PT{$this->property('timePickerInterval')}M");
         $dateTimes = new DatePeriod($startTime, $interval, $endTime);
         foreach ($dateTimes as $dateTime) {
-            $options[$dateTime->format('H:i')] = $dateTime->format($this->timeFormat);
+            $options[$dateTime->format('H:i')] = Carbon::parse($dateTime)->isoFormat($this->timeFormat);
         }
 
         return $options;
@@ -199,7 +220,7 @@ class Booking extends BaseComponent
             $query['sdateTime'] = $date->format('Y-m-d H:i');
             $result[] = (object)[
                 'rawTime' => $date->format('Y-m-d H:i'),
-                'time' => $date->format($this->timeFormat),
+                'time' => Carbon::parse($date)->isoFormat($this->timeFormat),
                 'fullyBooked' => $this->manager->isFullyBookedOn($date, input('guest')),
                 'actionUrl' => Request::url().'?'.http_build_query($query),
             ];
@@ -220,7 +241,7 @@ class Booking extends BaseComponent
             $reservation = $this->manager->getReservationByHash($hash);
         }
         else {
-            $reservation = $this->manager->getReservation();
+            $reservation = $this->manager->loadReservation();
         }
 
         return $this->reservation = $reservation;
@@ -230,7 +251,7 @@ class Booking extends BaseComponent
     {
         $dateTime = $this->getSelectedDateTime();
         $this->page['selectedDate'] = $dateTime;
-        $this->page['longDateTime'] = $dateTime->format($this->property('dateTimeFormat'));
+        $this->page['longDateTime'] = $dateTime->isoFormat($this->property('bookingDateTimeFormat'));
         $this->page['guestSize'] = input('guest', 2);
 
         if (!get('picker_form'))
@@ -303,7 +324,7 @@ class Booking extends BaseComponent
                     ['first_name', 'lang:igniter.reservation::default.label_first_name', 'required|min:2|max:32'],
                     ['last_name', 'lang:igniter.reservation::default.label_last_name', 'required|min:2|max:32'],
                     ['email', 'lang:igniter.reservation::default.label_email', 'required|email'],
-                    ['telephone', 'lang:igniter.reservation::default.label_telephone', 'required|regex:/^[0-9]+$/|digits_between:10,20'],
+                    ['telephone', 'lang:igniter.reservation::default.label_telephone', 'required'],
                     ['comment', 'lang:igniter.reservation::default.label_comment', 'max:520'],
                 ];
         }
@@ -338,14 +359,6 @@ class Booking extends BaseComponent
     //
     // Helpers
     //
-
-    protected function loadAssets()
-    {
-        $this->addCss('vendor/datepicker/bootstrap-datepicker3.min.css', 'bootstrap-datepicker3-css');
-        $this->addCss('css/booking.css', 'booking-css');
-        $this->addJs('vendor/datepicker/bootstrap-datepicker.min.js', 'bootstrap-datepicker-js');
-        $this->addJs('js/booking.js', 'booking-js');
-    }
 
     /**
      * @return \Carbon\Carbon

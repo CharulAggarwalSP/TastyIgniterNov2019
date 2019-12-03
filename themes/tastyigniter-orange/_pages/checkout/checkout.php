@@ -1,6 +1,6 @@
 ---
 title: main::lang.checkout.title
-layout: layout
+layout: default
 permalink: /checkout
 
 '[account]':
@@ -9,10 +9,6 @@ permalink: /checkout
     paramFrom: location
     showLocalThumb: 0
     menusPage: local/menus
-    openTimeFormat: 'H:i'
-    timePickerDateFormat: 'D d'
-    timePickerTimeFormat: 'H:i'
-    timePickerDateTimeFormat: 'D d H:i'
 
 '[cartBox]':
     pageIsCheckout: true

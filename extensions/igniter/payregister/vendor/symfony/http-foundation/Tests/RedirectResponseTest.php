@@ -20,10 +20,7 @@ class RedirectResponseTest extends TestCase
     {
         $response = new RedirectResponse('foo.bar');
 
-        $this->assertEquals(1, preg_match(
-            '#<meta http-equiv="refresh" content="\d+;url=foo\.bar" />#',
-            preg_replace(['/\s+/', '/\'/'], [' ', '"'], $response->getContent())
-        ));
+        $this->assertRegExp('#<meta http-equiv="refresh" content="\d+;url=\'foo\.bar\'" />#', preg_replace('/\s+/', ' ', $response->getContent()));
     }
 
     public function testRedirectResponseConstructorEmptyUrl()
@@ -60,13 +57,6 @@ class RedirectResponseTest extends TestCase
         $response->setTargetUrl('baz.beep');
 
         $this->assertEquals('baz.beep', $response->getTargetUrl());
-    }
-
-    public function testSetTargetUrlNull()
-    {
-        $this->expectException('InvalidArgumentException');
-        $response = new RedirectResponse('foo.bar');
-        $response->setTargetUrl(null);
     }
 
     public function testCreate()

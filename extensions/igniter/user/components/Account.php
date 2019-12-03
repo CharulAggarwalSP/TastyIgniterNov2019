@@ -2,7 +2,6 @@
 
 use Admin\Models\Customer_groups_model;
 use Admin\Models\Customers_model;
-use System\Models\Settings_model;
 use Admin\Traits\ValidatesForm;
 use ApplicationException;
 use Auth;
@@ -26,12 +25,6 @@ class Account extends \System\Classes\BaseComponent
                 'label' => 'The customer dashboard page',
                 'type' => 'select',
                 'default' => 'account/account',
-                'options' => [static::class, 'getPageOptions'],
-            ],
-            'detailsPage' => [
-                'label' => 'The customer details page',
-                'type' => 'select',
-                'default' => 'account/details',
                 'options' => [static::class, 'getPageOptions'],
             ],
             'addressPage' => [
@@ -148,25 +141,9 @@ class Account extends \System\Classes\BaseComponent
         return $this->customer()->orders()->with('status')->take(10)->get();
     }
 
-    public function getWifiPassword()
-    {
-        $settings = Settings_model::select('value')
-                           ->where('item', 'wifi_password')
-                           ->first()
-                           ->toArray();                           
-        return $settings;
-    }
-
     public function getCustomerReservations()
     {
         return $this->customer()->reservations()->with('status')->take(10)->get();
-    }
-
-    public function loginUrl()
-    {
-        $currentUrl = str_replace(Request::root(), '', Request::fullUrl());
-
-        return $this->controller->pageUrl($this->property('loginPage')).'?redirect='.urlencode($currentUrl);
     }
 
     public function onLogin()
@@ -184,19 +161,12 @@ class Account extends \System\Classes\BaseComponent
             $credentials = [
                 'email' => post('email'),
                 'password' => post('password'),
-                'status'   => 1
             ];
 
             Event::fire('igniter.user.beforeAuthenticate', [$this, $credentials]);
-            $resp = Auth::authenticate($credentials, $remember, TRUE);
-            if (!Auth::authenticate($credentials, $remember, TRUE)){
-                if(!$user = Customers_model::where('email',post('email'))->first())
-                    throw new ApplicationException(lang('igniter.user::default.login.alert_invalid_login'));
-                else if(!\Hash::check(post('password'), $user->password))
-                    throw new ApplicationException(lang('igniter.user::default.login.alert_invalid_login'));
-                else if($user->status == 0)
-                    throw new ApplicationException(lang('igniter.user::default.login.alert_disabled_user_login'));
-            }
+
+            if (!Auth::authenticate($credentials, $remember, TRUE))
+                throw new ApplicationException(lang('igniter.user::default.login.alert_invalid_login'));
 
             Event::fire('igniter.user.login', [$this]);
 
@@ -222,12 +192,12 @@ class Account extends \System\Classes\BaseComponent
             $data = post();
 
             $rules = [
-                ['first_name', 'lang:igniter.user::default.settings.label_first_name', 'required|min:2|max:32|regex:/^(?!\s*$)[A-Z-a-z]+$/i'],
-                ['last_name', 'lang:igniter.user::default.settings.label_last_name', 'required|min:2|max:32|regex:/^(?!\s*$)[A-Z-a-z]+$/i'],
+                ['first_name', 'lang:igniter.user::default.settings.label_first_name', 'required|min:2|max:32'],
+                ['last_name', 'lang:igniter.user::default.settings.label_last_name', 'required|min:2|max:32'],
                 ['email', 'lang:igniter.user::default.settings.label_email', 'required|email|unique:customers,email'],
                 ['password', 'lang:igniter.user::default.login.label_password', 'required|min:6|max:32|same:password_confirm'],
-                ['password_confirm', 'lang:igniter.user::default.login.label_password_confirm', 'required'], 
-                ['telephone', 'lang:igniter.user::default.settings.label_telephone', 'required|regex:/^[0-9]+$/|digits_between:10,20'],               
+                ['password_confirm', 'lang:igniter.user::default.login.label_password_confirm', 'required'],
+                ['telephone', 'lang:igniter.user::default.settings.label_telephone', 'required'],
                 ['newsletter', 'lang:igniter.user::default.login.label_subscribe', 'integer'],
             ];
 
@@ -287,16 +257,14 @@ class Account extends \System\Classes\BaseComponent
             $data = post();
 
             $rules = [
-                ['first_name', 'lang:igniter.user::default.label_first_name', 'required|min:2|max:32|regex:/^(?!\s*$)[A-Z-a-z]+$/i'],
-                ['last_name', 'lang:igniter.user::default.label_last_name', 'required|min:2|max:32|regex:/^(?!\s*$)[A-Z-a-z]+$/i'],
-                ['old_password', 'lang:igniter.user::default.label_email', 'required_with:new_password'],
+                ['first_name', 'lang:igniter.user::default.label_first_name', 'required|min:2|max:32'],
+                ['last_name', 'lang:igniter.user::default.label_last_name', 'required|min:2|max:32'],
+                ['old_password', 'lang:igniter.user::default.label_email', 'sometimes'],
                 ['new_password', 'lang:igniter.user::default.label_password', 'required_with:old_password|min:6|max:32|same:confirm_new_password'],
                 ['confirm_new_password', 'lang:igniter.user::default.label_password_confirm', 'required_with:old_password'],
-                ['telephone', 'lang:igniter.user::default.label_telephone', 'required||regex:/^[0-9]+$/|digits_between:10,20'],
+                ['telephone', 'lang:igniter.user::default.label_telephone', 'required'],
                 ['newsletter', 'lang:igniter.user::default.login.label_subscribe', 'integer'],
             ];
-
-            $messages = ['required_with'=>'Old Password field is required'];
 
             $this->validateAfter(function ($validator) {
                 if ($message = $this->passwordDoesNotMatch()) {
@@ -304,7 +272,7 @@ class Account extends \System\Classes\BaseComponent
                 }
             });
 
-            $this->validate($data, $rules, $messages);
+            $this->validate($data, $rules);
 
             $passwordChanged = FALSE;
             if (strlen(post('old_password')) AND strlen(post('new_password'))) {

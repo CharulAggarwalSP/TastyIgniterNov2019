@@ -426,7 +426,7 @@ class RequestTest extends TestCase
     }
 
     /**
-     * @dataProvider getFormatToMimeTypeMapProviderWithAdditionalNullFormat
+     * @dataProvider getFormatToMimeTypeMapProvider
      */
     public function testGetFormatFromMimeType($format, $mimeTypes)
     {
@@ -442,14 +442,6 @@ class RequestTest extends TestCase
                 $this->assertEquals($mimeTypes[0], $request->getMimeType($format));
             }
         }
-    }
-
-    public function getFormatToMimeTypeMapProviderWithAdditionalNullFormat()
-    {
-        return array_merge(
-            [[null, [null, 'unexistent-mime-type']]],
-            $this->getFormatToMimeTypeMapProvider()
-        );
     }
 
     public function testGetFormatFromMimeTypeWithParameters()
@@ -1624,15 +1616,6 @@ class RequestTest extends TestCase
         $this->assertObjectHasAttribute('storage', $session);
         $this->assertObjectHasAttribute('flashName', $session);
         $this->assertObjectHasAttribute('attributeName', $session);
-    }
-
-    /**
-     * @group legacy
-     * @expectedDeprecation Calling "Symfony\Component\HttpFoundation\Request::getSession()" when no session has been set is deprecated since Symfony 4.1 and will throw an exception in 5.0. Use "hasSession()" instead.
-     */
-    public function testGetSessionNullable()
-    {
-        (new Request())->getSession();
     }
 
     public function testHasPreviousSession()
