@@ -166,7 +166,7 @@ class Customers_model extends AuthUserModel
      *
      * @return string Reset code
      */
-    public function resetPassword()
+    public function resetPassword() 
     {
         if (!$this->enabled())
             return FALSE;
@@ -237,5 +237,15 @@ class Customers_model extends AuthUserModel
         }
 
         return $query;
+    }
+
+    public function completeResetPassword($code, $password)
+    {
+        $customer = Customers_model::where('reset_code', $code)->first();
+        $customer->password = $password;
+        if($customer->save())
+            return true;
+        else
+            return false;
     }
 }

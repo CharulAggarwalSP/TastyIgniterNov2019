@@ -1,0 +1,16 @@
+{
+  "code": "Dosa-Restraunt",
+  "name": "Restaurant Dosa",
+  "description": " Modern, Responsive and Clean Theme based For Dosa Restaurant.",
+  "version": "v2.1.0-beta.7",
+  "author": "SP Dev Team",
+  "require": {
+    "igniter.cart": "*",
+    "igniter.frontend": "*",
+    "igniter.local": "*",
+    "igniter.pages": "*",
+    "igniter.payregister": "*",
+    "igniter.reservation": "*",
+    "igniter.user": "*"
+  }
+}
