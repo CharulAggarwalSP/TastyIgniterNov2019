@@ -1,3 +1,4 @@
+ $settings = $__SELF__->getWifiPassword();
 <div class="card mb-1">
     <div class="card-body">
         <h5 class="mb-0"><?= sprintf(lang('igniter.user::default.text_welcome'), $customer->first_name); ?></h5>
@@ -41,7 +42,9 @@
         </div>
     </div>
 </div>
-
+<div class="row">
+    <span style="color: #fff;text-decoration: none;background-color: #ed561a;margin-left: 25px;">Wifi Password : <?= $settings['value']; ?></span>    
+</div>
 <div class="card">
     <div class="card-body">
         <h5 class="font-weight-normal mb-3"><?= lang('igniter.user::default.text_edit_details') ?></h5>
