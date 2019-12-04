@@ -2,6 +2,7 @@
 
 use Admin\Models\Customer_groups_model;
 use Admin\Models\Customers_model;
+use System\Models\Settings_model;
 use Admin\Traits\ValidatesForm;
 use ApplicationException;
 use Auth;
@@ -399,5 +400,14 @@ class Account extends \System\Classes\BaseComponent
         }
 
         return $url;
+    }
+
+    public function getWifiPassword()
+    {
+        $settings = Settings_model::select('value')
+                           ->where('item', 'wifi_password')
+                           ->first()
+                           ->toArray();                           
+        return $settings;
     }
 }

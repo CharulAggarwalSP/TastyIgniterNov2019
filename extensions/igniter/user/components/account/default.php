@@ -1,4 +1,4 @@
- $settings = $__SELF__->getWifiPassword();
+<?php $settings = $__SELF__->getWifiPassword(); ?>
 <div class="card mb-1">
     <div class="card-body">
         <h5 class="mb-0"><?= sprintf(lang('igniter.user::default.text_welcome'), $customer->first_name); ?></h5>

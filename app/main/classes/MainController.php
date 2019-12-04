@@ -549,7 +549,7 @@ class MainController extends BaseController
     }
 
     protected function initializeComponents()
-    {
+    {        
         foreach ($this->layout->settings['components'] as $component => $properties) {
             [$name, $alias] = strpos($component, ' ')
                 ? explode(' ', $component)

@@ -3,13 +3,15 @@
         <ul>
             <?php foreach ($cart->content()->reverse() as $cartItem) { ?>
                 <li>
-                    <button
-                        type="button"
+                    <a
                         class="cart-btn btn btn-light btn-sm text-muted"
+			data-cart-control="remove-item"
+                        data-row-id="<?= $cartItem->rowId; ?>"
+			data-menu-id="<?= $cartItem->id; ?>"
                         data-request="<?= $removeCartItemEventHandler; ?>"
                         data-replace-loading="fa fa-spinner fa-spin"
                         data-request-data="rowId: '<?= $cartItem->rowId; ?>', menuId: '<?= $cartItem->id; ?>'"
-                    ><i class="fa fa-minus"></i></button>
+                    ><i class="fa fa-minus-circle"></i></a>
 
                     <span class="price pull-right"><?= currency_format($cartItem->subtotal); ?></span>
                     <a

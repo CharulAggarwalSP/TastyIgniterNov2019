@@ -13,7 +13,7 @@
                 </div>
                 <?php if (!$hideSearch) { ?>
                     <div class="col-sm-8">
-                        <?= partial('@searchbar'); ?>
+                        <!--?= partial('@searchbar'); ?-->
                     </div>
                 <?php } ?>
             </div>
