@@ -195,4 +195,7 @@
   'System\\Models\\Activities_model' => 'app/system/models/Activities_model.php',
   'System\\Classes\\UpdateManager' => 'app/system/classes/UpdateManager.php',
   'System\\Classes\\HubManager' => 'app/system/classes/HubManager.php',
+  'Igniter\\Cart\\Components\\Orders' => 'extensions/igniter/cart/components/Orders.php',
+  'Main\\Classes\\MediaItem' => 'app/main/classes/MediaItem.php',
+  'Igniter\\Reservation\\Components\\Reservations' => 'extensions/igniter/reservation/components/Reservations.php',
 );

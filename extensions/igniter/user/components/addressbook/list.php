@@ -1,3 +1,11 @@
+<style>
+    .modal-backdrop.fade.show{
+        opacity: 0.7
+    }
+    #deleteModal.modal.fade.show{
+        opacity: 1
+    }
+</style>
 <?php if (count($customerAddresses)) { ?>
     <div class="list-group list-group-flush">
         <?php $index = 0;
@@ -12,6 +20,7 @@
                         class="btn btn-outline-default"
                         href="<?= site_url('account/address', ['addressId' => $address->address_id]); ?>"
                     ><?= lang('igniter.user::default.account.text_edit'); ?></a>
+                    <button name="" class="btn btn-outline-danger delete_btn_address" data-id="<?= $address->address_id; ?>"><?= lang('igniter.user::default.account.text_delete'); ?></button>                    
                 </span>
             </div>
         <?php } ?>
@@ -23,6 +32,26 @@
 <?php } else { ?>
     <p><?= lang('igniter.user::default.account.text_no_address'); ?></p>
 <?php } ?>
+<div class="modal fade" id="deleteModal">
+    <div class="modal-dialog">
+        <div class="modal-content">                  
+                    <div class="modal-body">
+                        <div class="">
+                            <p class="text-center">This cannot be undone! Are you sure you want to do this?</p>
+                            <div class="popup-form d-flex justify-content-center">
+                                <button class="popup_cancel_delete btn btn-primary">Cancel</button>
+                                <span>&nbsp; &nbsp; &nbsp;</span>
+                                <form method="POST" accept-charset="utf-8" data-request="<?= $deleteAddressEventHandler; ?>"role="form"> 
+                                    <input type="hidden" name="delete_address_id" id="delete_address_id" value=""/>
+                                    <button type="submit" class="popup_ok_delete btn btn-primary">OK</button>
+                                </form>
+                               
+                            </div>
+                        </div>
+                    </div>
+        </div>
+    </div>
+</div>
 
 <div class="buttons">
     <button

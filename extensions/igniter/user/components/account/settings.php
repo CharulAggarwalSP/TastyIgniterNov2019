@@ -59,7 +59,7 @@
         </div>
     </div>
 
-    <div class="form-group">
+    <!--div class="form-group">
         <div class="custom-control custom-checkbox">
             <input
                 type="checkbox"
@@ -74,7 +74,7 @@
             </label>
         </div>
         <?= form_error('newsletter', '<span class="text-danger">', '</span>'); ?>
-    </div>
+    </div-->
 
     <div class="my-3">
         <h5 class="font-weight-normal"><?= lang('igniter.user::default.settings.text_password_heading'); ?></h5>
