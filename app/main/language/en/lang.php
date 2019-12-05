@@ -142,7 +142,8 @@ return [
         'food' => 'Food',
         'section_data' => 'When Jazz starts to chase cars, the whole world stands still.',
         'welcome' => 'Welcome',
-        'first_section_side_paragraph' => 'We can make a commitment to promote vegetables and fruits and whole grains on every part of every menu. We can make portion sizes smaller and emphasize quality over quantity. And we can help create a culture - imagine this - where our kids ask for healthy options instead of resisting them.',
+        'first_section_side_paragraph' => 'We are bringing traditional food from India with a new look to come presenting new trends. By introducing some rare dishes like Dosa and other South Indian delicacies to the Netherlands we have become the only proud providers and still we are the only one to serve them. We wish you a pleasant dining experience with us',
+        // 'first_section_side_paragraph' => 'We can make a commitment to promote vegetables and fruits and whole grains on every part of every menu. We can make portion sizes smaller and emphasize quality over quantity. And we can help create a culture - imagine this - where our kids ask for healthy options instead of resisting them.',
         'second_section_side_paragraph' => 'I mean, it\'s nice to get a dinner reservation ahead of other people, but when it comes down to it, the most important thing to me is the actual work.',
     ],
 
@@ -269,7 +270,7 @@ return [
         'ajax_handler' => 'Ajax handler [%s] is not found.',
     ],
     
-        'services' => [
+    'services' => [
         'our_services' => 'Our Services',
         'view_our_menu' => 'View our Menu',
         'view_our_menu_text' => 'Lorem ipsum Nam libero tempore cum soluta nobis est eligendi optio cumque nihil impedit.',
@@ -298,9 +299,9 @@ return [
     'gallery' => [
         'first_image_title' => 'Idli Sambar',
         'first_image_text' => 'Sit accusamus, vel blanditiis iure minima ipsa molestias minus laborum velit, nulla nisi hic quasi enim.',
-        'second_image_title' => 'Butter Naan',
+        'second_image_title' => 'Mixed Kebab',
         'second_image_text' => 'Sit accusamus, vel blanditiis iure minima ipsa molestias minus laborum velit, nulla nisi hic quasi enim.',
-        'third_image_title' => 'Mixed Kebab',
+        'third_image_title' => 'Butter Naan',
         'third_image_text' => 'Sit accusamus, vel blanditiis iure minima ipsa.',
         'fourth_image_title' => 'Meat Samosa',
         'fourth_image_text' => 'Sit accusamus, vel blanditiis iure minima ipsa.',
