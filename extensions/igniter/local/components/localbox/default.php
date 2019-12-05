@@ -1,4 +1,4 @@
-<div id="local-box">
+<div id="local-box" class="custom__local">
     <div class="panel local-search">
         <div class="panel-body">
             <div class="row">

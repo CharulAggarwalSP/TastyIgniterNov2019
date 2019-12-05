@@ -220,4 +220,12 @@
   'System\\Traits\\RuleInjector' => 'app/system/traits/RuleInjector.php',
   'System\\Classes\\FormRequest' => 'app/system/classes/FormRequest.php',
   'Admin\\Requests\\Location' => 'app/admin/requests/Location.php',
+  'Admin\\Actions\\CalendarController' => 'app/admin/actions/CalendarController.php',
+  'Admin\\FormWidgets\\StatusEditor' => 'app/admin/formwidgets/StatusEditor.php',
+  'Admin\\FormWidgets\\DataTable' => 'app/admin/formwidgets/DataTable.php',
+  'Admin\\Widgets\\Table' => 'app/admin/widgets/Table.php',
+  'Admin\\Widgets\\Table\\Source\\DataSource' => 'app/admin/widgets/table/source/DataSource.php',
+  'Igniter\\User\\Components\\ResetPassword' => 'extensions/igniter/user/components/ResetPassword.php',
+  'Admin\\FormWidgets\\Repeater' => 'app/admin/formwidgets/Repeater.php',
+  'Main\\classes\\MediaItem' => 'app/main/classes/MediaItem.php',
 );

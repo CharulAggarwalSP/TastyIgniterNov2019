@@ -1,4 +1,4 @@
-<ul id="nav-tabs" class="nav-menus nav nav-tabs">
+<ul id="nav-tabs" class="nav-menus nav nav-tabs menu__nav">
     <a
         class="nav-item nav-link <?= ($activeTab === 'menus') ? 'active' : ''; ?>"
         href="<?= restaurant_url('local/menus'); ?>"

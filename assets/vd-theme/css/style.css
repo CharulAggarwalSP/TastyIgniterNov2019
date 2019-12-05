@@ -3996,3 +3996,7 @@ h1.loaderHq{
 		opacity: .25;
 	}
 }
+
+.input-group .form-control{
+	height: 44px !important;  
+}

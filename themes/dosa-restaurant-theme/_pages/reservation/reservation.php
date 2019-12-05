@@ -6,8 +6,8 @@ permalink: /reservation
 '[account]':
 
 '[booking]':
-    timePickerInterval: 180
-    timeSlotsInterval: 120
+    timePickerInterval: 60
+    timeSlotsInterval: 60
 ---
 <div class="container">
     <div class="row py-4">

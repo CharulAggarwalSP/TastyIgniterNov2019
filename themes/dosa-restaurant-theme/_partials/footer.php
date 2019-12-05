@@ -31,7 +31,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-sm-3">
+            <div class="col-sm-4">
                 <div class="footer-links">
                     <h6 class="footer-title d-none d-sm-block"><?= setting('site_name'); ?></h6>
                     <ul>

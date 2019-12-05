@@ -67,7 +67,7 @@ description: 'Local layout'
             <?php } ?>
 
             <div class="container">
-                <div class="row py-4">
+                <div class="row py-4 menu__page">
                     <div class="col-sm-2 d-none d-sm-inline-block">
                         <div class="categories affix-categories">
                             <?= component('categories'); ?>

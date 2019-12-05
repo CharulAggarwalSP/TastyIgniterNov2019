@@ -8,8 +8,9 @@
 
 <input type="hidden" name="picker_form" value="1">
 
-<div class="form-row">
-    <div class="col-sm-3 mb-3">
+<div class="form-row form-row-table">
+
+    <div class="col-sm-4 mb-3">
         <label class="sr-only" for="location">
             <?= lang('igniter.reservation::default.label_location'); ?>
         </label>
@@ -43,7 +44,7 @@
             <?php } ?>
         </select>
     </div>
-    <div class="col-sm-3 mb-3">
+    <div class="col-sm-3 col-lg-2 mb-3">
         <label class="sr-only" for="date">
             <?= lang('igniter.reservation::default.label_date'); ?>
         </label>
@@ -78,7 +79,7 @@
         </select>
     </div>
     <div class="col-sm-2 mb-3">
-        <button
+        <button style="height:100%;<style></style>"
             type="submit"
             class="btn btn-primary btn-block"
         ><?= lang('igniter.reservation::default.button_find_table'); ?></button>
