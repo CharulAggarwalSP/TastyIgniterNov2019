@@ -406,11 +406,12 @@ function onEnd()
 						<p class="para1"><?= sprintf(lang('main::lang.contact.info_text')) ?>  </p-->
 				<?php if ($contactLocation = $contact->location) { ?>
 					<div class="con-top">
-						<h4>Dosa North & South Indian Restaurant</h4>
-						<!--h4><?= $contactLocation->getName(); ?></h4-->
+						<!--h4>Dosa North & South Indian Restaurant</h4-->
+						<h4><?= $contactLocation->getName(); ?></h4>
 						<ul>
 							<li><?= format_address($contactLocation->getAddress()); ?></li>
 							<li>Phone : <?= $contactLocation->getTelephone(); ?> </li>
+							<li>Fax : <?= $contactLocation->getFax(); ?> </li>
 						</ul>
 					</div>
 				<?php } ?>

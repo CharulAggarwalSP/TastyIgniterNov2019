@@ -150,13 +150,11 @@ $config['form']['tabs'] = [
             'useAttachment' => TRUE,
             'comment' => 'lang:admin::lang.locations.help_image',
         ],
-        'location_status' => [
-            'label' => 'lang:admin::lang.label_status',
-            'type' => 'switch',
-            'default' => 1,
+        'location_fax' => [
+            'label' => 'lang:admin::lang.locations.label_fax',
+            'type' => 'text',
             'span' => 'right',
-        ],
-
+        ],        
         'address' => [
             'label' => 'lang:admin::lang.locations.text_tab_title_address',
             'type' => 'section',
@@ -202,6 +200,12 @@ $config['form']['tabs'] = [
                 1 => 'lang:admin::lang.text_yes',
                 0 => 'lang:admin::lang.text_no',
             ],
+        ],
+        'location_status' => [
+            'label' => 'lang:admin::lang.label_status',
+            'type' => 'switch',
+            'default' => 1,
+            'span' => 'left',
         ],
         'location_lat' => [
             'label' => 'lang:admin::lang.locations.label_latitude',

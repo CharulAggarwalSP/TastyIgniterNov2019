@@ -20,6 +20,10 @@ permalink: /contact
                             <div class="col-1"><i class="fa fa-phone"></i></div>
                             <div class="col"><?= $contactLocation->getTelephone(); ?></div>
                         </div>
+                        <div class="row contact-info">
+                            <div class="col-1"><i class="fa fa-fax"></i></div>
+                            <div class="col"><?= $contactLocation->getFax(); ?></div>
+                        </div>
                     </div>
                 <?php } ?>
             </div>
