@@ -97,7 +97,6 @@
 		$().UItoTop({
 			easingType: 'easeOutQuart'
 		});
-
 	});
 </script>
 <!--end-smooth-scrolling-->
@@ -109,8 +108,7 @@
 		$('#cookingLoader').show();
 	})
 
-	$(document).ajaxComplete(function() {
-	
+	$(document).ajaxComplete(function() {	
 		$('#cookingLoader').hide();
 	})
 </script>
@@ -137,4 +135,29 @@
 	        });
                 
 	});
+</script>
+<script>
+    $(document).ready(function() {
+        $('.owl-carousel').owlCarousel({
+                loop: true,
+                margin: 9,
+                responsiveClass: true,
+                responsive: {
+                  0: {
+                    items: 1,
+                    nav: true
+                  },
+                  600: {
+                    items: 3,
+                    nav: false
+                  },
+                  1000: {
+                    items: 5,
+                    nav: true,
+                    loop: false,
+                    margin: 20
+                  }
+                }
+        });
+    });
 </script>

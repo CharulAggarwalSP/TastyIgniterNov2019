@@ -77,12 +77,12 @@
                 </div>
             </div> -->
 
-            <!-- <div class="col-sm-3 mt-3 mt-sm-0">
+             <div class="col-sm-3 mt-3 mt-sm-0">
                 <div class="social-bottom">
                     <h6 class="footer-title"><?= lang('main::lang.text_follow_us'); ?></h6>
                     <?= partial('social_icons', ['socialIcons' => $this->theme->social]); ?>
                 </div>
-            </div> -->
+            </div> 
         </div>
     </div>
 </div>

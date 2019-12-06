@@ -2,12 +2,14 @@
 <div class="card mb-1">
     <div class="card-body">
         <h5 class="mb-0"><?= sprintf(lang('igniter.user::default.text_welcome'), $customer->first_name); ?></h5>
+		<span style="background: #000;color: #fff;padding: 6px 12px;display: inline-block;border-radius: 4px;font-size: 11px;margin-top: 5px;">Wifi Password :  <?= $settings['value']; ?></span>
     </div>
 </div>
 
 <div class="card-group mb-1">
     <div class="card mr-sm-1">
         <div class="card-body">
+			
             <?php if (!empty($customer->address)) { ?>
                 <h5 class="font-weight-normal">
                     <?= lang('igniter.user::default.text_default_address'); ?>
@@ -25,7 +27,7 @@
     </div>
 
     <div class="card">
-        <div class="card-body text-center">
+        <div class="card-body text-center basket_view">
             <p><i class="fa fa-shopping-basket fa-3x text-muted"></i></p>
             <?php if ($__SELF__->cartCount()) { ?>
                 <p><?= sprintf(lang('igniter.user::default.text_cart_summary'), $__SELF__->cartCount(), $__SELF__->cartTotal()); ?></p>
@@ -43,11 +45,13 @@
     </div>
 </div>
 <div class="row">
-    <span style="color: #fff;text-decoration: none;background-color: #ed561a;margin-left: 25px;">Wifi Password : <?= $settings['value']; ?></span>    
+       
 </div>
 <div class="card">
     <div class="card-body">
+		 
         <h5 class="font-weight-normal mb-3"><?= lang('igniter.user::default.text_edit_details') ?></h5>
         <?= partial('@settings'); ?>
     </div>
 </div>
+ 
