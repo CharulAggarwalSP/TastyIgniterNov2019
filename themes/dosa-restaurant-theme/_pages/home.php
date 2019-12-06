@@ -561,7 +561,7 @@ function onEnd()
 						<ul>
 							<li><?= format_address($contactLocation->getAddress()); ?></li>
 							<li>Phone : <?= $contactLocation->getTelephone(); ?> </li>
-							<li>Fax : <?= $contactLocation->getFax(); ?> </li>
+							<li>Fax : 020-6895073</li>
 						</ul>
 					</div>
 				<?php } ?>
