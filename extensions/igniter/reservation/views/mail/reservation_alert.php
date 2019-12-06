@@ -13,7 +13,7 @@ Reservation time: {reservation_time}
 
 | | |
 | -------- | -------- |
-| **Customer name**     | {first_name} {last_name}     |
+| **Customer name**     | <?= ucwords($first_name).' '.ucwords($last_name) ?>     |
 | **Reservation no**     | {reservation_number}     |
 | **Restaurant**     | {location_name}     |
 | **No of guest(s)**     | {reservation_guest_no} person(s)     |

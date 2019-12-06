@@ -6,4 +6,4 @@ Customer name: {first_name} {last_name}
 ==
 ## You have a new customer!
 
-**Customer name:** {first_name} {last_name}
+**Customer name:** <?= ucwords($first_name).' '.ucwords($last_name) ?>

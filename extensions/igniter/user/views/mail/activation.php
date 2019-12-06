@@ -8,7 +8,7 @@ Please click this link to verify your email address:
 
 {account_activation_link}
 ==
-Hi {first_name} {last_name},
+Hi <?= ucwords($first_name).' '.ucwords($last_name) ?>,
 
 ## Complete your registration with {site_name}.
 

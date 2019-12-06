@@ -22,7 +22,7 @@ Here is your form.
 
 | | |
 | -------- | -------- |
-| **From**     | {full_name}     |
+| **From**     | <?= ucwords($full_name) ?>     |
 | **Subject**     | {contact_topic}     |
 | **E-mail**     | {contact_email}     |
 | **Telephone**     | {contact_telephone}     |

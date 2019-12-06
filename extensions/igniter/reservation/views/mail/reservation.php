@@ -8,7 +8,7 @@ Your reservation {reservation_number} at {location_name} has been booked for {re
 
 Thanks for reserving with us online!
 ==
-Hi {first_name} {last_name},
+Hi <?= ucwords($first_name).' '.ucwords($last_name) ?>,
 
 ## Thank you for your reservation!
 

@@ -9,7 +9,7 @@ Please login using your new password:
 
 If you think this password update was a mistake, reset your password immediately.
 ==
-Hi {first_name} {last_name},
+Hi <?= ucwords($first_name).' '.ucwords($last_name) ?>,
 
 ## Your password was changed successfully!
 

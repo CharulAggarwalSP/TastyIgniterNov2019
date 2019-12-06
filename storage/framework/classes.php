@@ -262,4 +262,5 @@
   'Admin\\ActivityTypes\\OrderStatusUpdated' => 'app/admin/activitytypes/OrderStatusUpdated.php',
   'Admin\\ActivityTypes\\ReservationAssigned' => 'app/admin/activitytypes/ReservationAssigned.php',
   'Admin\\ActivityTypes\\ReservationStatusUpdated' => 'app/admin/activitytypes/ReservationStatusUpdated.php',
+  'Admin\\Models\\Payment_logs_model' => 'app/admin/models/Payment_logs_model.php',
 );

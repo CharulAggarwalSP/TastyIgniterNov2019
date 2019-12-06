@@ -37,7 +37,7 @@ Restaurant: {location_name}
 {/order_totals}
 
 ==
-Hi {first_name} {last_name},
+Hi <?= ucwords($first_name).' '.ucwords($last_name) ?>,
 
 ## Thank you for your order!
 
