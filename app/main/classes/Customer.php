@@ -53,12 +53,7 @@ class Customer extends \Igniter\Flame\Auth\Manager
     public function getTelephone()
     {
         return $this->user->telephone;
-    }
-    
-    public function getFax()
-    {
-        return $this->user->fax;
-    }
+    }    
 
     public function getAddressId()
     {
