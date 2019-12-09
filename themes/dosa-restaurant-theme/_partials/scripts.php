@@ -1,6 +1,6 @@
 <?= get_script_tags(); ?>
 <?= $this->theme->ga_tracking_code; ?>
-<?= '<script type="text/javascript" src="' . assets_url() . '/vd-theme/js/jquery-1.11.1.min.js"' . '></script>'; ?>
+<!--?= '<script type="text/javascript" src="' . assets_url() . '/vd-theme/js/jquery-1.11.1.min.js"' . '></script>'; ?-->
 <?= '<script type="text/javascript" src="' . assets_url() . '/vd-theme/js/move-top.js"' . '></script>'; ?>
 <?= '<script type="text/javascript" src="' . assets_url() . '/vd-theme/js/easing.js"' . '></script>'; ?>
 <?= '<script type="text/javascript" src="' . assets_url() . '/vd-theme/js/jquery.swipebox.min.js"' . '></script>'; ?>
