@@ -82,7 +82,7 @@
         <?= form_error('telephone', '<span class="text-danger">', '</span>'); ?>
     </div>
 
-    <div class="form-group">
+    <!--div class="form-group">
         <div class="custom-control custom-checkbox">
             <input
                 id="newsletter"
@@ -96,7 +96,7 @@
             </label>
         </div>
         <?= form_error('newsletter', '<span class="text-danger">', '</span>'); ?>
-    </div>
+    </div-->
 
     <?php if ($requireRegistrationTerms) { ?>
         <div class="form-group">

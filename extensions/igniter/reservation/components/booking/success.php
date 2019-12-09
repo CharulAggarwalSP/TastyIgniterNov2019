@@ -1,6 +1,6 @@
 <p>
     <?= sprintf(lang('igniter.reservation::default.text_greetings'),
-        $reservation->first_name.' '.$reservation->last_name); ?>
+        ucwords($reservation->first_name).' '.ucwords($reservation->last_name)); ?>
 </p>
 
 <p>
