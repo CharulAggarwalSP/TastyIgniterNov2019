@@ -2,7 +2,7 @@
     <div class="card mb-1">
         <div class="card-body">
             <h2 class="h4 font-weight-normal"><?= lang('igniter.cart::default.checkout.text_delivery_address'); ?></h2>
-            <b><?= $order->customer_name; ?></b><br>
+            <b><?= ucwords($order->customer_name); ?></b><br>
             <?= format_address($order->address); ?>
         </div>
     </div>
