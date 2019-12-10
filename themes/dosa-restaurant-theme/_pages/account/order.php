@@ -1,6 +1,6 @@
 ---
 title: main::lang.account.orders.title
-layout: default
+layout: layout
 permalink: /account/order/:hash?
 
 '[account]':
