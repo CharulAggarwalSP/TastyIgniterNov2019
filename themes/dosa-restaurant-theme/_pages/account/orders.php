@@ -1,6 +1,6 @@
 ---
 title: main::lang.account.orders.title
-layout: account
+layout: layout
 permalink: /account/orders/:orderId?
 
 '[accountOrders]':
