@@ -1,6 +1,6 @@
 ---
 title: main::lang.checkout.success.title
-layout: default
+layout: layout
 permalink: /checkout/success/:hash?
 
 '[orderPage]':
