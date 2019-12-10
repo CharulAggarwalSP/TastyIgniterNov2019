@@ -41,9 +41,10 @@
         </div>
         <div class="form-group">
             <input
-                type="text"
+                type="tel"
                 name="telephone"
                 class="form-control"
+				pattern="[0-9 -+()]{4,15}"
                 value="<?= set_value('telephone'); ?>"
                 placeholder="<?= lang('igniter.frontend::default.contact.label_telephone'); ?>"/>
             <?= form_error('telephone', '<span class="text-danger">', '</span>'); ?>

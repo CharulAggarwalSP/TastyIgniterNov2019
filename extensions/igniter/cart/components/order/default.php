@@ -21,7 +21,7 @@
         </div>
     <?php } ?>
 
-    <div class="row no-gutters">
+    <div class="row">
         <div class="col-sm-7 pr-sm-1">
             <div class="card mb-1">
                 <div class="card-body">

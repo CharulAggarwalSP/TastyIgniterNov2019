@@ -5044,3 +5044,36 @@ background: none !important
 	height:200px !important;
 	object-fit:cover !important
 } 
+
+.contact-in {
+    margin-top: 4.8em !important;
+}
+@media(max-width:1024px) and (min-width:768px){
+	.menu-group .menu-group-item .category-title {
+		padding: 15px 0;
+		margin-bottom: 0;
+		font-size: 14px;
+	}
+	.cart-coupon .input-group .form-control {
+		flex: 1;
+		width: auto;
+		flex: 0 0 70%;
+		max-width: initial;
+		max-width: 81%;
+	}
+}
+
+@media(max-width:767px) {
+	.menu-group .menu-group-item .category-title {
+		padding: 15px 0;
+		margin-bottom: 0;
+		font-size: 14px;
+	}
+	.cart-coupon .input-group .form-control {
+		flex: 1;
+		width: auto;
+		flex: 0 0 70%;
+		max-width: initial;
+		max-width: 81%;
+	}
+}
