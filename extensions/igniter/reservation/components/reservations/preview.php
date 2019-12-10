@@ -27,7 +27,7 @@
         </tr>
         <tr>
             <td><b><?= lang('admin::lang.label_name'); ?>:</b></td>
-            <td><?= ucwords($customerReservation->first_name) . ' ' . icwords($customerReservation->last_name); ?></td>
+            <td><?= ucwords($customerReservation->first_name) . ' ' . ucwords($customerReservation->last_name); ?></td>
         </tr>
         <tr>
             <td><b><?= lang('admin::lang.label_email'); ?>:</b></td>
