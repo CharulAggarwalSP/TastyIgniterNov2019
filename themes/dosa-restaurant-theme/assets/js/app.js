@@ -195,6 +195,9 @@ if (window.jQuery.request !== undefined)
                     options.fireSuccess && eval('(function($el, context, data, textStatus, jqXHR) {' + options.fireSuccess + '}.call($el.get(0), $el, context, data, textStatus, jqXHR))')
                 })
 
+                if (this.handler === 'accountAddressBook::onSubmit' && typeof window.location.pathname.split("/")[4] === 'undefined')
+                    location.reload();
+
                 return updatePromise
             },
             error: function (jqXHR, textStatus, errorThrown) {
@@ -326,6 +329,10 @@ if (window.jQuery.request !== undefined)
             $form.submit()
             return;
         }
+
+        if (window.location.pathname.split('/').pop() !== "menus")
+            $(window).ajaxStart(() => $('#cookingLoader').show());
+        $(window).ajaxStop(() => $('#cookingLoader').hide());
 
         $(window).trigger('ajaxBeforeSend', [context])
         $el.trigger('ajaxPromise', [context])

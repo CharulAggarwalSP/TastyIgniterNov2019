@@ -112,15 +112,6 @@
 <?php if (!empty($this->theme->custom_js)) { ?>
     <?= '<script type="text/javascript">'.$this->theme->custom_js.'</script>' ?>
 <?php } ?>
-<script>
-	$(document).ajaxStart(function() {			
-		$('#cookingLoader').show();
-	})
-
-	$(document).ajaxComplete(function() {	
-		$('#cookingLoader').hide();
-	})
-</script>
 <script type="text/javascript">
 	document.addEventListener('scroll', function() {
 		if ($(this).scrollTop() == 0) {

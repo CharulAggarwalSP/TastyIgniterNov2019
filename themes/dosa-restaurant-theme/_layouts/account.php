@@ -15,7 +15,25 @@ description: Account layout
     <?= partial('head'); ?>
 </head>
 <body class="<?= $this->page->bodyClass; ?> inner_pages">
-
+    <div id="cookingLoader" style="display:none">
+        <!--h1 class="loaderHq">Cooking in progress..</h1 -->
+        <div id="cooking">
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div id="area">
+                <div id="sides">
+                    <div id="pan"></div>
+                    <div id="handle"></div>
+                </div>
+                <div id="pancake">
+                    <div id="pastry"></div>
+                </div>
+            </div>
+        </div>
+    </div>
     <header class="header">
         <?= partial('nav/menu_inner'); ?>
     </header>
