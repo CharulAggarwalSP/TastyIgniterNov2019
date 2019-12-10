@@ -1,6 +1,6 @@
 ---
 title: main::lang.contact.title
-layout: default
+layout: layout
 permalink: /contact
 
 '[contact]':
