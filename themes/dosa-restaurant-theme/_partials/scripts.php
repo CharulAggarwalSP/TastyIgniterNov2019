@@ -7,9 +7,19 @@
 <?= '<script type="text/javascript" src="' . assets_url() . '/vd-theme/js/owl.carousel.js"' . '></script>'; ?>
 <?= '<script type="text/javascript" src="' . assets_url() . '/vd-theme/js/responsiveslides.min.js"' . '></script>'; ?>
 <?= '<script type="text/javascript" src="' . assets_url() . '/vd-theme/js/wow.min.js"' . '></script>'; ?>
-<!--/script-->
+<?php 
+	/* Script file does not want to include on menu page, but we want toinclude on address book page */
+	$param = explode('/',$_SERVER['REQUEST_URI']);
+	
+	if(count($param) > 3){		
+		if($param[3] === 'address'){
+			echo '<script type="text/javascript" src="' . assets_url() . '/vd-theme/js/bootstrap.min.js"' . '></script>';
+		}
+	}
+?>
 <script type="text/javascript">
-	jQuery(document).ready(function($) {
+	jQuery(document).ready(function($) {		
+    
 		$(".scroll").click(function(event) {
 			event.preventDefault();
 			$('html,body').animate({
@@ -121,7 +131,7 @@
 				$('.header-bottom').addClass("custom-class")
 		}
 	})
-	$(document).ready(function(){
+	$(document).ready(function(){		
 	        $('.delete_btn_address').on('click',function(){
 	            var id = $(this).attr('data-id'); 
 	            $('#deleteModal').modal('show');          
