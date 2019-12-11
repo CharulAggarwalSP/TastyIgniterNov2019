@@ -37,10 +37,10 @@
             </div>
         <?php } ?>
         <?php if ($locationCurrent->hasDelivery()) { ?>
-            <div class="list-group-item">
+            <!--div class="list-group-item">
                 <?= lang('igniter.local::default.text_last_order_time'); ?>&nbsp;
                 <?= $location->lastOrderTime()->isoFormat($lastOrderTimeFormat); ?>
-            </div>
+            </div-->
         <?php } ?>
         <?php if ($localPayments->isNotEmpty()) { ?>
             <div class="list-group-item">
