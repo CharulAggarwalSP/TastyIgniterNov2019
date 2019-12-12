@@ -202,6 +202,6 @@ return [
         'button_view_order' => 'View/Reorder',
         'button_back' => 'Back',
 
-        'alert_reorder_success' => 'You have successfully added the menus from order ID %s to your order.',
+        'alert_reorder_success' => 'You have successfully added the items from order ID %s to your order.',
     ],
 ];
