@@ -43,7 +43,7 @@ return [
     'text_delivery_map' => 'Delivery Map',
     'text_working_hour' => '(%s - %s)',
 
-    'text_categories' => 'Categories',
+    'text_categories' => 'All Categories',
     'text_view_categories' => 'View categories',
     'text_clear' => 'Clear Selection',
     'text_show_all' => 'Show All',
