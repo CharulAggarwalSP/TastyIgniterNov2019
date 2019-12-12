@@ -1,7 +1,7 @@
 <div id="local-box" class="custom__local">
     <div class="panel local-search">
         <div class="panel-body">
-            <div class="row">
+            <div class="row" style="display:none">
                 <div class="col-sm-<?= ($hideSearch) ? '12' : '4' ?>">
                     <div
                         id="local-timeslot"
