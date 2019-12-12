@@ -6,7 +6,7 @@
                 name="payment"
                 value="">
             <div class="form-group">
-                <label for=""><?= lang('igniter.cart::default.checkout.label_payment_method'); ?></label><br/>
+                <label for=""><?= lang('igniter.cart::default.checkout.label_payment_method'); ?></label><span>*</span><br/>
                 <div class="list-group">
                     <?php foreach ($paymentGateways as $paymentGateway) { ?>
                         <div class="list-group-item">

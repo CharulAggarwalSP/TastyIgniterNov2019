@@ -1,7 +1,7 @@
 <div class="row">
     <div class="col-sm-6">
         <div class="form-group">
-            <label for="first-name"><?= lang('igniter.cart::default.checkout.label_first_name'); ?></label>
+            <label for="first-name"><?= lang('igniter.cart::default.checkout.label_first_name'); ?></label><span>*</span>
             <input
                 type="text"
                 name="first_name"
@@ -13,7 +13,7 @@
     </div>
     <div class="col-sm-6">
         <div class="form-group">
-            <label for="last-name"><?= lang('igniter.cart::default.checkout.label_last_name'); ?></label>
+            <label for="last-name"><?= lang('igniter.cart::default.checkout.label_last_name'); ?></label><span>*</span>
             <input
                 type="text"
                 name="last_name"
@@ -28,7 +28,7 @@
 <div class="row">
     <div class="col-sm-6">
         <div class="form-group">
-            <label for="email"><?= lang('igniter.cart::default.checkout.label_email'); ?></label>
+            <label for="email"><?= lang('igniter.cart::default.checkout.label_email'); ?></label><span>*</span>
             <input
                 type="text"
                 name="email"
@@ -41,7 +41,7 @@
     </div>
     <div class="col-sm-6">
         <div class="form-group">
-            <label for="telephone"><?= lang('igniter.cart::default.checkout.label_telephone'); ?></label>
+            <label for="telephone"><?= lang('igniter.cart::default.checkout.label_telephone'); ?></label><span>*</span>
             <input
                 type="text"
                 name="telephone"

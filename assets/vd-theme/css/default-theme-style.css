@@ -47,10 +47,7 @@
     font-family: 'Italianno', cursive;
   }
 
-  p {
-    margin: 0;
-
-  }
+ 
 
   ul {
     margin : 0;
@@ -4888,7 +4885,8 @@ background: none !important
     }
 
     #contact-form .row [class*="col"] {
-      padding: 0
+      padding: 0;
+	  max-width:100%
     }
 
     .footer .main-footer [class*="col"] {
@@ -5074,6 +5072,22 @@ background: none !important
 		width: auto;
 		flex: 0 0 70%;
 		max-width: initial;
-		max-width: 81%;
+		max-width: 78%;
 	}
+}
+
+#contact-form .text-danger{
+	text-align: left !important;
+width: 100% !important;
+display: block;
+}
+main[role="main"]{
+	min-height: calc(100vh - 470px);
+}
+
+#page-wrapper .flex-column .nav-link {
+	display: flex;
+	padding: 0;
+	padding-bottom: 0px;
+	padding-bottom: 18px;
 }

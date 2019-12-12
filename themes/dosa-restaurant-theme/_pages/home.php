@@ -236,7 +236,7 @@ function onEnd()
 		</div>
 	</div-->
 	<!--end-team section-->		
-	<!--Gallery-->
+	<!--Gallery web-->
 	<div class="gallery d-none d-md-block" id="gallery"> 
 		<div class="container">
 		<h3 class="tittle"><?= sprintf(lang('main::lang.local.text_tab_gallery')) ?></h3>
@@ -374,14 +374,8 @@ function onEnd()
 			</div>
 		</div>
 	</div>
-	
-	
-	
-	
-	
-	
-	
-	<div class="gallery gallery_mobile d-block d-md-none" id="gallery">
+	<!--Gallery mobile-->
+	<div class="gallery gallery_mobile d-block d-md-none" id="gallery1">
 		<div class="container">
 		<h3 class="tittle"><?= sprintf(lang('main::lang.local.text_tab_gallery')) ?></h3>
 		<div class="arrows-serve"><img src=<?= '"' . assets_url(); ?>/vd-theme/images/border.png" alt="border"></div>
