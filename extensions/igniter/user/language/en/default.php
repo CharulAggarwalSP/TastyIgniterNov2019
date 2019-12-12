@@ -11,7 +11,7 @@ return [
     'text_reservations' => 'Recent Reservations',
     'text_inbox' => 'My Inbox',
     'text_welcome' => 'Welcome %s',
-    'text_cart_summary' => 'You have %s items: %s',
+    'text_cart_summary' => 'You have %s item(s): %s',
     'text_change_password' => 'Change Password',
     'text_order' => 'ORDER NOW',
     'text_checkout' => 'CHECKOUT NOW',
