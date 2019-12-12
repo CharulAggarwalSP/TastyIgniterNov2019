@@ -264,4 +264,5 @@
   'Admin\\ActivityTypes\\ReservationStatusUpdated' => 'app/admin/activitytypes/ReservationStatusUpdated.php',
   'Admin\\Models\\Payment_logs_model' => 'app/admin/models/Payment_logs_model.php',
   'Igniter\\Local\\Classes\\CoveredAreaCondition' => 'extensions/igniter/local/classes/CoveredAreaCondition.php',
+  'Admin\\Requests\\Customer' => 'app/admin/requests/Customer.php',
 );

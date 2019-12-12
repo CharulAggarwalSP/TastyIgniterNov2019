@@ -11,7 +11,7 @@ return [
     'text_reservations' => 'Recent Reservations',
     'text_inbox' => 'My Inbox',
     'text_welcome' => 'Welcome %s',
-    'text_cart_summary' => 'You have %s items: %s',
+    'text_cart_summary' => 'You have %s item(s): %s',
     'text_change_password' => 'Change Password',
     'text_order' => 'ORDER NOW',
     'text_checkout' => 'CHECKOUT NOW',
@@ -52,7 +52,7 @@ return [
         'label_remember' => 'Remember me',
         'label_activation' => 'Activation Code',
         'label_newsletter' => 'Keep me up-to-date with offers by email.',
-        'label_terms' => 'By clicking Register, you agree to the <a target="_blank" href="%s">Terms and Conditions</a> set out by this site, including our Cookie Use.',
+        'label_terms' => 'By clicking Register, you agree to the Terms and Conditions set out by this site, including our Cookie Use.',
         'label_i_agree' => 'I Agree',
         'label_subscribe' => 'Subscribe',
 

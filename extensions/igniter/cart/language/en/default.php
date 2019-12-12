@@ -144,7 +144,7 @@ return [
         'label_delivery' => 'Delivery',
         'label_collection' => 'Pick-up',
         'label_payment_method' => 'Payment Method',
-        'label_terms' => 'By clicking Register, you agree to the <a target="_blank" href="%s">Terms and Conditions</a> set out by this site, including our Cookie Use.',
+        'label_terms' => 'By clicking Register, you agree to the Terms and Conditions set out by this site, including our Cookie Use.',
         'label_comment' => 'Add Comments',
         'label_ip' => 'IP Address',
         'label_checkout_terms' => 'Checkout Terms',
@@ -158,7 +158,6 @@ return [
         'error_covered_area' => 'This restaurant currently does not deliver to your address',
         'error_delivery_less_current_time' => 'The %s Time can not be less than current time!',
         'error_invalid_payment' => 'The selected payment is invalid, please contact us',
-
         'alert_no_menu_to_order' => 'Please add item in your cart',
         'alert_no_selected_local' => 'Please select your local restaurant<',
         'alert_location_closed' => 'Sorry, you can\'t place an order now, we are currently closed,<br /> please come back later during our opening times.',
@@ -202,6 +201,6 @@ return [
         'button_view_order' => 'View/Reorder',
         'button_back' => 'Back',
 
-        'alert_reorder_success' => 'You have successfully added the menus from order ID %s to your order.',
+        'alert_reorder_success' => 'You have successfully added the items from order ID %s to your order.',
     ],
 ];
