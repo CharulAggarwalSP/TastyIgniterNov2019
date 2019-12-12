@@ -158,8 +158,7 @@ return [
         'error_covered_area' => 'This restaurant currently does not deliver to your address',
         'error_delivery_less_current_time' => 'The %s Time can not be less than current time!',
         'error_invalid_payment' => 'The selected payment is invalid, please contact us',
-
-        'alert_no_menu_to_order' => 'Please, add some items before you checkout!',
+        'alert_no_menu_to_order' => 'Please add item in your cart',
         'alert_no_selected_local' => 'Please select your local restaurant<',
         'alert_location_closed' => 'Sorry, you can\'t place an order now, we are currently closed,<br /> please come back later during our opening times.',
         'alert_no_delivery_time' => 'The selected time is outside our opening hours',
