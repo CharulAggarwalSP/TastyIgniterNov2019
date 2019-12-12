@@ -31,7 +31,7 @@
             name="password"
             id="login-password"
             class="form-control input-lg"
-            placeholder="<?= lang('igniter.user::default.settings.label_password'); ?>"
+            placeholder="<?= lang('igniter.user::default.login.label_password'); ?>"
             required
         />
         <span class="input-group-addon">
