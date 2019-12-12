@@ -144,7 +144,7 @@ return [
         'label_delivery' => 'Delivery',
         'label_collection' => 'Pick-up',
         'label_payment_method' => 'Payment Method',
-        'label_terms' => 'By clicking Register, you agree to the <a target="_blank" href="%s">Terms and Conditions</a> set out by this site, including our Cookie Use.',
+        'label_terms' => 'By clicking Register, you agree to the Terms and Conditions set out by this site, including our Cookie Use.',
         'label_comment' => 'Add Comments',
         'label_ip' => 'IP Address',
         'label_checkout_terms' => 'Checkout Terms',
