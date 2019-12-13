@@ -1,6 +1,6 @@
 ---
 title: main::lang.checkout.title
-layout: default
+layout: layout
 permalink: /checkout
 
 '[account]':

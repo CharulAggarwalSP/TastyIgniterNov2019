@@ -33,6 +33,13 @@ return [
     'label_send_to' => 'Send To',
     'label_send_to_staff_group' => 'Send To Staff Group',
     'label_send_to_custom' => 'Send To Email Address',
+    'label_password' => 'Password',
+    'label_password_confirm' => 'Password Confirm',
+    'label_email' => 'Email Address',
+    'label_first_name' => 'First Name',
+    'label_last_name' => 'Last Name',
+    'label_email' => 'Email Address',
+    'label_telephone' => 'Telephone',
 
     'column_date' => 'Date/Time',
     'column_subject' => 'Subject',

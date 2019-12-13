@@ -46,7 +46,7 @@
     <div class="row">
         <div class="col-sm-6">
             <div class="form-group">
-                <label for=""><?= lang('igniter.cart::default.checkout.label_address_1'); ?></label>
+                <label for=""><?= lang('igniter.cart::default.checkout.label_address_1'); ?></label><span>*</span>
                 <input
                     type="text"
                     name="address[address_1]"
@@ -70,7 +70,7 @@
     <div class="row">
         <div class="col-sm-4">
             <div class="form-group">
-                <label for=""><?= lang('igniter.cart::default.checkout.label_city'); ?></label>
+                <label for=""><?= lang('igniter.cart::default.checkout.label_city'); ?></label><span>*</span>
                 <input
                     type="text"
                     name="address[city]"
@@ -92,7 +92,7 @@
         </div>
         <div class="col-sm-4">
             <div class="form-group">
-                <label for=""><?= lang('igniter.cart::default.checkout.label_postcode'); ?></label>
+                <label for=""><?= lang('igniter.cart::default.checkout.label_postcode'); ?></label><span>*</span>
                 <input
                     type="text"
                     name="address[postcode]"

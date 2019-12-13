@@ -43,10 +43,10 @@
     </div>
 <?php } ?>
 
-<div class="form-group">
+<!--div class="form-group">
     <label for=""><?= lang('igniter.cart::default.checkout.label_ip'); ?></label>
     <?= $order->ip_address; ?><br/>
     <small><?= lang('igniter.cart::default.checkout.text_ip_warning'); ?></small>
-</div>
+</div-->
 
 <?= form_close(); ?>
