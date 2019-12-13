@@ -195,8 +195,8 @@ if (window.jQuery.request !== undefined)
                     options.fireSuccess && eval('(function($el, context, data, textStatus, jqXHR) {' + options.fireSuccess + '}.call($el.get(0), $el, context, data, textStatus, jqXHR))')
                 })
 
-                if (this.handler === 'accountAddressBook::onSubmit' && typeof window.location.pathname.split("/")[4] === 'undefined')
-                    location.reload();
+                // if (this.handler === 'accountAddressBook::onSubmit' && typeof window.location.pathname.split("/")[4] === 'undefined')
+                //     location.reload();
 
                 return updatePromise
             },

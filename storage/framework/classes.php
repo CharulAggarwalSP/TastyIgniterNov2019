@@ -265,4 +265,10 @@
   'Admin\\Models\\Payment_logs_model' => 'app/admin/models/Payment_logs_model.php',
   'Igniter\\Local\\Classes\\CoveredAreaCondition' => 'extensions/igniter/local/classes/CoveredAreaCondition.php',
   'Admin\\Requests\\Customer' => 'app/admin/requests/Customer.php',
+  'Admin\\FormWidgets\\RecordEditor' => 'app/admin/formwidgets/RecordEditor.php',
+  'Admin\\FormWidgets\\Connector' => 'app/admin/formwidgets/Connector.php',
+  'Admin\\Models\\Menu_options_model' => 'app/admin/models/Menu_options_model.php',
+  'Admin\\Requests\\Menu' => 'app/admin/requests/Menu.php',
+  'Admin\\Requests\\Coupon' => 'app/admin/requests/Coupon.php',
+  'Igniter\\Cart\\Models\\Coupons_model' => 'extensions/igniter/cart/models/Coupons_model.php',
 );

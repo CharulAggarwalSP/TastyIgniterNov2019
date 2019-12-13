@@ -78,6 +78,7 @@ return [
         'alert_registration_disabled' => 'Registration is currently disabled by the site administrator.',
 
         'activity_registered_account' => ' <b>created</b> an account.',
+        'alert_disabled_user_login' => 'Unable to login the disabled user.'
     ],
 
     'session' => [

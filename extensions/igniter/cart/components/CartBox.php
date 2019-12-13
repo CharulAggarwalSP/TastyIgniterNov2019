@@ -205,7 +205,7 @@ class CartBox extends \System\Classes\BaseComponent
 
     public function onApplyCoupon()
     {
-        try {
+        try {        	
             $this->cartManager->applyCouponCondition(post('code'));
 
             $this->controller->pageCycle();
