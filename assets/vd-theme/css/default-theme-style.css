@@ -5091,3 +5091,34 @@ main[role="main"]{
 	padding-bottom: 0px;
 	padding-bottom: 18px;
 }
+  
+.label-light{
+	color:#000;
+display: inline-block;
+}
+
+[data-control="cart-item"] .input-group{
+	display: flex;
+}
+[data-control="cart-item"] .input-group .form-control{
+	flex: 0 0 40%;
+	max-width: 40%;
+}
+[data-control="cart-item"] .btn-block{
+	padding-right: 40px !important;
+	padding-left: 40px !important;
+	height: 100%;
+}
+[data-control="cart-item"] .input-group .btn-block .pull-right{
+	float:none
+}
+[data-control="cart-item"] .modal-footer{
+	display: flex;
+	justify-content: center;
+}
+@media(max-width:767px){
+	[data-control="cart-item"] .input-group {
+    display: flex;
+    justify-content: center;
+}
+}
