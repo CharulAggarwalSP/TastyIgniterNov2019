@@ -41,7 +41,7 @@ class AddressBook extends \System\Classes\BaseComponent
             ['address.city', 'lang:igniter.user::default.account.label_city', 'required|min:2|max:128'],
             ['address.state', 'lang:igniter.user::default.account.label_state', 'max:128'],
             ['address.postcode', 'lang:igniter.user::default.account.label_postcode', 'min:2|max:11]'],
-            ['address.country', 'lang:igniter.user::default.account.label_country', 'required|integer'],
+            ['address.country_id', 'lang:igniter.user::default.account.label_country', 'required|integer'],
         ];
 
         if (!$this->validatePasses($data, $rules))
@@ -67,6 +67,8 @@ class AddressBook extends \System\Classes\BaseComponent
                 $this->property('redirectPage', 'account/address'),
                 ['addressId' => null]
             ));
+        else
+            return Redirect::back();
 
         $this->pageCycle();
 
@@ -117,7 +119,7 @@ class AddressBook extends \System\Classes\BaseComponent
     {
         if (!$customer = Auth::customer())
             return [];
-
+        // echo '<pre>';print_r($customer);echo '</pre>';die;
         return $customer->addresses()->listFrontEnd([
             'page' => $this->param('page'),
             'pageLimit' => $this->property('itemsPerPage'),

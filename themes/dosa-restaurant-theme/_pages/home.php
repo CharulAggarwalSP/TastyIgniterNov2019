@@ -536,7 +536,7 @@ function onEnd()
 	<!--/contact-->
 	<div class="section-contact" id="contact">
 		<div class="container">
-			<div class="contact-main">
+			<div class="contact-main" id="contact-main">
 				<div class="col-md-6 contact-grid wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
 					<h3 class="tittle wow bounceIn" data-wow-duration=".8s" data-wow-delay=".2s"><?= sprintf(lang('main::lang.menu_contact')) ?></h3>
 					<div class="arrows-three"><img src=<?= '"' . assets_url(); ?>/vd-theme/images/border.png" alt="border"></div>
@@ -574,3 +574,9 @@ function onEnd()
 	</div>
 	<!--//contact-->
 	<!--end-content section-->
+	<script type="text/javascript">
+		window.onload = function(){
+			if("<?= session()->has('errors') ?>")
+				document.getElementById("contact-main").scrollIntoView()
+		}
+	</script>
