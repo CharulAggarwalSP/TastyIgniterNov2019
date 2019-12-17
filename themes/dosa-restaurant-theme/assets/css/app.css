@@ -7301,8 +7301,7 @@ a.close.disabled {
 .fa-chevron-circle-up:before {
   content: "\f139"; }
 
-.fa-chevron-down:before, .menu-group .menu-group-item .category-title.collapsed .collapse-toggle:before {
-  content: "\f078"; }
+
 
 .fa-chevron-left:before {
   content: "\f053"; }
@@ -7312,6 +7311,9 @@ a.close.disabled {
 
 .fa-chevron-up:before, .menu-group .menu-group-item .category-title .collapse-toggle:before {
   content: "\f077"; }
+  
+  .fa-chevron-down:before, .menu-group .menu-group-item .category-title.collapsed .collapse-toggle:before {
+  content: "\f078"; }
 
 .fa-child:before {
   content: "\f1ae"; }

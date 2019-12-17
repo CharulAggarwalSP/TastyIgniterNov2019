@@ -44,7 +44,7 @@
   h5,
   h6 {
     margin     : 0;
-    font-family: 'Italianno', cursive;
+     
   }
 
  
@@ -68,6 +68,7 @@
     -ms-background-size    : cover;
     min-height             : 800px;
     position               : relative;
+	background-position: center center;
   }
 
   .banner:before {
@@ -4641,13 +4642,16 @@ background: none !important
   }
 
   #cooking #area {
-    position        : absolute;
-    bottom          : 0;
-    right           : 0;
-    width           : 50%;
-    height          : 50%;
-    background-color: transparent;
-    transform-origin: 15% 60%;
+    position: absolute;
+bottom: 0;
+right: 0;
+width: 50%;
+height: 50%;
+background-color:
+transparent;
+transform-origin: 15% 60%;
+left: 0;
+margin: auto;
   }
 
   #cooking #area #sides {
@@ -5121,4 +5125,19 @@ display: inline-block;
     display: flex;
     justify-content: center;
 }
+}
+	
+	
+#gallery1{
+	text-align:center;
+	margin:40px 0;
+}
+
+@media(max-width:767px){
+	.card.my-account .card-body{
+		padding:0px;
+	}
+	.card.my-account .card-body .form-control{
+		font-size:12px;
+	}
 }

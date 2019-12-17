@@ -575,8 +575,8 @@ function onEnd()
 	<!--//contact-->
 	<!--end-content section-->
 	<script type="text/javascript">
-		window.onload = function(){
+		document.addEventListener("DOMContentLoaded", function(){
 			if("<?= session()->has('errors') ?>")
 				document.getElementById("contact-main").scrollIntoView()
-		}
+		}); 
 	</script>

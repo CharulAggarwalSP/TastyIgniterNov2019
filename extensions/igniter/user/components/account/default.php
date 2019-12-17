@@ -47,7 +47,7 @@
 <div class="row">
        
 </div>
-<div class="card">
+<div class="card my-account">
     <div class="card-body">
 		 
         <h5 class="font-weight-normal mb-3"><?= lang('igniter.user::default.text_edit_details') ?></h5>
