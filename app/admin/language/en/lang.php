@@ -556,6 +556,7 @@ return [
         'alert_success_logout' => 'You are now logged out.',
         'alert_email_sent' => 'We\'ve sent a password reset link to your email.',
         'alert_email_not_sent' => 'The e-mail could not be sent. Possible reason: your host may have disabled the mail() function.',
+        'alert_email_not_exist' => 'The e-mail address does not exist.'
     ],
 
     'mealtimes' => [
@@ -919,8 +920,8 @@ return [
         'column_min_capacity' => 'Minimum Capacity',
         'column_capacity' => 'Maximum Capacity',
 
-        'label_min_capacity' => 'Minimum',
-        'label_capacity' => 'Capacity',
+        'label_min_capacity' => 'Minimum Capacity',
+        'label_capacity' => 'Maximum Capacity',
 
         'error_capacity' => 'The Maximum capacity value must be greater than minimum capacity value.',
     ],

@@ -151,7 +151,7 @@ return [
         'label_last_name' => 'Last Name',
         'label_email' => 'Email Address',
         'label_password' => 'New Password',
-        'label_password_confirm' => 'New Password Confirm',
+        'label_password_confirm' => 'Confirm Password ',
         'label_old_password' => 'Old Password',
         'label_telephone' => 'Telephone',
         'label_s_question' => 'Security Question',

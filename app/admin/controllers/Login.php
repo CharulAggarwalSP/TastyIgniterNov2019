@@ -62,7 +62,7 @@ class Login extends \Admin\Classes\AdminController
 
     protected function _resetPassword()
     {
-        if ($this->validateResetForm()) {
+        if ($this->validateResetForm()) {            
             if (!$code = input('code')) {
                 $staff = Staffs_model::whereStaffEmail(post('email'))->first();
                 $user = $staff->user;
@@ -108,6 +108,9 @@ class Login extends \Admin\Classes\AdminController
             flash()->danger($error);
 
             return $this->redirect(current_url());
+        }else{            
+            $error = lang('admin::lang.login.alert_email_not_exist');
+            flash()->danger($error);
         }
     }
 
