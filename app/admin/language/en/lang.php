@@ -200,6 +200,7 @@ return [
         'text_title' => 'Categories',
         'text_form_name' => 'Category',
         'text_filter_search' => 'Search by name.',
+        'text_filter_status' => 'Status',
         'text_empty' => 'There are no categories available.',
 
         'column_parent' => 'Parent',

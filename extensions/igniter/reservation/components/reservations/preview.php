@@ -10,10 +10,10 @@
                 <?= $customerReservation->reserve_date->setTimeFromTimeString($customerReservation->reserve_time)->isoFormat($reservationDateTimeFormat); ?>
             </td>
         </tr>
-        <tr>
+        <!--tr>
             <td><b><?= lang('igniter.reservation::default.reservations.column_table'); ?>:</b></td>
             <td><?= $customerReservation->related_table ? $customerReservation->related_table->table_name : null; ?></td>
-        </tr>
+        </tr-->
         <tr>
             <td><b><?= lang('igniter.reservation::default.reservations.column_guest'); ?>:</b></td>
             <td><?= $customerReservation->guest_num; ?></td>
