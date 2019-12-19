@@ -271,4 +271,5 @@
   'Admin\\Requests\\Menu' => 'app/admin/requests/Menu.php',
   'Admin\\Requests\\Coupon' => 'app/admin/requests/Coupon.php',
   'Igniter\\Cart\\Models\\Coupons_model' => 'extensions/igniter/cart/models/Coupons_model.php',
+  'Igniter\\Pages\\Components\\SitePage' => 'extensions/igniter/pages/components/SitePage.php',
 );

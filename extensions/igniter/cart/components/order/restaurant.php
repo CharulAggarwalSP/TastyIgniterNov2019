@@ -1,6 +1,6 @@
 <div class="d-sm-flex">
     <?php if ($location->hasMedia('thumb')) { ?>
-        <div class="w-sm-25 d-none d-sm-block mr-sm-4">
+        <div class="col-md-5 w-sm-50 d-none d-sm-block mr-sm-4">
             <img
                 class="img-responsive"
                 src="<?= $location->getThumb(); ?>"

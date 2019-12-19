@@ -5081,12 +5081,13 @@ margin: auto;
 		flex: 0 0 70%;
 		max-width: initial;
 		max-width: 78%;
-	}
+  }
+  
 }
 
 #contact-form .text-danger{
 	text-align: left !important;
-  width: 100% !important;
+ 
   display: block;
 }
 main[role="main"]{
@@ -5167,7 +5168,6 @@ display: inline-block;
 #contact-form .text-danger{
   position: absolute;
   bottom: 0;
-  width: 100%;
   background:red;
   color:#fff !important;
   width: auto;
@@ -5175,8 +5175,7 @@ display: inline-block;
   padding: 1px 10px;
   border-radius: 2px;
   z-index: 99999999999999999;
-  left: 0;
+  left: auto;
   font-size: 10px;
   right: 0;
-  left: auto;
 }
