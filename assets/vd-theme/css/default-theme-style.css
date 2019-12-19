@@ -1,4 +1,5 @@
   @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap');
+  @import url('https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 
   body a {
     transition        : 0.5s all;
@@ -5085,8 +5086,8 @@ margin: auto;
 
 #contact-form .text-danger{
 	text-align: left !important;
-width: 100% !important;
-display: block;
+  width: 100% !important;
+  display: block;
 }
 main[role="main"]{
 	min-height: calc(100vh - 470px);
@@ -5159,4 +5160,23 @@ display: inline-block;
 }
 .card-body {
   font-size: 16px!important;
+}
+#contact-form .form-group{
+  position:relative;
+}
+#contact-form .text-danger{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background:red;
+  color:#fff !important;
+  width: auto;
+  white-space: nowrap;
+  padding: 1px 10px;
+  border-radius: 2px;
+  z-index: 99999999999999999;
+  left: 0;
+  font-size: 10px;
+  right: 0;
+  left: auto;
 }
