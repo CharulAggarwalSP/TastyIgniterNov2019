@@ -11,13 +11,13 @@
                     aria-hidden="true"
                 ><i class="fa fa-times text-danger"></i></a>
             <?php } ?>
-            <a
+            <!--a
                 class="btn pull-right"
                 data-control="edit-widget"
                 data-toggle="modal"
                 data-target="#<?= $widgetAlias ?>-modal"
                 data-handler="<?= $this->getEventHandler('onLoadUpdatePopup'); ?>"
-            ><i class="fa fa-cog"></i></a>
+            ><i class="fa fa-cog"></i></a-->
         </div>
 
         <div id="<?= $widgetAlias ?>"><?= $widget->render() ?></div>

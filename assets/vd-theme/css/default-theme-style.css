@@ -1929,7 +1929,7 @@
   }
 
   .contact-grid {
-    padding-left: 0;
+    padding-left: 28px;
     text-align  : center;
   }
 
@@ -3386,6 +3386,9 @@ background: none !important
   }
 
   @media (max-width:480px) {
+    .form-row img.img-responsive.img-rounded{
+      display: none!important;
+  }
     .logo a h1 {
       font-size: 4em;
     }
@@ -4882,7 +4885,7 @@ margin: auto;
 
     #contact-form .row {
       display              : grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr;
       margin               : 0px;
       grid-gap             : 10px;
       margin-bottom        : -10px;
@@ -5140,4 +5143,20 @@ display: inline-block;
 	.card.my-account .card-body .form-control{
 		font-size:12px;
 	}
+}
+
+ h2 a{
+  color:black;
+  font-size: 16px;
+  font-weight:bold;
+}
+.text-muted{
+  font-size: 17px!important;
+  font-weight:500!important;
+}
+.font-weight-normal{
+  font-size: 15px;
+}
+.card-body {
+  font-size: 16px!important;
 }
