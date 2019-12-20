@@ -5148,15 +5148,15 @@ display: inline-block;
 	}
 }
 
- h2 a{
-  color:black;
+ .categories h2 a{
+
   font-size: 16px;
   font-weight:bold;
 }
-.text-muted{
+/*.text-muted{
   font-size: 17px!important;
   font-weight:500!important;
-}
+}*/
 .font-weight-normal{
   font-size: 15px;
 }
@@ -5183,4 +5183,7 @@ display: inline-block;
 .fa, .menu-group .menu-group-item .category-title .collapse-toggle, a.ti-loading:before, button.ti-loading:before, span.ti-loading:before, .fas {
  
   font-family: 'FontAwesome'!important;
+}
+h6.menu-name{
+  font-size: 17px !important;
 }
