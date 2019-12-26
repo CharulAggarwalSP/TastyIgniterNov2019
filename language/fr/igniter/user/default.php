@@ -22,7 +22,7 @@ return [
     'text_no_orders' => 'There are no orders available to show.',
     'text_no_reservations' => 'There are no reservations available to show.',
     'text_no_inbox' => 'There are no messages available to show',
-    'text_no_cart_items' => 'There are no menus added in your cart.',
+    'text_no_cart_items' => 'There are no items added in your cart.',
 
     'text_logout' => 'Logout',
     'text_logged_in' => 'Already have an account? <a href="%s">Login Here</a>',
@@ -48,7 +48,7 @@ return [
 
     'login' => [
         'label_password' => 'Password',
-        'label_password_confirm' => 'Password Confirm',
+        'label_password_confirm' => 'Confirm Password',
         'label_remember' => 'Remember me',
         'label_activation' => 'Activation Code',
         'label_newsletter' => 'Keep me up-to-date with offers by email.',
@@ -107,7 +107,7 @@ return [
         'component_desc' => 'Displays password reset form',
 
         'text_heading' => 'Account Password Reset',
-        'text_summary' => 'Email address you use to log in to your account We\'ll send you an email with a new password.',
+        'text_summary' => 'Email address you use to log in to your account. We\'ll send you an email to reset your password.',
 
         'label_email' => 'Email Address',
         'label_password' => 'Password',

@@ -11,7 +11,7 @@
     </button>
 </div>
 <div id="collapseCategories<?= $id ?>" class="collapse d-sm-block">
-    <h2 class="h5 px-3 d-none d-sm-block"><a href="<?= restaurant_url('local/menus'); ?>"><?= lang('igniter.local::default.text_categories') ?></a></h2>
+    <h2 class="h5 px-3 d-none d-sm-block"><a href="<?= site_url('local/menus'); ?>"><?= lang('igniter.local::default.text_categories') ?></a></h2>
     <nav class="nav nav-categories flex-column">
         <?php if ($selectedCategory) { ?>
            <!--  <a

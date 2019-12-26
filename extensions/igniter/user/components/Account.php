@@ -151,7 +151,7 @@ class Account extends \System\Classes\BaseComponent
     {
         try {
             $namedRules = [
-                ['email', 'lang:igniter.user::default.settings.label_email', 'required|email'],
+                ['email', 'lang:igniter.user::default.settings.label_email', 'required|email|regex:/^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/i'],
                 ['password', 'lang:igniter.user::default.login.label_password', 'required|min:6|max:32'],
                 ['remember', 'lang:igniter.user::default.login.label_remember', 'integer'],
             ];
