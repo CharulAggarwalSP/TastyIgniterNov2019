@@ -10,16 +10,13 @@
                 <div class="list-group">
                     <?php foreach ($paymentGateways as $paymentGateway) { ?>
                         <div class="list-group-item">
-                            <div
-                                class="custom-control custom-radio<?= set_value('payment') == $paymentGateway->code ? ' active' : ''; ?>"
-                            >
+                            <div class="custom-control custom-radio<?= set_value('payment') == $paymentGateway->code ? ' active' : ''; ?>">
                                 <input
                                     type="radio"
-                                    id="payment-<?= $paymentGateway->code ?>"
-                                    class="custom-control-input"
+                                    id="payment-<?= $paymentGateway->code ?>" class="custom-control-input"
                                     name="payment"
                                     value="<?= $paymentGateway->code ?>"
-                                    autocomplete="off"
+                                    autocomplete="off" 
                                 />
                                 <label
                                     class="custom-control-label d-block"

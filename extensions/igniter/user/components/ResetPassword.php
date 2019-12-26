@@ -65,7 +65,7 @@ class ResetPassword extends BaseComponent
     {
         try {
             $namedRules = [
-                ['email', 'lang:igniter.user::default.reset.label_email', 'required|email|between:6,255'],
+                ['email', 'lang:igniter.user::default.reset.label_email', 'required|email|between:6,255||regex:/^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/i'],
             ];
 
             $this->validate(post(), $namedRules);

@@ -12,7 +12,7 @@ return [
     'text_heading' => 'My Order',
     'text_update_heading' => 'Updating menu choices',
     'text_add_heading' => 'Adding menu choices',
-    'text_no_cart_items' => '<p class="text-center">There are no menus added in your cart.</p>',
+    'text_no_cart_items' => '<p class="text-center">There are no items added in your cart.</p>',
     'text_delivery' => 'Delivery',
     'text_collection' => 'Pick-up',
     'text_apply_coupon' => 'Enter coupon code',

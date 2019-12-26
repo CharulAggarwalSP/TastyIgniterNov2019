@@ -190,7 +190,7 @@ class Checkout extends BaseComponent
         $namedRules = [
             ['first_name', 'lang:igniter.cart::default.checkout.label_first_name', 'required|min:2|max:32|regex:/^(?!\s*$)[A-Z-a-z]+$/i'],
             ['last_name', 'lang:igniter.cart::default.checkout.label_last_name', 'required|min:2|max:32|regex:/^(?!\s*$)[A-Z-a-z]+$/i'],
-            ['email', 'lang:igniter.cart::default.checkout.label_email', 'sometimes|required|email|max:96|unique:customers'],
+            ['email', 'lang:igniter.cart::default.checkout.label_email', 'sometimes|required|email|max:96|unique:customers|regex:/^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/i'],
             ['telephone', 'lang:igniter.cart::default.checkout.label_telephone', 'regex:/^[0-9]+$/|digits_between:10,13'],
             ['comment', 'lang:igniter.cart::default.checkout.label_comment', 'max:500'],
             ['payment', 'lang:igniter.cart::default.checkout.label_payment_method', 'sometimes|required|alpha_dash'],

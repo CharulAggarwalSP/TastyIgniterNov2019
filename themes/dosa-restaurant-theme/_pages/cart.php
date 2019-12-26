@@ -1,6 +1,6 @@
 ---
 title: main::lang.cart.title
-layout: default
+layout: layout
 permalink: /cart
 
 '[localBox]':

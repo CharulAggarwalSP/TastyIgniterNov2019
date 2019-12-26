@@ -25,7 +25,7 @@
         </div>
         <div class="form-group">
             <input
-                type="text"
+                type="email"
                 name="email"
                 class="form-control"
                 value="<?= set_value('email'); ?>"
