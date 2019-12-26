@@ -70,7 +70,7 @@ class Coupon extends CartCondition
     {
         $minimumOrder = $this->couponModel->minimumOrderTotal();
 
-        return ["subtotal > {$minimumOrder}"];
+        return ["subtotal >= {$minimumOrder}"];
     }
 
     public function whenInvalid()
