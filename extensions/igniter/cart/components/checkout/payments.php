@@ -9,14 +9,14 @@
                 <label for=""><?= lang('igniter.cart::default.checkout.label_payment_method'); ?></label><span>*</span><br/>
                 <div class="list-group">
                     <?php foreach ($paymentGateways as $paymentGateway) { ?>
-                        <div class="list-group-item">
+                        <div class="list-group-item <?= set_value('payment') == $paymentGateway->code ? 'bg-light' : ''; ?>">
                             <div class="custom-control custom-radio<?= set_value('payment') == $paymentGateway->code ? ' active' : ''; ?>">
                                 <input
                                     type="radio"
                                     id="payment-<?= $paymentGateway->code ?>" class="custom-control-input"
                                     name="payment"
                                     value="<?= $paymentGateway->code ?>"
-                                    autocomplete="off" 
+                                    autocomplete="off" <?= set_value('payment') == $paymentGateway->code ? 'checked=checked' : ''; ?>
                                 />
                                 <label
                                     class="custom-control-label d-block"
