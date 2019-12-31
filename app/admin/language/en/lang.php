@@ -657,6 +657,7 @@ return [
         'help_max_selected' => 'Maximum items to select from these options, leave blank to ignore.',
         'help_option_required' => 'Select Enabled if a customer MUST choose this option. If this option is not required, select Disabled.',
         'help_specials' => 'Select disable to deactivate Special. Select Enable to activate Special and enter the Start Date, End Date and price of your Special item.',
+        'menu_type' => 'Select Menu Type'
     ],
 
     'orders' => [

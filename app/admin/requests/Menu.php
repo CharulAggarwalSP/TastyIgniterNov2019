@@ -21,6 +21,7 @@ class Menu extends FormRequest
             ['menu_status', 'admin::lang.label_status', 'boolean'],
             ['mealtime_id', 'admin::lang.menus.label_mealtime', 'nullable|integer'],
             ['menu_priority', 'admin::lang.menus.label_menu_priority', 'nullable|integer'],
+            ['menu_type_id', 'Menu type is required', 'integer'],
         ];
     }
 }
