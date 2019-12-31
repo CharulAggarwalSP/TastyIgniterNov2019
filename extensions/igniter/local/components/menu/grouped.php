@@ -3,8 +3,7 @@
         <div class="menu-group-item">
             <p><?= lang('igniter.local::default.text_no_category'); ?></p>
         </div>
-    <?php }
-    else { ?>
+    <?php } else { ?>
         <?php $index = 0;
         foreach ($groupedMenuItems as $categoryId => $menuList) { ?>
             <?php
@@ -15,21 +14,11 @@
                 <?php if ($hasCategory) {
                     $menuCategory = array_get($menuListCategories, $categoryId);
                     $menuCategoryAlias = strtolower(str_slug($menuCategory->name));
-                    ?>
+                ?>
                     <div id="<?= $menuCategoryAlias; ?>-heading" role="tab">
-                        <h4
-                            class="category-title cursor-pointer"
-                            data-toggle="collapse"
-                            data-target="#<?= $menuCategoryAlias; ?>-collapse"
-                            aria-expanded="false"
-                            aria-controls="<?= $menuCategoryAlias; ?>-heading"
-                        ><?= e($menuCategory->name); ?><span class="collapse-toggle text-muted pull-right"></span></h4>
+                        <h4 class="category-title cursor-pointer <?= $index < 5 ? 'show' : ''; ?>" data-toggle="collapse" data-target="#<?= $menuCategoryAlias; ?>-collapse" aria-expanded="false" aria-controls="<?= $menuCategoryAlias; ?>-heading"><?= e($menuCategory->name); ?><span class="collapse-toggle text-muted pull-right"></span></h4>
                     </div>
-                    <div
-                        id="<?= $menuCategoryAlias; ?>-collapse"
-                        class="collapse <?= $index < 5 ? 'show' : ''; ?>"
-                        role="tabpanel" aria-labelledby="<?= $menuCategoryAlias; ?>"
-                    >
+                    <div id="<?= $menuCategoryAlias; ?>-collapse" class="collapse <?= $index < 5 ? 'show' : ''; ?>" role="tabpanel" aria-labelledby="<?= $menuCategoryAlias; ?>">
                         <div class="menu-category">
                             <?php if (strlen($menuCategory->description)) { ?>
                                 <p><?= nl2br($menuCategory->description); ?></p>
@@ -37,13 +26,10 @@
 
                             <?php if ($menuCategory->hasMedia('thumb')) { ?>
                                 <div class="image">
-                                    <img
-                                        class="img-responsive"
-                                        src="<?= $menuCategory->getThumb([
-                                            'width' => $menuCategoryWidth,
-                                            'height' => $menuCategoryHeight,
-                                        ]); ?>"
-                                        alt="<?= $menuCategory->name; ?>"/>
+                                    <img class="img-responsive" src="<?= $menuCategory->getThumb([
+                                                                            'width' => $menuCategoryWidth,
+                                                                            'height' => $menuCategoryHeight,
+                                                                        ]); ?>" alt="<?= $menuCategory->name; ?>" />
                                 </div>
                             <?php } ?>
                         </div>
