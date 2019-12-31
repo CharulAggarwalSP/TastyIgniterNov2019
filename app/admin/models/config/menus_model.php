@@ -365,6 +365,14 @@ $config['form']['tabs'] = [
             'type' => 'switch',
             'comment' => 'lang:admin::lang.menus.help_specials',
         ],
+        'menu_type_id' => [
+            'label' => 'Menu Type',
+            'type' => 'relation',
+            'span' => 'left',
+            'relationFrom' => 'menu_type',
+            'nameFrom' => 'name',
+            'placeholder' => 'lang:admin::lang.menus.menu_type'
+        ],
     ],
 ];
 

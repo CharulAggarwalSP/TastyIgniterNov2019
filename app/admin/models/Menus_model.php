@@ -52,6 +52,7 @@ class Menus_model extends Model
         ],
         'belongsTo' => [
             'mealtime' => ['Admin\Models\Mealtimes_model'],
+            'menu_type' => ['Admin\Models\Menus_types_model'],
         ],
         'belongsToMany' => [
             'categories' => ['Admin\Models\Categories_model', 'table' => 'menu_categories'],
