@@ -198,7 +198,7 @@ return [
 
         'button_order' => 'Place New Order',
         'button_reorder' => 'Reorder',
-        'button_view_order' => 'View/Reorder',
+        'button_view_order' => 'View',
         'button_back' => 'Back',
 
         'alert_reorder_success' => 'You have successfully added the items from order ID %s to your order.',
