@@ -27,7 +27,7 @@
     </div>
 
     <div class="card">
-        <div class="card-body text-center basket_view">
+        <div class="card-body text-center basket_view" style="display:none">
             <p><i class="fa fa-shopping-basket fa-3x text-muted"></i></p>
             <?php if ($__SELF__->cartCount()) { ?>
                 <p><?= sprintf(lang('igniter.user::default.text_cart_summary'), $__SELF__->cartCount(), currency_format($__SELF__->cartTotal())); ?></p>
