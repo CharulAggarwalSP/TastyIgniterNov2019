@@ -33,11 +33,11 @@
                 <!--p class="mb-0"><?= lang('igniter.cart::default.checkout.text_success_message'); ?></p-->
 
 
-                <td>
+                <!-- <td>
                     <?php if (!$hideReorderBtn) { ?>
                         <button class="btn btn-primary re-order" data-request="<?= $__SELF__ . '::onReOrder'; ?>" data-request-data="orderId: <?= $order->order_id; ?>" data-attach-loading><?= lang('igniter.cart::default.orders.button_reorder'); ?></button>
                     <?php } ?>
-                </td>
+                </td> -->
             </tr>
         </tbody>
     </table>
