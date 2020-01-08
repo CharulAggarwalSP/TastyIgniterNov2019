@@ -140,28 +140,24 @@ function onEnd()
 					<a href="<?= restaurant_url('local/menus'); ?>" class="hi-icon"><img src=<?= '"' . assets_url(); ?>/vd-theme/images/serve1.png" alt=" " /></a>
 				</div>
 				<h4><?= sprintf(lang('main::lang.services.view_our_menu')) ?></h4>
-				<p><?= sprintf(lang('main::lang.services.view_our_menu_text')) ?></p>
 			</div>
 			<div class="col-md-3 services-gd text-center wow slideInDown" data-wow-duration="1s" data-wow-delay=".2s">
 				<div class="hi-icon-wrap hi-icon-effect-9 hi-icon-effect-9a">
 					<a href="<?= page_url('reservation/reservation'); ?>" class="hi-icon"><img src=<?= '"' . assets_url(); ?>/vd-theme/images/serve2.png" alt=" " /></a>
 				</div>
 				<h4><?= sprintf(lang('main::lang.services.reservation')) ?></h4>
-				<p><?= sprintf(lang('main::lang.services.reservation_text')) ?></p>
 			</div>
 			<div class="col-md-3 services-gd text-center wow slideInUp" data-wow-duration="1s" data-wow-delay=".2s">
 				<div class="hi-icon-wrap hi-icon-effect-9 hi-icon-effect-9a">
 					<a href="#contact" class="hi-icon scroll"><img src=<?= '"' . assets_url(); ?>/vd-theme/images/serve3.png" alt=" " /></a>
 				</div>
 				<h4><?= sprintf(lang('main::lang.services.fine_recipes')) ?></h4>
-				<p><?= sprintf(lang('main::lang.services.fine_recipes_text')) ?></p>
 			</div>
 			<div class="col-md-3 services-gd text-center wow slideInRight" data-wow-duration="1s" data-wow-delay=".3s">
 				<div class="hi-icon-wrap hi-icon-effect-9 hi-icon-effect-9a">
 					<a href="#contact" class="hi-icon scroll"><img src=<?= '"' . assets_url(); ?>/vd-theme/images/serve4.png" alt=" " /></a>
 				</div>
 				<h4><?= sprintf(lang('main::lang.services.spicy_recipes')) ?></h4>
-				<p><?= sprintf(lang('main::lang.services.spicy_recipes_text')) ?></p>
 			</div>
 				<div class="clearfix"> </div>
 			</div>
