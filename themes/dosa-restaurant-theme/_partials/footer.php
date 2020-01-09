@@ -4,7 +4,7 @@
             <div class="col-sm-4">
 				<div class="footer-links">
 					<h6 class="footer-title d-none d-sm-block"> Address</h6>
-					<h5 class="mb-1">North & South Indian Restaurant</h5>
+					<h5 class="mb-1">Dosa North & South Indian Restaurant</h5>
 					<h5 class="mb-1">Timings: 15:30 - 23:00</h5>
 					<ul>
 						<li>Overtoom 146<br>1054 HS<br>Amsterdam<br>Netherlands</li>
