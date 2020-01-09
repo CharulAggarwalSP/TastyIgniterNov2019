@@ -4,14 +4,14 @@
             <div class="col-sm-4">
 				<div class="footer-links">
 					<h6 class="footer-title d-none d-sm-block"> Address</h6>
-					<h5 class="mb-1">Timiing: 15:30 - 23:00</h5>
+					<h5 class="mb-1">North & South Indian Restaurant</h5>
+					<h5 class="mb-1">Timings: 15:30 - 23:00</h5>
 					<ul>
-						<li>North & South Indian Restaurant</li>
 						<li>Overtoom 146<br>1054 HS<br>Amsterdam<br>Netherlands</li>
 						<li>Phone : 0681936735 </li>
 						<li>Fax : 020-6895073</li>
 					</ul>
-				</div>
+				</div> 
 			</div>
             <div class="col-sm-4">
                 <div class="footer-links">
