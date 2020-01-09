@@ -13,6 +13,9 @@
                             <ul>
                                 <li class="active"><a data-hover="Home" href="<?=page_url('home');?>"><?=sprintf(lang('main::lang.menu_home'))?></a></li>
                                 <li><a href="<?=restaurant_url('local/menus');?>"><?=sprintf(lang('main::lang.menu_about'))?></a></li>
+                                <?php if (Auth::isLogged()) { ?>
+                                <li><a data-hover="Reservation" href="<?= page_url('reservation/reservation'); ?>" target="_blank">Reservation</a></li>
+                                <?php } ?>
                                 <li><a data-hover="Menu" href="<?=assets_url('/media/menu/menu.pdf')?>" target="_blank"><?=sprintf(lang('main::lang.menu'))?></a></li>
                                 <li><a data-hover="Services" href="#services" class="scroll"><?=sprintf(lang('main::lang.local.text_tab_services'))?></a></li>
                                 <!-- <li><a data-hover="Chefs" href="#team" class="scroll"><?=sprintf(lang('main::lang.local.text_tab_chefs'))?></a></li> -->
@@ -32,7 +35,7 @@
         <div class="banner-slider">
             <div class="callbacks_container">
                 <ul class="rslides" id="slider4">
-                    <li>
+                    <li style="background-image:url('<?php echo assets_url()."/vd-theme/images/c3.jpg";?>');">
                         <div class="banner-info">
                             <h3 class="wow slideInUp" data-wow-duration="1s" data-wow-delay=".3s"><?=sprintf(lang('main::lang.home.text_step_banner_headline_one'))?></h3>
                             <p class="wow slideInDown" data-wow-duration="1s" data-wow-delay=".3s"><?=sprintf(lang('main::lang.home.text_step_banner_text_one'))?></p>
@@ -40,7 +43,7 @@
                             <!--span class="wow slideInUp" data-wow-duration="1s" data-wow-delay=".3s"><?=sprintf(lang('main::lang.home.text_ready_to_be_opened'))?></span-->
                         </div>
                     </li>
-                    <li>
+                    <li style="background-image:url('<?php echo assets_url()."/vd-theme/images/c4.jpg" ?>');">
                         <div class="banner-info">
                             <h3 class="wow slideInUp" data-wow-duration="1s" data-wow-delay=".3s"><?=sprintf(lang('main::lang.home.text_step_banner_headline_two'))?></h3>
                             <p class="wow slideInDown" data-wow-duration="1s" data-wow-delay=".3s"><?=sprintf(lang('main::lang.home.text_step_banner_text_two'))?></p>
@@ -48,7 +51,7 @@
                             <!--span class="wow slideInUp" data-wow-duration="1s" data-wow-delay=".3s"><?=sprintf(lang('main::lang.home.text_ready_to_be_opened'))?></span-->
                         </div>
                     </li>
-                    <li>
+                    <li style="background-image:url('<?php echo assets_url()."/vd-theme/images/c1.jpg" ?>');">
                         <div class="banner-info">
                             <h3 class="wow slideInUp" data-wow-duration="1s" data-wow-delay=".3s"><?=sprintf(lang('main::lang.home.text_step_banner_headline_three'))?></h3>
                             <p class="wow slideInDown" data-wow-duration="1s" data-wow-delay=".3s"><?=sprintf(lang('main::lang.home.text_step_banner_text_three'))?></p>

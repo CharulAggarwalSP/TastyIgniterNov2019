@@ -15,11 +15,11 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="<?= assets_url('/media/menu/menu.pdf'); ?>" target="_blank"><?= lang('main::lang.menu'); ?></a>
                             </li>
-
+                            <?php if (Auth::isLogged()) { ?>
                             <li class="nav-item">
                                 <a class="nav-link" href="<?= page_url('reservation/reservation'); ?>" class="<?= ($this->page->getId() == 'reservation-reservation') ? 'active' : ''; ?>"><?= lang('main::lang.menu_reservation'); ?></a>
                             </li>
-
+                            <?php } ?>
                             <?php if (Auth::isLogged()) { ?>
                                 <li class="nav-item dropdown">
                                     <a id="dropdownAccount" class="nav-link dropdown-toggle clickable" role="button" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?= lang('main::lang.menu_my_account'); ?> </a>
