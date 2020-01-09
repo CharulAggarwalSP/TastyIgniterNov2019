@@ -522,8 +522,11 @@ function onEnd()
 		<div class="container">
 			<div class="bottom-top">
 				<a href="http://192.168.0.146/TastyIgniterNov2019">
-				<img class="img-logo" style="height:180px" alt="Dosa North &amp; South Indian Restaurant" src="http://192.168.0.146/TastyIgniterNov2019/assets/media/uploads/Dosa logo 2019.png">
+				<img class="img-logo" style="height:130px" alt="Dosa North &amp; South Indian Restaurant" src="http://192.168.0.146/TastyIgniterNov2019/assets/media/uploads/Dosa logo 2019.png">
 				</a>
+				<div class="start wow flipInX" data-wow-duration="1s" data-wow-delay=".3s">
+					<a href="<?= site_url('contact'); ?>" class="hvr-bounce-to-bottom"><?= lang('main::lang.menu_contact'); ?></a>
+				</div>
 			<!--<h3 class=" wow flipInX" data-wow-duration="1s" data-wow-delay=".3s"><?= sprintf(lang('main::lang.contact.we_are_sharing')) ?></h3>
 			<span><?= sprintf(lang('main::lang.contact.delicious_treats')) ?></span>-->
 			<!--p class="wow slideInDown" data-wow-duration="1s" data-wow-delay=".5s"><?= sprintf(lang('main::lang.contact.contact_us_text')) ?></p-->

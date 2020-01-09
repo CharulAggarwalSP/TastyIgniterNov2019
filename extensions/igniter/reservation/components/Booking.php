@@ -75,7 +75,7 @@ class Booking extends BaseComponent
             'bookingTimeFormat' => [
                 'label' => 'Time format to use for the time dropdown',
                 'type' => 'text',
-                'default' => 'HH::mm'//'hh:mm a',
+                'default' => 'HH:mm'//'hh:mm a',
             ],
             'bookingDateTimeFormat' => [
                 'label' => 'Date time format to use for displaying reservation date & time',

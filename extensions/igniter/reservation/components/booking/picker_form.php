@@ -17,10 +17,10 @@
 		#fff;
 		position:relative
 	}
-	@media(min-width:768px){
+	@media(min-width:768px){ 
 	.center-block:after{
 			content: "";
-			background: url(http://192.168.0.146/TastyIgniterNov2019/assets/media/uploads/Dosa%20logo%202019.png) no-repeat;
+			background: url('<?php echo assets_url()."/media/uploads/Dosa%20logo%202019.png" ?>') no-repeat;
 			background-size: auto;
 			position: absolute;
 			top: 16px;
@@ -126,7 +126,7 @@
                 <option
                     value="<?= $key; ?>"
                     <?= set_select('time', $key); ?>
-                ><?= e($value); ?></option>
+                ><?= e($value) ?></option>
             <?php } ?>
         </select>
     </div>
