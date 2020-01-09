@@ -66,8 +66,9 @@
     <div class="down"><a class="scroll" href="#services"><img src=<?='"' . assets_url();?>/vd-theme/images/down.png" alt=""></a>
     </div>
 	<div class="home___logo">
-					<img src="https://demo.softprodigyphp.in/RestaurantDosaQA/assets//vd-theme/images/halal.png" />
-					<img src="https://demo.softprodigyphp.in/RestaurantDosaQA/assets//vd-theme/images/halal.png" />
+					<img style="width: 90px; margin-right: 10px; background: #fff; padding: 7px 10px;
+    border-radius: 10px;" src="<?php echo assets_url().'/vd-theme/images/vegan.png'?>" />
+					<img src="<?php echo assets_url().'/vd-theme/images/halal.png' ?>" />
 				</div>
 </div>
 <!--end-header section-->

@@ -142,24 +142,28 @@ function onEnd()
 					<a href="<?= restaurant_url('local/menus'); ?>" class="hi-icon"><img src=<?= '"' . assets_url(); ?>/vd-theme/images/serve1.png" alt=" " /></a>
 				</div>
 				<h4><?= sprintf(lang('main::lang.services.view_our_menu')) ?></h4>
+				<p>The list of mouthwatering dishes contains but is not limited to the dishes like ...</p>
 			</div>
 			<div class="col-md-3 services-gd text-center wow slideInDown" data-wow-duration="1s" data-wow-delay=".2s">
 				<div class="hi-icon-wrap hi-icon-effect-9 hi-icon-effect-9a">
 					<a href="<?= page_url('reservation/reservation'); ?>" class="hi-icon"><img src=<?= '"' . assets_url(); ?>/vd-theme/images/serve2.png" alt=" " /></a>
 				</div>
 				<h4><?= sprintf(lang('main::lang.services.reservation')) ?></h4>
+				<p>Just specify the number of people, the date of party and timing to utilize table reservation</p>
 			</div>
 			<div class="col-md-3 services-gd text-center wow slideInUp" data-wow-duration="1s" data-wow-delay=".2s">
 				<div class="hi-icon-wrap hi-icon-effect-9 hi-icon-effect-9a">
 					<a href="#contact" class="hi-icon scroll"><img src=<?= '"' . assets_url(); ?>/vd-theme/images/serve3.png" alt=" " /></a>
 				</div>
 				<h4><?= sprintf(lang('main::lang.services.fine_recipes')) ?></h4>
+				<p>Our party catering service makes sure everyone fills tummy with healthy and delicious food</p>
 			</div>
 			<div class="col-md-3 services-gd text-center wow slideInRight" data-wow-duration="1s" data-wow-delay=".3s">
 				<div class="hi-icon-wrap hi-icon-effect-9 hi-icon-effect-9a">
 					<a href="#contact" class="hi-icon scroll"><img src=<?= '"' . assets_url(); ?>/vd-theme/images/serve4.png" alt=" " /></a>
 				</div>
 				<h4><?= sprintf(lang('main::lang.services.spicy_recipes')) ?></h4>
+				<p>From spacious halls to thoroughly professional catering team, we have everything to exceed your expectations</p>
 			</div>
 				<div class="clearfix"> </div>
 			</div>

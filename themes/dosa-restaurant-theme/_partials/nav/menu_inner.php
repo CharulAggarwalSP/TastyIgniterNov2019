@@ -59,10 +59,13 @@
         </div>
     </div>
     <?php if(Request::path() == 'default/menus'){ ?>
-    <div loder__right><img src="<?= assets_url('/vd-theme/images/halal.png') ?>" /> </div>
+    <div loder__right>
+    <img style="width: 90px; margin-right: 10px; background: #fff; padding: 7px 10px;
+    border-radius: 10px;" src="<?php echo assets_url().'/vd-theme/images/vegan.png'?>" />
+    <img src="<?= assets_url('/vd-theme/images/halal.png') ?>" /> </div>
     <?php } ?>
     <!-- <div class="down"><a class="scroll" href="#services"><img src=<?= '"' . assets_url(); ?>/vd-theme/images/down.png" alt=""></a>
-</div> -->
+</div> --> 
 </div>
 <style>
     [loder__right] {
@@ -72,6 +75,9 @@
         bottom: 20px;
         right: 10px;
     }
-
+    .banner.inner_pages{
+        min-height:300px !important;
+        background:url('<?php echo assets_url()."/vd-theme/images/1.jpg" ?>') no-repeat;
+    }
     [loder__right] img{max-width:100%}
 </style>
