@@ -16,7 +16,7 @@ $closingTime = Carbon\Carbon::parse($schedule->getCloseTime());
         <dt class="text-muted"><?= lang('igniter.local::default.text_closed'); ?></dt>
     <?php } ?>
 
-    <dd>
+    <!-- <dd>
         <?php if ($schedule->getPeriod($openingTime)->opensAllDay()) { ?>
             <span class="fa fa-clock-o"></span>
             <span><?= lang('igniter.local::default.text_24_7_hour'); ?></span>
@@ -28,7 +28,7 @@ $closingTime = Carbon\Carbon::parse($schedule->getCloseTime());
                 <?= $closingTime->isoFormat($localBoxTimeFormat); ?>
             </span>
         <?php } ?>
-    </dd>
+    </dd> -->
 
     <dd class="text-muted">
         <?php if (!$hasDelivery AND $hasCollection) { ?>
