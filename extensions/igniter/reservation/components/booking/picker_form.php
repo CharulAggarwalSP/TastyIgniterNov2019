@@ -55,6 +55,16 @@
 	#page-wrapper{
 		padding: 60px 0;
 	}
+	@media(max-width:767px){
+		.form-row-table [class*="col"] {
+			flex: 0 0 50%;
+			max-width: 100%;
+		}
+		.center-block{
+			max-width: 95%;
+		}
+	}
+	
 </style>
 
 <input type="hidden" name="picker_form" value="1">
