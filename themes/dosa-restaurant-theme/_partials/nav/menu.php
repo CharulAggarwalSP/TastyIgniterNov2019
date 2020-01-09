@@ -51,7 +51,7 @@
                             <!--span class="wow slideInUp" data-wow-duration="1s" data-wow-delay=".3s"><?=sprintf(lang('main::lang.home.text_ready_to_be_opened'))?></span-->
                         </div>
                     </li>
-                    <li style="background-image:url('<?php echo assets_url()."/vd-theme/images/c1.jpg" ?>');">
+                    <li style="background-image:url('<?php echo assets_url()."/vd-theme/images/g2.jpg" ?>');">
                         <div class="banner-info">
                             <h3 class="wow slideInUp" data-wow-duration="1s" data-wow-delay=".3s"><?=sprintf(lang('main::lang.home.text_step_banner_headline_three'))?></h3>
                             <p class="wow slideInDown" data-wow-duration="1s" data-wow-delay=".3s"><?=sprintf(lang('main::lang.home.text_step_banner_text_three'))?></p>
