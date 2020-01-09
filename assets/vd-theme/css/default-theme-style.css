@@ -5455,3 +5455,12 @@ body,html{
 	overflow-x:hidden;
  
 }
+
+.home___logo{
+	position: absolute;
+right: 0;
+bottom: 0;
+z-index: 99;
+right: 20px;
+bottom: 20px;
+}

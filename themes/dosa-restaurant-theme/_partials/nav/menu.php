@@ -59,10 +59,15 @@
                         </div>
                     </li>
                 </ul>
+				
             </div>
         </div>
     <!--banner Slider ends Here-->
     <div class="down"><a class="scroll" href="#services"><img src=<?='"' . assets_url();?>/vd-theme/images/down.png" alt=""></a>
     </div>
+	<div class="home___logo">
+					<img src="https://demo.softprodigyphp.in/RestaurantDosaQA/assets//vd-theme/images/halal.png" />
+					<img src="https://demo.softprodigyphp.in/RestaurantDosaQA/assets//vd-theme/images/halal.png" />
+				</div>
 </div>
 <!--end-header section-->

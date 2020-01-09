@@ -5,7 +5,7 @@
 				<div class="footer-links">
 					<h6 class="footer-title d-none d-sm-block"> Address</h6>
 					<h5 class="mb-1">Dosa North & South Indian Restaurant</h5>
-					<h5 class="mb-1">Timings: 15:30 - 23:00</h5>
+					
 					<ul>
 						<li>Overtoom 146<br>1054 HS<br>Amsterdam<br>Netherlands</li>
 						<li>Phone : 0681936735 </li>
@@ -99,6 +99,8 @@
                 <div class="social-bottom">
                     <h6 class="footer-title"><?= lang('main::lang.text_follow_us'); ?></h6>
                     <?= partial('social_icons', ['socialIcons' => $this->theme->social]); ?>
+					<h6 class="footer-title mb-1 pb-1 mt-3">Opening Timings</h6>
+					<h5 class="mb-1">All Days ( 15:30-23:00 )</h5>
                 </div>
             </div> 
             </div> 
