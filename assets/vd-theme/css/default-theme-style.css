@@ -4339,8 +4339,7 @@ background: none !important;
 
 
 
-    body>main {
-      padding-top: 0 !important;
+    body>main { 
       margin: 0 !important;
     }
 
@@ -4366,7 +4365,8 @@ background: none !important;
       margin: auto;
       width: 100%;
       position: relative;
-      top: -9vw;
+      top: 0;
+	  top: 70px !important;
     }
   }
 
@@ -4521,8 +4521,7 @@ background: none !important;
   }
 
   @media(max-width:767px) {
-    body>main {
-      padding-top: 0 !important;
+    body>main { 
       margin: 0 !important;
     }
 
@@ -5352,7 +5351,7 @@ object-position: center -16vw;
 		top:0 !important
 	}
 	body .callbacks_tabs {
-		bottom: 30px;
+		bottom: 22%;
 		left: 0;
 		display: flex;
 		justify-content: center;
@@ -5369,6 +5368,37 @@ object-position: center -16vw;
     position: relative;
     background-position: center center;
   }
+  .bottom-top{
+	  padding:50px 0 !important
+  }
+  .bottom-top .img-logo{
+	  height: 80px !important;
+  }
+  .footer .main-footer{
+	  padding-top:0 !important
+  }
+  .down {
+    position: absolute;
+    left: 39%;
+    bottom: 0;
+    top: auto;
+}
+.ab-text{margin-top:0 !important}
+.footer .main-footer .social-icons li a {
+    padding: 0px 10px !important;
+    font-size: 20px !important;
+    margin-bottom: 20px !important;
+}
+ body #home .banner-slider {
+      margin: auto; 
+      width: 100%;
+      position: relative;
+      top: 0 
+    }
+	body > main {
+    padding-top: 70px;
+    padding-bottom: 55px;
+}
 }
 @media(max-width:1024px) and (min-width:768px){ 
 	 
@@ -5416,4 +5446,12 @@ object-position: center -16vw;
 
 h1, .h1, h2, .h2, h3, .h3{
 	color:#efa52c !important
+}
+.dropdown-item:hover, .dropdown-item:focus{
+	color:#fff
+}
+
+body,html{
+	overflow-x:hidden;
+ 
 }
