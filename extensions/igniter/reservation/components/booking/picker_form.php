@@ -6,6 +6,57 @@
     ]
 ); ?>
 
+
+<style>
+	.center-block{
+		border: 0;
+		box-shadow: 10px 0 50px 0 
+		rgba(18, 25, 33, 0.1);
+		border-radius: 10px;
+		background:
+		#fff;
+		position:relative
+	}
+	@media(min-width:768px){
+	.center-block:after{
+			content: "";
+			background: url(http://192.168.0.146/TastyIgniterNov2019/assets/media/uploads/Dosa%20logo%202019.png) no-repeat;
+			background-size: auto;
+			position: absolute;
+			top: 16px;
+			right: 0;
+			width: 140px;
+			height: 100px;
+			background-size: contain;
+			padding: 30px;
+			right: 40px;
+		}
+	}
+	body {
+		background:#f2f2f2
+	}
+	.form-row-table{
+		display:flex;
+		flex-wrap:wrap;
+	}
+	.form-row-table [class*="col"]{
+		flex:1;
+		max-width: 100%;
+	}
+	.center-block h1{
+		font-weight: bold;
+		margin-bottom: 15px;
+	}
+	.center-block .card.mb-1 .card-body{
+		padding-top: 0;
+		padding-bottom: 0;
+		margin-top: 30px; 
+	}
+	#page-wrapper{
+		padding: 60px 0;
+	}
+</style>
+
 <input type="hidden" name="picker_form" value="1">
 
 <div class="form-row form-row-table">
@@ -27,7 +78,7 @@
             <?php } ?>
         </select>
     </div> -->
-    <input type="hidden" name="location" value="1">
+    <input type="hidden" name="location" value="1"> 
     <div class="col-sm-2 mb-3">
         <label class="sr-only" for="noOfGuests">
             <?= lang('igniter.reservation::default.label_guest_num'); ?>
