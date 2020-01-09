@@ -42,7 +42,7 @@ function onEnd()
 
 <!--start-content section-->
 	<!--start about section-->
-	<div class="about" id="about">
+	<div class="about pt-0" id="about">
 		<div class="container">
 			<!--/about-section-->
 			<div class="about-section">
@@ -86,6 +86,7 @@ function onEnd()
 			</div>
 			<!--//about-section-->
 			<!--/about-section2-->
+			<?php if (Auth::isLogged()) { ?>
 			<div class="about-section">
 				<div class="col-md-5 ab-text two">
 				<h3 class="tittle wow slideInDown" data-wow-duration="1s" data-wow-delay=".3s"><?= lang('main::lang.menu_reservation'); ?></h3>
@@ -125,6 +126,7 @@ function onEnd()
 				</div>
 				<div class="clearfix"> </div>
 			</div>
+			<?php } ?>
 			<!--//about-section2-->
 		</div>
 	</div>
@@ -239,9 +241,9 @@ function onEnd()
 		<div class="arrows-serve"><img src=<?= '"' . assets_url(); ?>/vd-theme/images/border.png" alt="border"></div>
 		<div class="gallery-grids">
 			<div class="col-md-6 baner-top wow fadeInRight animated" data-wow-delay=".5s">
-				<a href=<?= '"' . assets_url(); ?>/vd-theme/images/g1.jpg" class="b-link-stripe b-animate-go  swipebox">
+				<a href=<?= '"' . assets_url(); ?>/vd-theme/images/g7.jpg" class="b-link-stripe b-animate-go  swipebox">
 					<div class="gal-spin-effect vertical ">
-						<img src=<?= '"' . assets_url(); ?>/vd-theme/images/g1.jpg" alt=" " />
+						<img src=<?= '"' . assets_url(); ?>/vd-theme/images/g7.jpg" alt=" " />
 						<div class="gal-text-box">
 							<div class="info-gal-con">
 								<!--h4><?= sprintf(lang('main::lang.gallery.first_image_title')) ?></h4-->
@@ -255,9 +257,9 @@ function onEnd()
 				</a>
 			</div>
 			<div class="col-md-6 baner-top wow fadeInLeft animated" data-wow-delay=".5s">
-				<a href=<?= '"' . assets_url(); ?>/vd-theme/images/g2.jpg" class="b-link-stripe b-animate-go  swipebox">
+				<a href=<?= '"' . assets_url(); ?>/vd-theme/images/c3.jpg" class="b-link-stripe b-animate-go  swipebox">
 					<div class="gal-spin-effect vertical ">
-						<img src=<?= '"' . assets_url(); ?>/vd-theme/images/g2.jpg" alt=" " />
+						<img class="equal" src=<?= '"' . assets_url(); ?>/vd-theme/images/c3.jpg" alt=" " style="object-position: center center;"/>
 						<div class="gal-text-box">
 							<div class="info-gal-con">
 								<!--h4><?= sprintf(lang('main::lang.gallery.second_image_title')) ?></h4-->
@@ -271,9 +273,9 @@ function onEnd()
 				</a>
 			</div>
 			<div class="col-md-3 baner-top ban-mar wow fadeInUp animated" data-wow-delay=".5s">
-				<a href=<?= '"' . assets_url(); ?>/vd-theme/images/c1.jpg" class="b-link-stripe b-animate-go  swipebox">
+				<a href=<?= '"' . assets_url(); ?>/vd-theme/images/c4.jpg" class="b-link-stripe b-animate-go  swipebox">
 					<div class="gal-spin-effect vertical ">
-						<img src=<?= '"' . assets_url(); ?>/vd-theme/images/c1.jpg" alt=" " />
+						<img src=<?= '"' . assets_url(); ?>/vd-theme/images/c4.jpg" alt=" " />
 						<div class="gal-text-box">
 							<div class="info-gal-con">
 								<!--h4><?= sprintf(lang('main::lang.gallery.third_image_title')) ?></h4-->
@@ -287,9 +289,9 @@ function onEnd()
 				</a>
 			</div>
 			<div class="col-md-3 baner-top ban-mar wow fadeInDown animated" data-wow-delay=".5s">
-				<a href=<?= '"' . assets_url(); ?>/vd-theme/images/c2.jpg" class="b-link-stripe b-animate-go  swipebox">
+				<a href=<?= '"' . assets_url(); ?>/vd-theme/images/g8.jpg" class="b-link-stripe b-animate-go  swipebox">
 					<div class="gal-spin-effect vertical ">
-						<img src=<?= '"' . assets_url(); ?>/vd-theme/images/c2.jpg" alt=" " />
+						<img src=<?= '"' . assets_url(); ?>/vd-theme/images/g8.jpg" alt=" " />
 						<div class="gal-text-box">
 							<div class="info-gal-con">
 								<!--h4><?= sprintf(lang('main::lang.gallery.fourth_image_title')) ?></h4-->
@@ -303,9 +305,9 @@ function onEnd()
 				</a>
 			</div>
 			<div class="col-md-3 baner-top ban-mar wow fadeInUp animated" data-wow-delay=".5s">
-				<a href=<?= '"' . assets_url(); ?>/vd-theme/images/c3.jpg" class="b-link-stripe b-animate-go  swipebox">
+				<a href=<?= '"' . assets_url(); ?>/vd-theme/images/g1.jpg" class="b-link-stripe b-animate-go  swipebox">
 					<div class="gal-spin-effect vertical ">
-						<img src=<?= '"' . assets_url(); ?>/vd-theme/images/c3.jpg" alt=" " />
+						<img src=<?= '"' . assets_url(); ?>/vd-theme/images/g1.jpg" alt=" " />
 						<div class="gal-text-box">
 							<div class="info-gal-con">
 								<!--h4><?= sprintf(lang('main::lang.gallery.fifth_image_title')) ?></h4-->
@@ -319,9 +321,9 @@ function onEnd()
 				</a>
 			</div>
 			<div class="col-md-3 baner-top ban-mar wow fadeInDown animated" data-wow-delay=".5s">
-				<a href=<?= '"' . assets_url(); ?>/vd-theme/images/c4.jpg" class="b-link-stripe b-animate-go  swipebox">
+				<a href=<?= '"' . assets_url(); ?>/vd-theme/images/g2.jpg" class="b-link-stripe b-animate-go  swipebox">
 					<div class="gal-spin-effect vertical ">
-						<img src=<?= '"' . assets_url(); ?>/vd-theme/images/c4.jpg" alt=" " />
+						<img src=<?= '"' . assets_url(); ?>/vd-theme/images/g2.jpg" alt=" " />
 						<div class="gal-text-box">
 							<div class="info-gal-con">
 								<!--h4><?= sprintf(lang('main::lang.gallery.sixth_image_title')) ?></h4-->
@@ -335,9 +337,9 @@ function onEnd()
 				</a>
 			</div>
 			<div class="col-md-6 baner-top wow fadeInRight animated" data-wow-delay=".5s">
-				<a href=<?= '"' . assets_url(); ?>/vd-theme/images/g7.jpg" class="b-link-stripe b-animate-go  swipebox">
+				<a href=<?= '"' . assets_url(); ?>/vd-theme/images/c2.jpg" class="b-link-stripe b-animate-go  swipebox">
 					<div class="gal-spin-effect vertical ">
-						<img src=<?= '"' . assets_url(); ?>/vd-theme/images/g7.jpg" alt=" " />
+						<img src=<?= '"' . assets_url(); ?>/vd-theme/images/c2.jpg" alt=" " />
 						<div class="gal-text-box">
 							<div class="info-gal-con">
 								<!--h4><?= sprintf(lang('main::lang.gallery.seventh_image_title')) ?></h4-->
@@ -351,9 +353,9 @@ function onEnd()
 				</a>
 			</div>
 			<div class="col-md-6 baner-top wow fadeInLeft animated" data-wow-delay=".5s">
-				<a href=<?= '"' . assets_url(); ?>/vd-theme/images/g8.jpg" class="b-link-stripe b-animate-go  swipebox">
+				<a href=<?= '"' . assets_url(); ?>/vd-theme/images/c1.jpg" class="b-link-stripe b-animate-go  swipebox">
 					<div class="gal-spin-effect vertical ">
-						<img src=<?= '"' . assets_url(); ?>/vd-theme/images/g8.jpg" alt=" " />
+						<img class="equal" src=<?= '"' . assets_url(); ?>/vd-theme/images/c1.jpg" alt=" " />
 						<div class="gal-text-box">
 							<div class="info-gal-con">
 								<!--h4><?= sprintf(lang('main::lang.gallery.eighth_image_title')) ?></h4-->
@@ -377,9 +379,9 @@ function onEnd()
 			<div class="arrows-serve"><img src=<?= '"' . assets_url(); ?>/vd-theme/images/border.png" alt="border"></div>
 			<div class="gallery-grids owl-carousel owl-theme">
 				<div class="col-md-6 baner-top wow fadeInRight animated" data-wow-delay=".5s">
-					<a href=<?= '"' . assets_url(); ?>/vd-theme/images/g1.jpg" class="b-link-stripe b-animate-go  swipebox">
+					<a href=<?= '"' . assets_url(); ?>/vd-theme/images/g7.jpg" class="b-link-stripe b-animate-go  swipebox">
 						<div class="gal-spin-effect vertical ">
-							<img src=<?= '"' . assets_url(); ?>/vd-theme/images/g1.jpg" alt=" " />
+							<img src=<?= '"' . assets_url(); ?>/vd-theme/images/g7.jpg" alt=" " />
 							<div class="gal-text-box">
 								<div class="info-gal-con">
 									<!--h4><?= sprintf(lang('main::lang.gallery.first_image_title')) ?></h4-->
@@ -393,9 +395,9 @@ function onEnd()
 					</a>
 				</div>
 				<div class="col-md-6 baner-top wow fadeInLeft animated" data-wow-delay=".5s">
-					<a href=<?= '"' . assets_url(); ?>/vd-theme/images/g2.jpg" class="b-link-stripe b-animate-go  swipebox">
+					<a href=<?= '"' . assets_url(); ?>/vd-theme/images/c3.jpg" class="b-link-stripe b-animate-go  swipebox">
 						<div class="gal-spin-effect vertical ">
-							<img src=<?= '"' . assets_url(); ?>/vd-theme/images/g2.jpg" alt=" " />
+							<img src=<?= '"' . assets_url(); ?>/vd-theme/images/c3.jpg" alt=" " />
 							<div class="gal-text-box">
 								<div class="info-gal-con">
 									<!--h4><?= sprintf(lang('main::lang.gallery.second_image_title')) ?></h4-->
@@ -409,9 +411,9 @@ function onEnd()
 					</a>
 				</div>
 				<div class="col-md-3 baner-top ban-mar wow fadeInUp animated" data-wow-delay=".5s">
-					<a href=<?= '"' . assets_url(); ?>/vd-theme/images/c1.jpg" class="b-link-stripe b-animate-go  swipebox">
+					<a href=<?= '"' . assets_url(); ?>/vd-theme/images/c4.jpg" class="b-link-stripe b-animate-go  swipebox">
 						<div class="gal-spin-effect vertical ">
-							<img src=<?= '"' . assets_url(); ?>/vd-theme/images/c1.jpg" alt=" " />
+							<img src=<?= '"' . assets_url(); ?>/vd-theme/images/c4.jpg" alt=" " />
 							<div class="gal-text-box">
 								<div class="info-gal-con">
 									<!--h4><?= sprintf(lang('main::lang.gallery.third_image_title')) ?></h4-->
@@ -425,9 +427,9 @@ function onEnd()
 					</a>
 				</div>
 				<div class="col-md-3 baner-top ban-mar wow fadeInDown animated" data-wow-delay=".5s">
-					<a href=<?= '"' . assets_url(); ?>/vd-theme/images/c2.jpg" class="b-link-stripe b-animate-go  swipebox">
+					<a href=<?= '"' . assets_url(); ?>/vd-theme/images/g8.jpg" class="b-link-stripe b-animate-go  swipebox">
 						<div class="gal-spin-effect vertical ">
-							<img src=<?= '"' . assets_url(); ?>/vd-theme/images/c2.jpg" alt=" " />
+							<img src=<?= '"' . assets_url(); ?>/vd-theme/images/g8.jpg" alt=" " />
 							<div class="gal-text-box">
 								<div class="info-gal-con">
 									<!--h4><?= sprintf(lang('main::lang.gallery.fourth_image_title')) ?></h4-->
@@ -441,9 +443,9 @@ function onEnd()
 					</a>
 				</div>
 				<div class="col-md-3 baner-top ban-mar wow fadeInUp animated" data-wow-delay=".5s">
-					<a href=<?= '"' . assets_url(); ?>/vd-theme/images/c3.jpg" class="b-link-stripe b-animate-go  swipebox">
+					<a href=<?= '"' . assets_url(); ?>/vd-theme/images/g1.jpg" class="b-link-stripe b-animate-go  swipebox">
 						<div class="gal-spin-effect vertical ">
-							<img src=<?= '"' . assets_url(); ?>/vd-theme/images/c3.jpg" alt=" " />
+							<img src=<?= '"' . assets_url(); ?>/vd-theme/images/g1.jpg" alt=" " />
 							<div class="gal-text-box">
 								<div class="info-gal-con">
 									<!--h4><?= sprintf(lang('main::lang.gallery.fifth_image_title')) ?></h4-->
@@ -457,9 +459,9 @@ function onEnd()
 					</a>
 				</div>
 				<div class="col-md-3 baner-top ban-mar wow fadeInDown animated" data-wow-delay=".5s">
-					<a href=<?= '"' . assets_url(); ?>/vd-theme/images/c4.jpg" class="b-link-stripe b-animate-go  swipebox">
+					<a href=<?= '"' . assets_url(); ?>/vd-theme/images/g2.jpg" class="b-link-stripe b-animate-go  swipebox">
 						<div class="gal-spin-effect vertical ">
-							<img src=<?= '"' . assets_url(); ?>/vd-theme/images/c4.jpg" alt=" " />
+							<img src=<?= '"' . assets_url(); ?>/vd-theme/images/g2.jpg" alt=" " />
 							<div class="gal-text-box">
 								<div class="info-gal-con">
 									<!--h4><?= sprintf(lang('main::lang.gallery.sixth_image_title')) ?></h4-->
@@ -473,9 +475,9 @@ function onEnd()
 					</a>
 				</div>
 				<div class="col-md-6 baner-top wow fadeInRight animated" data-wow-delay=".5s">
-					<a href=<?= '"' . assets_url(); ?>/vd-theme/images/g7.jpg" class="b-link-stripe b-animate-go  swipebox">
+					<a href=<?= '"' . assets_url(); ?>/vd-theme/images/c2.jpg" class="b-link-stripe b-animate-go  swipebox">
 						<div class="gal-spin-effect vertical ">
-							<img src=<?= '"' . assets_url(); ?>/vd-theme/images/g7.jpg" alt=" " />
+							<img src=<?= '"' . assets_url(); ?>/vd-theme/images/c2.jpg" alt=" " />
 							<div class="gal-text-box">
 								<div class="info-gal-con">
 									<!--h4><?= sprintf(lang('main::lang.gallery.seventh_image_title')) ?></h4-->
@@ -489,9 +491,9 @@ function onEnd()
 					</a>
 				</div>
 				<div class="col-md-6 baner-top wow fadeInLeft animated" data-wow-delay=".5s">
-					<a href=<?= '"' . assets_url(); ?>/vd-theme/images/g8.jpg" class="b-link-stripe b-animate-go  swipebox">
+					<a href=<?= '"' . assets_url(); ?>/vd-theme/images/c1.jpg" class="b-link-stripe b-animate-go  swipebox">
 						<div class="gal-spin-effect vertical ">
-							<img src=<?= '"' . assets_url(); ?>/vd-theme/images/g8.jpg" alt=" " />
+							<img src=<?= '"' . assets_url(); ?>/vd-theme/images/c1.jpg" alt=" " />
 							<div class="gal-text-box">
 								<div class="info-gal-con">
 									<!--h4><?= sprintf(lang('main::lang.gallery.eighth_image_title')) ?></h4-->
@@ -519,12 +521,15 @@ function onEnd()
 	<div class="bottom">
 		<div class="container">
 			<div class="bottom-top">
-			<h3 class=" wow flipInX" data-wow-duration="1s" data-wow-delay=".3s"><?= sprintf(lang('main::lang.contact.we_are_sharing')) ?></h3>
-			<span><?= sprintf(lang('main::lang.contact.delicious_treats')) ?></span>
+				<a href="http://192.168.0.146/TastyIgniterNov2019">
+				<img class="img-logo" style="height:180px" alt="Dosa North &amp; South Indian Restaurant" src="http://192.168.0.146/TastyIgniterNov2019/assets/media/uploads/Dosa logo 2019.png">
+				</a>
+			<!--<h3 class=" wow flipInX" data-wow-duration="1s" data-wow-delay=".3s"><?= sprintf(lang('main::lang.contact.we_are_sharing')) ?></h3>
+			<span><?= sprintf(lang('main::lang.contact.delicious_treats')) ?></span>-->
 			<!--p class="wow slideInDown" data-wow-duration="1s" data-wow-delay=".5s"><?= sprintf(lang('main::lang.contact.contact_us_text')) ?></p-->
-			<div class="start wow flipInX" data-wow-duration="1s" data-wow-delay=".3s">
-				<a href="<?= site_url('contact'); ?>" class="hvr-bounce-to-bottom"><?= lang('main::lang.menu_contact'); ?></a>
-			</div>
+			<!--	<div class="start wow flipInX" data-wow-duration="1s" data-wow-delay=".3s">
+					<a href="<?= site_url('contact'); ?>" class="hvr-bounce-to-bottom"><?= lang('main::lang.menu_contact'); ?></a>
+				</div>-->
 			</div>
 		</div>
 	</div>

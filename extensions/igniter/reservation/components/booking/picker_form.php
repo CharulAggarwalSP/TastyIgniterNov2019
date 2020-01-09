@@ -10,7 +10,7 @@
 
 <div class="form-row form-row-table">
 
-    <div class="col-sm-4 mb-3">
+    <!-- <div class="col-sm-4 mb-3">
         <label class="sr-only" for="location">
             <?= lang('igniter.reservation::default.label_location'); ?>
         </label>
@@ -26,7 +26,8 @@
                 ><?= e($value); ?></option>
             <?php } ?>
         </select>
-    </div>
+    </div> -->
+    <input type="hidden" name="location" value="1">
     <div class="col-sm-2 mb-3">
         <label class="sr-only" for="noOfGuests">
             <?= lang('igniter.reservation::default.label_guest_num'); ?>

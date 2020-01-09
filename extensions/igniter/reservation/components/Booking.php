@@ -75,7 +75,7 @@ class Booking extends BaseComponent
             'bookingTimeFormat' => [
                 'label' => 'Time format to use for the time dropdown',
                 'type' => 'text',
-                'default' => 'hh:mm a',
+                'default' => 'HH::mm'//'hh:mm a',
             ],
             'bookingDateTimeFormat' => [
                 'label' => 'Date time format to use for displaying reservation date & time',
@@ -212,8 +212,10 @@ class Booking extends BaseComponent
     public function getTimeSlots()
     {
         $result = [];
-        $selectedDate = Carbon::createFromFormat('Y-m-d H:i', input('date').' '.input('time'));
-        $interval = $this->property('timeSlotsInterval', $this->location->getReservationInterval());
+        $time = '15:30';//input('time');
+        $selectedDate = Carbon::createFromFormat('Y-m-d H:i', input('date').' '.$time);
+        
+        $interval = $this->property('timeSlotsInterval',  $this->location->getReservationInterval());
         $dateTimes = $this->manager->makeTimeSlots($selectedDate, $interval);
         $query = Request::query();
         foreach ($dateTimes as $date) {
@@ -225,7 +227,6 @@ class Booking extends BaseComponent
                 'actionUrl' => Request::url().'?'.http_build_query($query),
             ];
         }
-
         return $result;
     }
 

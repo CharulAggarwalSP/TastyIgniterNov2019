@@ -1,9 +1,21 @@
-<div class="main-footer pt-sm-3">
+<div class="main-footer pb-0">
     <div class="container">
-        <div class="row">
-            <div class="col-sm-3">
+        <div class="row main-footer-row">
+            <div class="col-sm-4">
+				<div class="footer-links">
+					<h6 class="footer-title d-none d-sm-block"> Address</h6>
+					<h5 class="mb-1">Timiing: 15:30 - 23:00</h5>
+					<ul>
+						<li>North & South Indian Restaurant</li>
+						<li>Overtoom 146<br>1054 HS<br>Amsterdam<br>Netherlands</li>
+						<li>Phone : 0681936735 </li>
+						<li>Fax : 020-6895073</li>
+					</ul>
+				</div>
+			</div>
+            <div class="col-sm-4">
                 <div class="footer-links">
-                    <h6 class="footer-title d-none d-sm-block"><?= lang('main::lang.text_my_account'); ?></h6>
+                    <h6 class="footer-title d-none d-sm-block"> <?= lang('main::lang.text_my_account'); ?></h6>
                     <ul>
                       <?php if (Auth::isLogged()) { ?>
                         <li><a href="<?= page_url('account/account'); ?>"
@@ -28,19 +40,24 @@
                             </a>
                         </li>
                         <?php } ?>
+						<li>
+                            <a href="<?= site_url('contact'); ?>">
+                                <?= lang('main::lang.menu_contact'); ?>
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
-            <div class="col-sm-4">
+            <!--<div class="col-sm-4">
                 <div class="footer-links">
                     <h6 class="footer-title d-none d-sm-block"><?= setting('site_name'); ?></h6>
                     <ul>
                         <?php if (!is_single_location()) { ?>
-                            <!-- <li>
+                              <li>
                                 <a href="<?= site_url('locations'); ?>">
                                     <?= lang('main::lang.menu_locations'); ?>
                                 </a>
-                            </li> -->
+                            </li> 
                         <?php } ?>
                         <li>
                             <a href="<?= site_url('contact'); ?>">
@@ -48,18 +65,18 @@
                             </a>
                         </li>
                         <?php //if ($this->theme->hide_admin_link != 1) { ?>
-                           <!--  <li>
+                            <li>
                                 <a
                                     target="_blank"
                                     href="<?= admin_url(); ?>"
                                 >
                                     <?= lang('main::lang.menu_admin'); ?>
                                 </a>
-                            </li> -->
+                            </li> 
                         <?php// } ?>
                     </ul>
                 </div>
-            </div>
+            </div>-->
             <!-- <div class="col-sm-3">
                 <div class="footer-links">
                     <h6 class="footer-title d-none d-sm-block"><?= lang('main::lang.text_information'); ?></h6>
@@ -77,11 +94,13 @@
                 </div>
             </div> -->
 
-             <div class="col-sm-3 mt-3 mt-sm-0">
+             <div class="col-sm-4 mt-3 mt-sm-0">
+              <div class="footer-links">
                 <div class="social-bottom">
                     <h6 class="footer-title"><?= lang('main::lang.text_follow_us'); ?></h6>
                     <?= partial('social_icons', ['socialIcons' => $this->theme->social]); ?>
                 </div>
+            </div> 
             </div> 
         </div>
     </div>
@@ -95,7 +114,7 @@
     </div>
 </div>
 
-<div class="bottom-footer py-2">
+<div class="bottom-footer py-2 tex-center" style="text-align:center;">
     <div class="container">
         <div class="row">
             <div class="col p-2">                 

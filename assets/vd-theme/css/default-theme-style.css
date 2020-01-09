@@ -1,6 +1,33 @@
   @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap');
   @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css');
   @import url('https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+   @import url('https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap');
+
+@font-face {
+    font-family: 'OPTICopperplate';
+    src: url('../fonts/Copperplate/OPTICopperplate-Heavy.woff2') format('woff2'),
+        url('../fonts/Copperplate/OPTICopperplate-Heavy.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OPTICopperplate';
+    src: url('../fonts/Copperplate/OPTICopperplate.woff2') format('woff2'),
+        url('../fonts/Copperplate/OPTICopperplate.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OPTICopperplate';
+    src: url('../fonts/Copperplate/OPTICopperplate-Light.woff2') format('woff2'),
+        url('../fonts/Copperplate/OPTICopperplate-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+
 
   body a {
     transition: 0.5s all;
@@ -15,7 +42,9 @@
 
   html,
   body {
+    
     font-family: 'Open Sans', sans-serif !important;
+    font-family: 'Raleway', sans-serif !important;
     font-size: 13px;
     background: #ffffff;
   }
@@ -393,13 +422,18 @@
   #slider3-pager li {
     display: inline-block;
   }
-
+.banner-slider{
+	 
+	min-height: 800px;
+	display: flex;
+}
   .rslides {
     position: relative;
     list-style: none;
     overflow: hidden;
     width: 100%;
     padding: 0;
+	height:100%;
   }
 
   .rslides li {
@@ -409,6 +443,7 @@
     width: 100%;
     left: 0;
     top: 0;
+	background-size:cover; height:100%
   }
 
   .rslides li {
@@ -425,7 +460,7 @@
   .callbacks_tabs {
     list-style: none;
     position: absolute;
-    bottom: -8%;
+    bottom: 30%;
     z-index: 999;
     left: 47%;
     padding: 0;
@@ -744,9 +779,8 @@
   }
 
   figure.effect-jazz:hover img {
-    opacity: 0.5;
-    -webkit-transform: scale3d(1.05, 1.05, 1);
-    transform: scale3d(1.05, 1.05, 1);
+   
+   
   }
 
   figure.effect-jazz:hover figcaption::after {
@@ -1364,16 +1398,20 @@
   /*--bottom-*/
   .bottom {
     background: url("../images/bottom.jpg") no-repeat 0px 0px;
+    background-position-x: 0px;
+    background-position-y: 0px;
     background-size: auto;
-    padding: 0em 0 0 0;
-    background-size: cover;
-    -o-background-size: cover;
-    -moz-background-size: cover;
-    -ms-background-size: cover;
-    -webkit-background-size: cover;
-    min-height: inherit;
-    position: relative;
-    padding: 10vw 0;
+background-size: auto;
+padding: 0em 0 0 0;
+background-size: cover;
+-o-background-size: cover;
+-moz-background-size: cover;
+-ms-background-size: cover;
+-webkit-background-size: cover;
+min-height: inherit;
+position: relative;
+padding: 10vw 0;
+background-position: center center;
   }
 
   .bottom:before {
@@ -1901,7 +1939,7 @@
   /*-- contact-page --*/
   h3.tittle {
     font-size: 5em;
-    color: #333;
+    color: #efa52c;
   }
 
   .arrows-three {
@@ -1915,7 +1953,7 @@
     position: absolute;
     bottom: 43%;
     left: 22.5%;
-    background: #333;
+    background: #efa52c;
     width: 22%;
     height: 3px;
   }
@@ -1925,7 +1963,7 @@
     position: absolute;
     bottom: 43%;
     right: 22.5%;
-    background: #333;
+    background: #efa52c;
     width: 22%;
     height: 3px;
   }
@@ -2275,20 +2313,21 @@
 
   .footer-title {
     text-transform: uppercase;
-    padding-bottom: 14px;
-    font-weight: bold;
-    color:
-      #fff;
-    line-height: 22px;
+padding-bottom: 14px;
+font-weight: bold;
+color: #fff;
+line-height: 22px;
+font-size: 15px;
+color:
+#efa52c;
   }
 
   .footer-links li a {
-    color: #fff !important;
-    font-size: 14px;
-    margin-bottom: 5px;
-    display: block;
-    padding-left: 0;
-    background: none !important
+   font-size: 13px;
+margin-bottom: 10px;
+display: block;
+padding-left: 0;
+background: none !important;
   }
 
   /*-- responsive-design starts-here --*/
@@ -2303,7 +2342,7 @@
 
     h3.tittle,
     h3.single {
-      font-size: 4em;
+      font-size: 3em;
     }
 
 
@@ -4188,7 +4227,12 @@
       align-items: center;
     }
   }
-
+    body .header-bottom {
+      background: #000;
+      padding: 10px 0;
+      
+      position: fixed !important;
+    }
   body {
     overflow-x: hidden;
     margin-bottom: 0 !important;
@@ -4283,15 +4327,7 @@
       margin: 0px;
     }
 
-    body .header-bottom {
-      background: #000;
-      padding: 10px 0;
-      position: -webkit-sticky !important;
-      position: -moz-sticky !important;
-      position: -ms-sticky !important;
-      position: -o-sticky !important;
-      position: sticky !important;
-    }
+
 
     body>main {
       padding-top: 0 !important;
@@ -5154,6 +5190,12 @@
     text-align: center;
     margin: 40px 0;
   }
+  
+  .gallery .equal{
+	  height: 337px;
+object-fit: cover;
+object-position: center -16vw;
+  }
 
   @media(max-width:767px) {
     .card.my-account .card-body {
@@ -5256,3 +5298,33 @@
       width: 100%;
     }
   }
+  
+  
+  
+ /*MAIN-FOOTER AREA CSS STARTS*/
+.footer .main-footer{
+	 padding:60px 0;
+	 font-size:13px;
+ }
+.footer .main-footer .footer-links{
+	background:
+	rgba(255,255,255,0.1);
+	padding: 20px;
+	border-radius: 10px; 
+	height:100%;
+}
+@media(min-width:768px){
+	.main-footer-row{
+		display:flex;
+	}
+	.main-footer-row:before,
+	.main-footer-row:after{
+		display:none
+	}
+	 
+}
+
+.footer .main-footer .social-icons li a{
+	padding: 0px !important;
+	font-size: 20px !important;
+}

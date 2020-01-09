@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'OPTICopperplate';
+    src: url('OPTICopperplate-Heavy.woff2') format('woff2'),
+        url('OPTICopperplate-Heavy.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OPTICopperplate';
+    src: url('OPTICopperplate.woff2') format('woff2'),
+        url('OPTICopperplate.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OPTICopperplate';
+    src: url('OPTICopperplate-Light.woff2') format('woff2'),
+        url('OPTICopperplate-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
