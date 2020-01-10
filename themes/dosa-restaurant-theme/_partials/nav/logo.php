@@ -12,6 +12,7 @@
     <?php } else { ?>
         <img
             class="img-logo"
+            style="height:80px"
             alt="<?= setting('site_name'); ?>"
             src="<?= uploads_url(setting('site_logo')) ?>"
         >

@@ -8,9 +8,9 @@
 					
 					<ul>
 						<li>Overtoom 146<br>1054 HS<br>Amsterdam<br>Netherlands</li>
-						<li>Phone : 0681936735 </li>
-						<li><i class="fa fa-phone" aria-hidden="true"></i> 0681936735 </li>
-						<li>Fax : 020-6895073</li>
+						<li><i class="fa fa-phone" aria-hidden="true" style="color:rgba(255, 255, 255, 0.75)"></i> 020-6164838 </li>
+						<li><i class="fa fa-mobile" aria-hidden="true" style="color:rgba(255, 255, 255, 0.75)"></i> 0681936735 </li>
+						<li><i class="fa fa-fax" aria-hidden="true" style="color:rgba(255, 255, 255, 0.75)"></i> 020-6895073 </li>
 					</ul>
 				</div> 
 			</div>

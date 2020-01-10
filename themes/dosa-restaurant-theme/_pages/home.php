@@ -526,7 +526,7 @@ function onEnd()
 		<div class="container">
 			<div class="bottom-top">
 				<a href="<?=page_url('home');?>">
-				<img class="img-logo" style="height:130px" alt="Dosa North &amp; South Indian Restaurant" src="<?= assets_url().'/media/uploads/Dosa logo 2019.png' ?>">
+				<img class="img-logo" style="height:130px" alt="Dosa North &amp; South Indian Restaurant" src="<?= assets_url().'/media/uploads/dosa_logo.png' ?>">
 				</a>
 				<div class="start wow flipInX" data-wow-duration="1s" data-wow-delay=".3s">
 					<a href="<?= site_url('contact'); ?>" class="hvr-bounce-to-bottom"><?= lang('main::lang.menu_contact'); ?></a>
