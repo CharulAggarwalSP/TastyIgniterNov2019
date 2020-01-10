@@ -143,7 +143,9 @@ return [
         'food' => 'Food',
         'section_data' => 'When Jazz starts to chase cars, the whole world stands still.',
         'welcome' => 'Welcome',
-        'first_section_side_paragraph' => 'We are bringing traditional food from India with a new look to come presenting new trends. By introducing some rare dishes like Dosa and other South Indian delicacies to the Netherlands we have become the only proud providers and still we are the only one to serve them. We wish you a pleasant dining experience with us',
+        'first_section_side_paragraph' => 'The Dosa marked inception in Netherlands 25 years ago. Our objective was to blend traditional south Indian food trends with innovate presentations. We have been achieving this objective since inception with the help DOSA and many more popular but rare and traditional South Indian delicacies.
+Now we focus on filling your tummy with yummy, hygienic and healthy traditional South Indian food to turn your dinner and parties into a memorable moment that you would love to cherish for the rest of your life.
+Do you want to try something? What are you waiting for then? Let’s go!',
         // 'first_section_side_paragraph' => 'We can make a commitment to promote vegetables and fruits and whole grains on every part of every menu. We can make portion sizes smaller and emphasize quality over quantity. And we can help create a culture - imagine this - where our kids ask for healthy options instead of resisting them.',
         'second_section_side_paragraph' => 'I mean, it\'s nice to get a dinner reservation ahead of other people, but when it comes down to it, the most important thing to me is the actual work.',
     ],
