@@ -562,7 +562,9 @@ function onEnd()
 						<h4><?= $contactLocation->getName(); ?></h4>
 						<ul>
 							<li><?= format_address($contactLocation->getAddress()); ?></li>
-							<li><a href="mailto:dosarestaurant@gmail.com" target="_top">dosarestaurant@gmail.com</li>
+							<li>
+								<a href="mailto:dosarestaurant@gmail.com" target="_top">dosarestaurant@gmail.com</a>
+							</li>
 							<li><i class="fa fa-phone" aria-hidden="true" ></i>&nbsp;&nbsp; <?= $contactLocation->getTelephone(); ?> </li>
 							<li><i class="fa fa-mobile" aria-hidden="true"></i> &nbsp;&nbsp;&nbsp;0681936735 </li>
 							<li><i class="fa fa-fax" aria-hidden="true"></i> &nbsp;020-6895073</li>

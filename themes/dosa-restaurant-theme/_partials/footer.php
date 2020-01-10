@@ -8,7 +8,7 @@
 					
 					<ul>
 						<li>Overtoom 146<br>1054 HS<br>Amsterdam<br>Netherlands</li>
-						<li><a href="mailto:dosarestaurant@gmail.com" target="_top">dosarestaurant@gmail.com</a> </li>
+						<li><a href="mailto:dosarestaurant@gmail.com" target="_top">dosarestaurant@gmail.com</a></li>
 						<li><i class="fa fa-phone" aria-hidden="true" style="color:rgba(255, 255, 255, 0.75)"></i> &nbsp;020-6164838 </li>
 						<li><i class="fa fa-mobile" aria-hidden="true" style="color:rgba(255, 255, 255, 0.75)"></i> &nbsp;&nbsp;0681936735 </li>
 						<li><i class="fa fa-fax" aria-hidden="true" style="color:rgba(255, 255, 255, 0.75)"></i> 020-6895073 </li>
