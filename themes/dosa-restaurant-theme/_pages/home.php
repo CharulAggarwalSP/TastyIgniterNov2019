@@ -526,7 +526,7 @@ function onEnd()
 		<div class="container">
 			<div class="bottom-top">
 				<a href="<?=page_url('home');?>">
-				<img class="img-logo" style="height:130px" alt="Dosa North &amp; South Indian Restaurant" src="<?= assets_url().'/media/uploads/dosa_logo.png' ?>">
+				<img class="img-logo" style="height:190px" alt="Dosa North &amp; South Indian Restaurant" src="<?= assets_url().'/media/uploads/dosa_logo.png' ?>">
 				</a>
 				<div class="start wow flipInX" data-wow-duration="1s" data-wow-delay=".3s">
 					<a href="<?= site_url('contact'); ?>" class="hvr-bounce-to-bottom"><?= lang('main::lang.menu_contact'); ?></a>
@@ -562,8 +562,9 @@ function onEnd()
 						<h4><?= $contactLocation->getName(); ?></h4>
 						<ul>
 							<li><?= format_address($contactLocation->getAddress()); ?></li>
-							<li>Phone : <?= $contactLocation->getTelephone(); ?> </li>
-							<li>Fax : 020-6895073</li>
+							<li><i class="fa fa-phone" aria-hidden="true" ></i>&nbsp;&nbsp; <?= $contactLocation->getTelephone(); ?> </li>
+							<li><i class="fa fa-mobile" aria-hidden="true"></i> &nbsp;&nbsp;&nbsp;0681936735 </li>
+							<li><i class="fa fa-fax" aria-hidden="true"></i> &nbsp;020-6895073</li>
 						</ul>
 					</div>
 				<?php } ?>
