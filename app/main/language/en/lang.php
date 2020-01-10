@@ -135,7 +135,7 @@ return [
         'text_step_banner_text_one' => 'TRADITIONAL AUTHENTIC DINING',
         'text_step_banner_headline_two' => 'Speciality in',
         'text_step_banner_text_two' => 'NORTH & SOUTH INDIAN',
-        'text_step_banner_headline_three' => '35 years',
+        'text_step_banner_headline_three' => '25 years',
         'text_step_banner_text_three' => 'IN YOUR SERVICE',
         'text_ready_to_be_opened' => 'READY TO BE OPENED',
         'honest' => 'Honest',
