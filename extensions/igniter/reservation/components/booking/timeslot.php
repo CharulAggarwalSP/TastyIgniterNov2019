@@ -36,9 +36,15 @@
 	}
 	.time_slot{
 		display:flex;
+		flex-wrap:wrap;
 	}
 	.time_slot a{
-		flex:1
+		flex: 1;
+		margin: 0 4px;
+		border: none !important;
+		font-weight: bold;
+		padding: 11px;
+		margin-bottom:4px;
 	}
 	@media(min-width:768px){ 
 	.center-block:after{
@@ -72,8 +78,10 @@
 	}
 	.center-block .card.mb-1 .card-body{
 		padding-top: 0;
-		padding-bottom: 0;
-		margin-top: 30px; 
+		padding-bottom: 0; 
+	}
+	.center-block {
+		padding:20px
 	}
 	#page-wrapper{
 		padding: 60px 0;

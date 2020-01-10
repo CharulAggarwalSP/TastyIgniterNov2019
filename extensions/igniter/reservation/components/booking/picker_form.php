@@ -20,7 +20,7 @@
 	@media(min-width:768px){ 
 	.center-block:after{
 			content: "";
-			background: url('<?php echo assets_url()."/media/uploads/Dosa%20logo%202019.png" ?>') no-repeat;
+			background: url('<?php echo assets_url()."/media/uploads/dosa_logo.png" ?>') no-repeat;
 			background-size: auto;
 			position: absolute;
 			top: 16px;
