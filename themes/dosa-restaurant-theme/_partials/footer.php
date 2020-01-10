@@ -8,8 +8,8 @@
 					
 					<ul>
 						<li>Overtoom 146<br>1054 HS<br>Amsterdam<br>Netherlands</li>
-						<li><i class="fa fa-phone" aria-hidden="true" style="color:rgba(255, 255, 255, 0.75)"></i> 020-6164838 </li>
-						<li><i class="fa fa-mobile" aria-hidden="true" style="color:rgba(255, 255, 255, 0.75)"></i> 0681936735 </li>
+						<li><i class="fa fa-phone" aria-hidden="true" style="color:rgba(255, 255, 255, 0.75)"></i> &nbsp;020-6164838 </li>
+						<li><i class="fa fa-mobile" aria-hidden="true" style="color:rgba(255, 255, 255, 0.75)"></i> &nbsp;&nbsp;0681936735 </li>
 						<li><i class="fa fa-fax" aria-hidden="true" style="color:rgba(255, 255, 255, 0.75)"></i> 020-6895073 </li>
 					</ul>
 				</div> 
@@ -101,7 +101,7 @@
                     <h6 class="footer-title"><?= lang('main::lang.text_follow_us'); ?></h6>
                     <?= partial('social_icons', ['socialIcons' => $this->theme->social]); ?>
 					<h6 class="footer-title mb-1 pb-1 mt-3">Opening Timings</h6>
-					<h5 class="mb-1">All Days ( 15:30-23:00 )</h5>
+					<h5 class="mb-1">All Days&nbsp; : &nbsp;15:30hrs - 23:00hrs </h5>
                 </div>
             </div> 
             </div> 

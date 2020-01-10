@@ -47,7 +47,7 @@ return [
     'text_condition_below_total' => '%s below %s',
     'text_delivery_areas' => 'Delivery Areas',
     'text_delivery_map' => 'Delivery Map',
-    'text_working_hour' => '(%s - %s)',
+    'text_working_hour' => '%s - %s',
 
     'text_categories' => 'Categories',
     'text_view_categories' => 'View categories',

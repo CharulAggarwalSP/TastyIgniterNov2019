@@ -60,7 +60,7 @@
     </div>
     
     <div loder__right>
-    <img style="width: 90px; margin-right: 10px; background: #fff; padding: 7px 10px;
+    <img style="width: 90px; margin-right: 0px; padding: 7px 10px;
     border-radius: 10px;" src="<?php echo assets_url().'/vd-theme/images/vegan.png'?>" />
     <img src="<?= assets_url('/vd-theme/images/halal.png') ?>" /> </div>
     
@@ -69,7 +69,6 @@
 </div>
 <style>
     [loder__right] {
-        width: 100px;
         overflow: hidden;
         position: absolute;
         bottom: 20px;
