@@ -142,7 +142,7 @@ function onEnd()
 					<a href="<?= restaurant_url('local/menus'); ?>" class="hi-icon"><img src=<?= '"' . assets_url(); ?>/vd-theme/images/serve1.png" alt=" " /></a>
 				</div>
 				<h4><?= sprintf(lang('main::lang.services.view_our_menu')) ?></h4>
-				<p>The list of mouthwatering dishes contains but is not limited to the dishes like ...</p>
+				<p>Turn your party into a memorable moment to come back here again and again with a variety of delectable dishes we have in our menu for you</p>
 			</div>
 			<div class="col-md-3 services-gd text-center wow slideInDown" data-wow-duration="1s" data-wow-delay=".2s">
 				<div class="hi-icon-wrap hi-icon-effect-9 hi-icon-effect-9a">
@@ -163,7 +163,7 @@ function onEnd()
 					<a href="#contact" class="hi-icon scroll"><img src=<?= '"' . assets_url(); ?>/vd-theme/images/serve4.png" alt=" " /></a>
 				</div>
 				<h4><?= sprintf(lang('main::lang.services.spicy_recipes')) ?></h4>
-				<p>From spacious halls to thoroughly professional catering team, we have everything to exceed your expectations</p>
+				<p>From a heavily experienced cooking and service staff to a thoroughly professional catering team, we have everything to exceed your expectations</p>
 			</div>
 				<div class="clearfix"> </div>
 			</div>
@@ -562,7 +562,7 @@ function onEnd()
 						<h4><?= $contactLocation->getName(); ?></h4>
 						<ul>
 							<li><?= format_address($contactLocation->getAddress()); ?></li>
-							<li><i class="fas fa-envelope-square" aria-hidden="true"></i> &nbsp;dosarestaurant@gmail.com </li>
+							<li><a href="mailto:dosarestaurant@gmail.com" target="_top">dosarestaurant@gmail.com</li>
 							<li><i class="fa fa-phone" aria-hidden="true" ></i>&nbsp;&nbsp; <?= $contactLocation->getTelephone(); ?> </li>
 							<li><i class="fa fa-mobile" aria-hidden="true"></i> &nbsp;&nbsp;&nbsp;0681936735 </li>
 							<li><i class="fa fa-fax" aria-hidden="true"></i> &nbsp;020-6895073</li>
