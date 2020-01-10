@@ -142,7 +142,7 @@ function onEnd()
 					<a href="<?= restaurant_url('local/menus'); ?>" class="hi-icon"><img src=<?= '"' . assets_url(); ?>/vd-theme/images/serve1.png" alt=" " /></a>
 				</div>
 				<h4><?= sprintf(lang('main::lang.services.view_our_menu')) ?></h4>
-				<p>Turn your party into a memorable moment to come back here again and again with a variety of delectable dishes we have in our menu for you</p>
+				<p>Turn your dining experience into a memorable moment with a variety of selectable North Indian Curries  & South Indian specialities. Check out our delicious menu</p>
 			</div>
 			<div class="col-md-3 services-gd text-center wow slideInDown" data-wow-duration="1s" data-wow-delay=".2s">
 				<div class="hi-icon-wrap hi-icon-effect-9 hi-icon-effect-9a">
@@ -163,7 +163,7 @@ function onEnd()
 					<a href="#contact" class="hi-icon scroll"><img src=<?= '"' . assets_url(); ?>/vd-theme/images/serve4.png" alt=" " /></a>
 				</div>
 				<h4><?= sprintf(lang('main::lang.services.spicy_recipes')) ?></h4>
-				<p>From a heavily experienced cooking and service staff to a thoroughly professional catering team, we have everything to exceed your expectations</p>
+				<p>We have everything to exceed your expectations from an owner with 40 yrs experience in the cooking industry and an experienced chefs trained out of India to a professional catering team, we have successfully hosted many local & overseas corporate group events</p>
 			</div>
 				<div class="clearfix"> </div>
 			</div>
@@ -578,7 +578,7 @@ function onEnd()
 			<!--map-->
 			<div class="map wow fadeInDown" data-wow-duration=".8s" data-wow-delay=".5s">
 					<div class="gmap_canvas">
-					<iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=Overtoom%20146%201054%20Amsterdam%20Netherlands&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+					<iframe width="600" height="500" id="gmap_canvas" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2436.4398558249177!2d4.871278115801592!3d52.36244387978461!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c609e15433598b%3A0x78c885ee5a686237!2sDosa%20South%20Indian%20Restaurant!5e0!3m2!1sen!2sin!4v1578671310935!5m2!1sen!2sin" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
 					</div>
 			</div>
 			<!--//map-->

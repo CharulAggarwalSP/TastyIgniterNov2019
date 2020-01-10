@@ -13,7 +13,10 @@
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link" href="<?= assets_url('/media/menu/menu.pdf'); ?>" target="_blank"><?= lang('main::lang.menu'); ?></a>
+                                <a class="nav-link" href="<?= assets_url('media/menu/food.pdf'); ?>" target="_blank"><?= lang('main::lang.food_menu'); ?></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="<?= assets_url('media/menu/drinks.pdf'); ?>" target="_blank"><?= lang('main::lang.drinks_menu'); ?></a>
                             </li>
                             <?php if (Auth::isLogged()) { ?>
                             <li class="nav-item">
@@ -76,7 +79,7 @@
     }
     .banner.inner_pages{
         min-height:300px !important;
-        background:url('<?php echo assets_url()."/vd-theme/images/1.jpg" ?>') no-repeat;
+        background:url('<?php echo assets_url()."/vd-theme/images/1.jpg" ?>') no-repeat 0px;
     }
     [loder__right] img{max-width:100%}
 </style>
