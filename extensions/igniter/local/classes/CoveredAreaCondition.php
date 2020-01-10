@@ -15,8 +15,8 @@ class CoveredAreaCondition
     public function __construct(array $condition = [])
     {
         $this->type = array_get($condition, 'type', 'all');
-        $this->amount = (int)array_get($condition, 'amount', -1);
-        $this->total = (int)array_get($condition, 'total', 0);
+        $this->amount = array_get($condition, 'amount', -1);
+        $this->total = array_get($condition, 'total', 0);
         $this->priority = (int)array_get($condition, 'priority', 999);
     }
 
