@@ -30,7 +30,8 @@ return [
     'menu_contact' => 'Contact Us',
     'menu_admin' => 'Administrator',
     'menu_about' => 'Order Online',
-    'menu' => 'Menu',
+    'food_menu' => 'Food Menu',
+    'drinks_menu' => 'Drinks Menu',
 
     'alert_success' => '%s successfully.',
     'alert_error' => 'An error occurred, %s.',

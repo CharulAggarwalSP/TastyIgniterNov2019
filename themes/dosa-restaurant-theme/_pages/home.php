@@ -562,6 +562,7 @@ function onEnd()
 						<h4><?= $contactLocation->getName(); ?></h4>
 						<ul>
 							<li><?= format_address($contactLocation->getAddress()); ?></li>
+							<li><i class="fas fa-envelope-square" aria-hidden="true"></i> &nbsp;dosarestaurant@gmail.com </li>
 							<li><i class="fa fa-phone" aria-hidden="true" ></i>&nbsp;&nbsp; <?= $contactLocation->getTelephone(); ?> </li>
 							<li><i class="fa fa-mobile" aria-hidden="true"></i> &nbsp;&nbsp;&nbsp;0681936735 </li>
 							<li><i class="fa fa-fax" aria-hidden="true"></i> &nbsp;020-6895073</li>
@@ -575,7 +576,7 @@ function onEnd()
 			<!--map-->
 			<div class="map wow fadeInDown" data-wow-duration=".8s" data-wow-delay=".5s">
 					<div class="gmap_canvas">
-					<iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=Overtoom%20146%201054%20HS%20Amsterdam%20Netherlands&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+					<iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=Overtoom%20146%201054%20Amsterdam%20Netherlands&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
 					</div>
 			</div>
 			<!--//map-->
