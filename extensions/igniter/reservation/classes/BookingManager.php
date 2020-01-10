@@ -69,8 +69,9 @@ class BookingManager
         if (!$this->location)
             return [];
 
-        $start = $date->copy()->subMinutes($interval * 2);
-        $end = $date->copy()->addMinutes($interval * 6);
+        // $start = $date->copy()->subMinutes($i0nterval * 2);
+        $start = $date->copy();
+        $end = $date->copy()->addMinutes($interval * 8);
         $dateInterval = new DateInterval('PT'.$interval.'M');
         $dateTimes = new DatePeriod($start, $dateInterval, $end);
 
