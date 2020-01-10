@@ -149,14 +149,14 @@ function onEnd()
 					<a href="<?= page_url('reservation/reservation'); ?>" class="hi-icon"><img src=<?= '"' . assets_url(); ?>/vd-theme/images/serve2.png" alt=" " /></a>
 				</div>
 				<h4><?= sprintf(lang('main::lang.services.reservation')) ?></h4>
-				<p>Just specify the number of people, the date of party and timing to utilize table reservation</p>
+				<p>Please reserve your table to enjoy the Indian Authentic Fine Dining experience in Amsterdam.</p>
 			</div>
 			<div class="col-md-3 services-gd text-center wow slideInUp" data-wow-duration="1s" data-wow-delay=".2s">
 				<div class="hi-icon-wrap hi-icon-effect-9 hi-icon-effect-9a">
 					<a href="#contact" class="hi-icon scroll"><img src=<?= '"' . assets_url(); ?>/vd-theme/images/serve3.png" alt=" " /></a>
 				</div>
 				<h4><?= sprintf(lang('main::lang.services.fine_recipes')) ?></h4>
-				<p>Our party catering service makes sure everyone fills tummy with healthy and delicious food</p>
+				<p>Specialised in birthdays, wedding, reception, company & team events caterings.</p>
 			</div>
 			<div class="col-md-3 services-gd text-center wow slideInRight" data-wow-duration="1s" data-wow-delay=".3s">
 				<div class="hi-icon-wrap hi-icon-effect-9 hi-icon-effect-9a">
