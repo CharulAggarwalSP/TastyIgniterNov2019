@@ -180,7 +180,7 @@ return [
         'text_empty' => 'There are no order(s).',
         'text_leave_review' => 'Leave review',
         'text_no_payment' => 'No Payment',
-        'text_login_to_view_more' => 'For more information about your order, please create an account or login.',
+        'text_login_to_view_more' => 'For more information about your order, please contact the restaurant on 020-6164838.',
 
         'column_id' => 'Order no.',
         'column_status' => 'Status',

@@ -9,7 +9,7 @@
 					<ul>
 						<li style="    margin-bottom: 10px;
 ">Overtoom 146<br>1054 HS<br>Amsterdam<br>Netherlands</li>
-						<li><a href="mailto:dosarestaurant@gmail.com" target="_top" style="margin-bottom:0"><i class="fa fa-envelope-square" style="color:rgba(255, 255, 255, 0.75);"></i>dosarestaurant@gmail.com</a></li>
+						<li><a href="mailto:dosarestaurant@gmail.com" target="_top" style="margin-bottom:0"><i class="fa fa-envelope-square" style="color:rgba(255, 255, 255, 0.75);"></i>&nbsp;dosarestaurant@gmail.com</a></li>
 						<li><i class="fa fa-phone" aria-hidden="true" style="color:rgba(255, 255, 255, 0.75)"></i> &nbsp;020-6164838 </li>
 						<li><i class="fa fa-mobile" aria-hidden="true" style="color:rgba(255, 255, 255, 0.75)"></i> &nbsp;&nbsp;0681936735 </li>
 						<li><i class="fa fa-fax" aria-hidden="true" style="color:rgba(255, 255, 255, 0.75)"></i> 020-6895073 </li>
@@ -111,7 +111,7 @@
                 <div class="social-bottom">
                     <h6 class="footer-title"><?= lang('main::lang.text_follow_us'); ?></h6>
                     <?= partial('social_icons', ['socialIcons' => $this->theme->social]); ?>
-					<h6 class="footer-title mb-1 pb-1 mt-3">Opening Timings</h6>
+					<h6 class="footer-title mb-1 pb-1 mt-3">Opening Times</h6>
 					<h5 class="mb-1">All Days&nbsp; : &nbsp;15:30hrs - 23:00hrs </h5>
                 </div>
             </div> 
