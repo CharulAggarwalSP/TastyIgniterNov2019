@@ -5324,7 +5324,7 @@ object-position: center -16vw;
 }
 .footer .main-footer .footer-links .social-icons{
 	display:block;
-	width:100&
+	width:100%
 }
 @media(min-width:768px){
 	.main-footer-row{
