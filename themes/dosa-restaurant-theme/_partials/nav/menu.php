@@ -34,7 +34,7 @@
                                 <!-- <li><a data-hover="Chefs" href="#team" class="scroll"><?=sprintf(lang('main::lang.local.text_tab_chefs'))?></a></li> -->
                                 <!-- <li><a data-hover="Reservation" href="#reservation" class="scroll">REservation</a></li> -->
                                 <li class="d-none d-md-inline-flex"><a data-hover="Gallery" href="#gallery" class="scroll"><?=sprintf(lang('main::lang.local.text_tab_gallery'))?></a></li>
-                                <li class="d-block d-md-none"><a data-hover="Gallery" href="#gallery1" class="scroll"><?=sprintf(lang('main::lang.local.text_tab_gallery'))?></a></li>
+                                <!-- <li class="d-block d-md-none"><a data-hover="Gallery" href="#gallery1" class="scroll"><?=sprintf(lang('main::lang.local.text_tab_gallery'))?></a></li> -->
                                 <li><a data-hover="Contact" href="#contact" class="scroll"><?=sprintf(lang('main::lang.contact.title'))?></a></li>
                             </ul>
                         </nav>
