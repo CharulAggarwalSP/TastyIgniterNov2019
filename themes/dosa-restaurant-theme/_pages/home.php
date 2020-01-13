@@ -570,7 +570,7 @@ function onEnd()
 							<li><i class="fa fa-fax" aria-hidden="true"></i> &nbsp;020-6895073</li>
 						</ul>
 						<br>
-						<h4>Opening Timings</h4>
+						<h4>Opening Times</h4>
 						<ul>
 							<li>
 								All Days&nbsp; : &nbsp;15:30hrs - 23:00hrs 
