@@ -9,4 +9,3 @@
 composer.lock
 node_modules
 storage/temp/public/*
-assets/media/menu/*

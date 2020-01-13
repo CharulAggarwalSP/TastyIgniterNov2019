@@ -142,7 +142,7 @@ function onEnd()
 					<a href="<?= restaurant_url('local/menus'); ?>" class="hi-icon"><img src=<?= '"' . assets_url(); ?>/vd-theme/images/serve1.png" alt=" " /></a>
 				</div>
 				<h4><?= sprintf(lang('main::lang.services.view_our_menu')) ?></h4>
-				<p>Turn your dining experience into a memorable moment with a variety of North Indian Curries & South Indian specialities.We also have gluten free and vegan dishes available. Check out our delicious menu.</p>
+				<p>Turn your dining experience into a memorable moment with a variety of North Indian Curries & South Indian specialities. We also have gluten free and vegan dishes available. Check out our delicious menu.</p>
 			</div>
 			<div class="col-md-3 services-gd text-center wow slideInDown" data-wow-duration="1s" data-wow-delay=".2s">
 				<div class="hi-icon-wrap hi-icon-effect-9 hi-icon-effect-9a">

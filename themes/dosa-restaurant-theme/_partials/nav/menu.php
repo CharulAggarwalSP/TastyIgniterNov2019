@@ -16,8 +16,20 @@
                                 
                                 <li><a data-hover="Reservation" href="<?= page_url('reservation/reservation'); ?>" target="_blank">Reservation</a></li>
                                
-                                <li><a href="<?=assets_url('media/menu/food.pdf')?>" target="_blank"><?=sprintf(lang('main::lang.food_menu'))?></a></li>
-                                <li><a href="<?=assets_url('media/menu/drinks.pdf')?>" target="_blank"><?=sprintf(lang('main::lang.drinks_menu'))?></a></li>
+                                <!-- <li><a href="<?=assets_url('media/menu/food.pdf')?>" target="_blank"><?=sprintf(lang('main::lang.food_menu'))?></a></li>
+                                <li><a href="<?=assets_url('media/menu/drinks.pdf')?>" target="_blank"><?=sprintf(lang('main::lang.drinks_menu'))?></a></li> -->
+
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Menu
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <a href="<?=assets_url('media/menu/food.pdf')?>" target="_blank"><?=sprintf(lang('main::lang.food_menu'))?></a>
+                                    <a href="<?=assets_url('media/menu/drinks.pdf')?>" target="_blank"><?=sprintf(lang('main::lang.drinks_menu'))?></a>
+                                    </div>
+                                </li>
+
+
                                 <li><a data-hover="Services" href="#services" class="scroll"><?=sprintf(lang('main::lang.local.text_tab_services'))?></a></li>
                                 <!-- <li><a data-hover="Chefs" href="#team" class="scroll"><?=sprintf(lang('main::lang.local.text_tab_chefs'))?></a></li> -->
                                 <!-- <li><a data-hover="Reservation" href="#reservation" class="scroll">REservation</a></li> -->
