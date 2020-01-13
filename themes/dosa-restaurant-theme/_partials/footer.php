@@ -43,11 +43,12 @@
                             </a>
                         </li>
                         <?php } ?>
-						<li>
+						<li> 
                             <a href="<?=restaurant_url('local/menus');?>"><?=sprintf(lang('main::lang.menu_about'))?></a>
                         </li>
                         <li>
-                            <a data-hover="Services" href="#services" class="scroll"><?=sprintf(lang('main::lang.local.text_tab_services'))?></a>
+                            <a href="<?= page_url('reservation/reservation'); ?>">Reservation</a>
+                            
                         </li>
                         <li class="d-none d-md-inline-flex">
                             <a data-hover="Gallery" href="#gallery" class="scroll"><?=sprintf(lang('main::lang.local.text_tab_gallery'))?></a>
