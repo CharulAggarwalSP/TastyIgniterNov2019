@@ -22,7 +22,7 @@ return [
 
     'text_subject' => 'Table Reserved - %s!',
     'text_greetings' => 'Thank You %s,',
-    'text_success_message' => 'Your reservation at %s has been booked for %s person(s) on %s.<br />Thanks for reserving with us online!',
+    'text_success_message' => 'Your reservation at %s has been booked for %s person(s) on %s.<br />Thanks for reserving with us online!<br>For more information please contact the restaurant on 020-6164838',
 
     'label_status' => 'Status',
     'label_location' => 'Location',
