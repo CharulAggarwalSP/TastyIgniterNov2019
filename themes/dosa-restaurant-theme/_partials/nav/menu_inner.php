@@ -12,17 +12,20 @@
                                 <a class="nav-link" href="<?= restaurant_url('local/menus'); ?>" class="<?= ($this->page->getId() == 'local-menus') ? 'active' : ''; ?>"><?= lang('main::lang.menu_about'); ?></a>
                             </li>
 
-                            <li class="nav-item">
-                                <a class="nav-link" href="<?= assets_url('media/menu/food.pdf'); ?>" target="_blank"><?= lang('main::lang.food_menu'); ?></a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="<?= assets_url('media/menu/drinks.pdf'); ?>" target="_blank"><?= lang('main::lang.drinks_menu'); ?></a>
-                            </li>
-                            <?php if (Auth::isLogged()) { ?>
+                            <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Menu
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <a href="<?=assets_url('media/menu/food.pdf')?>" target="_blank"><?=sprintf(lang('main::lang.food_menu'))?></a>
+                                    <a href="<?=assets_url('media/menu/drinks.pdf')?>" target="_blank"><?=sprintf(lang('main::lang.drinks_menu'))?></a>
+                                    </div>
+                                </li>
+                           
                             <li class="nav-item">
                                 <a class="nav-link" href="<?= page_url('reservation/reservation'); ?>" class="<?= ($this->page->getId() == 'reservation-reservation') ? 'active' : ''; ?>"><?= lang('main::lang.menu_reservation'); ?></a>
                             </li>
-                            <?php } ?>
+                            
                             <?php if (Auth::isLogged()) { ?>
                                 <li class="nav-item dropdown">
                                     <a id="dropdownAccount" class="nav-link dropdown-toggle clickable" role="button" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?= lang('main::lang.menu_my_account'); ?> </a>

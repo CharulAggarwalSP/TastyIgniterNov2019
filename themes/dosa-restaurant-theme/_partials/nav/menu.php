@@ -13,16 +13,28 @@
                             <ul>
                                 <li class="active"><a data-hover="Home" href="<?=page_url('home');?>"><?=sprintf(lang('main::lang.menu_home'))?></a></li>
                                 <li><a href="<?=restaurant_url('local/menus');?>"><?=sprintf(lang('main::lang.menu_about'))?></a></li>
-                                <?php if (Auth::isLogged()) { ?>
+                                
                                 <li><a data-hover="Reservation" href="<?= page_url('reservation/reservation'); ?>" target="_blank">Reservation</a></li>
-                                <?php } ?>
-                                <li><a href="<?=assets_url('media/menu/food.pdf')?>" target="_blank"><?=sprintf(lang('main::lang.food_menu'))?></a></li>
-                                <li><a href="<?=assets_url('media/menu/drinks.pdf')?>" target="_blank"><?=sprintf(lang('main::lang.drinks_menu'))?></a></li>
+                               
+                                <!-- <li><a href="<?=assets_url('media/menu/food.pdf')?>" target="_blank"><?=sprintf(lang('main::lang.food_menu'))?></a></li>
+                                <li><a href="<?=assets_url('media/menu/drinks.pdf')?>" target="_blank"><?=sprintf(lang('main::lang.drinks_menu'))?></a></li> -->
+
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Menu
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <a href="<?=assets_url('media/menu/food.pdf')?>" target="_blank"><?=sprintf(lang('main::lang.food_menu'))?></a>
+                                    <a href="<?=assets_url('media/menu/drinks.pdf')?>" target="_blank"><?=sprintf(lang('main::lang.drinks_menu'))?></a>
+                                    </div>
+                                </li>
+
+
                                 <li><a data-hover="Services" href="#services" class="scroll"><?=sprintf(lang('main::lang.local.text_tab_services'))?></a></li>
                                 <!-- <li><a data-hover="Chefs" href="#team" class="scroll"><?=sprintf(lang('main::lang.local.text_tab_chefs'))?></a></li> -->
                                 <!-- <li><a data-hover="Reservation" href="#reservation" class="scroll">REservation</a></li> -->
                                 <li class="d-none d-md-inline-flex"><a data-hover="Gallery" href="#gallery" class="scroll"><?=sprintf(lang('main::lang.local.text_tab_gallery'))?></a></li>
-                                <li class="d-block d-md-none"><a data-hover="Gallery" href="#gallery1" class="scroll"><?=sprintf(lang('main::lang.local.text_tab_gallery'))?></a></li>
+                                <!-- <li class="d-block d-md-none"><a data-hover="Gallery" href="#gallery1" class="scroll"><?=sprintf(lang('main::lang.local.text_tab_gallery'))?></a></li> -->
                                 <li><a data-hover="Contact" href="#contact" class="scroll"><?=sprintf(lang('main::lang.contact.title'))?></a></li>
                             </ul>
                         </nav>

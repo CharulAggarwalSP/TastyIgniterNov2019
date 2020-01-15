@@ -79,7 +79,7 @@
                 <?= form_error('address.city', '<span class="text-danger">', '</span>'); ?>
             </div>
         </div>
-        <div class="col-sm-4">
+        <!-- <div class="col-sm-4">
             <div class="form-group">
                 <label for=""><?= lang('igniter.cart::default.checkout.label_state'); ?></label>
                 <input
@@ -89,7 +89,7 @@
                     value="<?= set_value('address[state]', $order->address['state']); ?>"/>
                 <?= form_error('address.state', '<span class="text-danger">', '</span>'); ?>
             </div>
-        </div>
+        </div> -->
         <div class="col-sm-4">
             <div class="form-group">
                 <label for=""><?= lang('igniter.cart::default.checkout.label_postcode'); ?></label><span>*</span>

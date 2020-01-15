@@ -142,7 +142,7 @@ function onEnd()
 					<a href="<?= restaurant_url('local/menus'); ?>" class="hi-icon"><img src=<?= '"' . assets_url(); ?>/vd-theme/images/serve1.png" alt=" " /></a>
 				</div>
 				<h4><?= sprintf(lang('main::lang.services.view_our_menu')) ?></h4>
-				<p>Turn your dining experience into a memorable moment with a variety of selectable North Indian Curries  & South Indian specialities. Check out our delicious menu</p>
+				<p>Turn your dining experience into a memorable moment with a variety of North Indian Curries & South Indian specialities. We also have gluten free and vegan dishes available. Check out our delicious menu.</p>
 			</div>
 			<div class="col-md-3 services-gd text-center wow slideInDown" data-wow-duration="1s" data-wow-delay=".2s">
 				<div class="hi-icon-wrap hi-icon-effect-9 hi-icon-effect-9a">
@@ -563,11 +563,18 @@ function onEnd()
 						<ul>
 							<li><?= format_address($contactLocation->getAddress()); ?></li>
 							<li>
-								<a href="mailto:dosarestaurant@gmail.com" target="_top">dosarestaurant@gmail.com</a>
+								<a href="mailto:dosarestaurant@gmail.com" target="_top"><i class="fa fa-envelope-square" ></i>&nbsp;&nbsp;&nbsp;dosarestaurant@gmail.com</a>
 							</li>
 							<li><i class="fa fa-phone" aria-hidden="true" ></i>&nbsp;&nbsp; <?= $contactLocation->getTelephone(); ?> </li>
 							<li><i class="fa fa-mobile" aria-hidden="true"></i> &nbsp;&nbsp;&nbsp;0681936735 </li>
 							<li><i class="fa fa-fax" aria-hidden="true"></i> &nbsp;020-6895073</li>
+						</ul>
+						<br>
+						<h4>Opening Times</h4>
+						<ul>
+							<li>
+								All Days&nbsp; : &nbsp;15:30hrs - 23:00hrs 
+							</li>
 						</ul>
 					</div>
 				<?php } ?>
