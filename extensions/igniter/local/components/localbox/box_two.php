@@ -38,7 +38,7 @@ $closingTime = Carbon\Carbon::parse($schedule->getCloseTime());
             <?= lang('igniter.local::default.text_delivery_only'); ?>
         <?php }
         else if ($hasDelivery AND $hasCollection) { ?>
-            <?= lang('igniter.local::default.text_both_types'); ?>
+            <?php // echo lang('igniter.local::default.text_both_types'); ?>
         <?php }
         else { ?>
             <?= lang('igniter.local::default.text_no_types'); ?>
