@@ -8,6 +8,7 @@
                     <span class="menu"> </span>
                     <nav class="link-effect-41" id="link-effect-41">
                         <ul class="nav navbar-nav">
+                            <li class="active"><a href="<?=page_url('home');?>"><?=sprintf(lang('main::lang.menu_home'))?></a></li>
                             <li class="nav-item">
                                 <a class="nav-link" href="<?= restaurant_url('local/menus'); ?>" class="<?= ($this->page->getId() == 'local-menus') ? 'active' : ''; ?>"><?= lang('main::lang.menu_about'); ?></a>
                             </li>
