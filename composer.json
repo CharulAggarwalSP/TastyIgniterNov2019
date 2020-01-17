@@ -39,6 +39,14 @@
   "replace": {
     "kriswallsmith/assetic": "*"
   },
+  "autoload":{
+    "psr-4":{
+     "Igniter\\Flame\\Currency\\":"overrides/tastyigniter/flame/src/Currency/"
+    },
+    "exclude-from-classmap":[
+     "vendor\\tastyigniter\\flame\\src\\Currency\\Currency.php"
+    ]
+  },
   "autoload-dev": {
     "psr-4": {
       "Tests\\": "tests"
