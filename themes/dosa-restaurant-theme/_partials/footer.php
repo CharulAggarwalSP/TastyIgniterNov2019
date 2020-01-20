@@ -135,7 +135,7 @@
             <div class="col p-2">                 
                 <?php echo sprintf(lang('main::lang.site_copyright')).' '. date('Y').' '.setting('site_name'); ?>&nbsp;&nbsp;&nbsp;
                 <a href="<?=assets_url('media/policy/privacy.pdf')?>">Privacy Policy</a>&nbsp;&nbsp;&nbsp;
-                <a href="javascript:void(0)">Cookie Policy</a>
+                <a href="<?=assets_url('media/policy/cookie.pdf')?>">Cookie Policy</a>
             </div>
         </div>
     </div>
