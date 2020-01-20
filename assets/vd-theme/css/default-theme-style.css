@@ -2351,6 +2351,7 @@ margin-bottom: 10px;
 display: block;
 padding-left: 0;
 background: none !important;
+word-break: break-all;
   }
 
   /*-- responsive-design starts-here --*/
