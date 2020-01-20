@@ -20270,6 +20270,8 @@ span.ti-loading:before,
 
 .footer-links li {
   list-style: none;
+  display: flex;
+  margin: 0 0 10px;
 }
 
 .footer-links li a {

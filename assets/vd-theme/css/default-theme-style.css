@@ -2347,7 +2347,7 @@ color:
 
   .footer-links li a {
    font-size: 13px;
-margin-bottom: 10px;
+margin-bottom: 0;
 display: block;
 padding-left: 0;
 background: none !important;
@@ -5514,4 +5514,8 @@ body .banner.inner_pages{
 	text-align: center;
 max-width: 60%;
 margin: auto;
+}
+.con-top ul li {
+  display: flex;
+  align-items: center;
 }
