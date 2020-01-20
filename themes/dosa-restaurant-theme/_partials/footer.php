@@ -134,8 +134,8 @@
         <div class="row">
             <div class="col p-2">                 
                 <?php echo sprintf(lang('main::lang.site_copyright')).' '. date('Y').' '.setting('site_name'); ?>&nbsp;&nbsp;&nbsp;
-                <i class="fa fa-circle" style="color:rgba(255, 255, 255, 0.75)"></i>&nbsp;<a href="<?=assets_url('media/policy/privacy.pdf')?>">Privacy Policy</a>&nbsp;&nbsp;&nbsp;
-                <i class="fa fa-circle" style="color:rgba(255, 255, 255, 0.75)"></i>&nbsp;<a href="javascript:void(0)">Cookie Policy</a>
+                <a href="<?=assets_url('media/policy/privacy.pdf')?>">Privacy Policy</a>&nbsp;&nbsp;&nbsp;
+                <a href="javascript:void(0)">Cookie Policy</a>
             </div>
         </div>
     </div>
