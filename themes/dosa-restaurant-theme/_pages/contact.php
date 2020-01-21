@@ -21,15 +21,15 @@ permalink: /contact
                         </div>
                         <div class="row contact-info">
                             <div class="col-1"><i class="fa fa-phone"></i></div>
-                            <div class="col">020-6164838 </div>
+                            <div class="col"><?= $contactLocation->getTelephone(); ?> </div>
                         </div>
                         <div class="row contact-info">
                             <div class="col-1"><i class="fa fa-mobile"></i></div>
-                            <div class="col"><?= $contactLocation->getTelephone(); ?></div>
+                            <div class="col">0681936735</div>
                         </div>
                         <div class="row contact-info">
                             <div class="col-1"><i class="fa fa-fax"></i></div>
-                            <div class="col"><?= $contactLocation->getFax(); ?></div>
+                            <div class="col">020-6895073</div>
                         </div>
                     </div>
                 <?php } ?>
