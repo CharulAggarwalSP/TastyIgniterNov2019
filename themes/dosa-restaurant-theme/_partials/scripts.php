@@ -23,11 +23,6 @@
 	window.CookieConsent.init({
 		language: {
 		current: 'en',
-		locale: {
-			en: {
-				barLinkSetting:''
-			}
-		}
 		},
 		theme: {
 			barColor: '#efa52c',
