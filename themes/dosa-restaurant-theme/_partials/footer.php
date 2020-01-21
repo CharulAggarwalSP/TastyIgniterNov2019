@@ -50,7 +50,7 @@
                             <a href="<?= page_url('reservation/reservation'); ?>">Reservation</a>
                             
                         </li>
-                        <li class="d-none d-md-inline-flex">
+                        <li>
                             <a data-hover="Gallery" href="#gallery" class="scroll"><?=sprintf(lang('main::lang.local.text_tab_gallery'))?></a>
                         </li>
 						<li>
