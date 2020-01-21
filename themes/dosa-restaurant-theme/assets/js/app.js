@@ -330,7 +330,7 @@ if (window.jQuery.request !== undefined)
             return;
         }
 
-        if (window.location.pathname.split('/').length >= 3 && window.location.pathname.split('/').pop() !== "menus")
+        if (window.location.pathname.split('/').pop() !== "menus")
             $(window).ajaxStart(() => $('#cookingLoader').show());
 
         $(window).ajaxStop(() => $('#cookingLoader').hide());
