@@ -7,6 +7,7 @@
 <?= '<script type="text/javascript" src="' . assets_url() . '/vd-theme/js/owl.carousel.js"' . '></script>'; ?>
 <?= '<script type="text/javascript" src="' . assets_url() . '/vd-theme/js/responsiveslides.min.js"' . '></script>'; ?>
 <?= '<script type="text/javascript" src="' . assets_url() . '/vd-theme/js/wow.min.js"' . '></script>'; ?>
+<?= '<script type="text/javascript" src="' . assets_url() . '/vd-theme/js/cookieconsent.min.js"' . '></script>'; ?>
 <?php 
 	/* Script file does not want to include on menu page, but we want toinclude on address book page */
 	$param = explode('/',$_SERVER['REQUEST_URI']);
@@ -17,15 +18,123 @@
 		}
 	}
 ?>
-<script type="text/javascript">
-	jQuery(document).ready(function($) {		
-    
-		$(".scroll").click(function(event) {
-			event.preventDefault();
-			$('html,body').animate({
-				scrollTop: $(this.hash).offset().top
-			}, 900);
-		});
+<!-- Scripts -->
+<script>
+	window.CookieConsent.init({
+		language: {
+		current: 'en',
+		locale: {
+			en: {
+				barLinkSetting:''
+			}
+		}
+		},
+		theme: {
+			barColor: '#efa52c',
+			barTextColor: 'black',
+			barMainButtonColor: 'black',
+			barMainButtonTextColor: '#efa52c',
+			modalMainButtonColor: '#4285F4',
+			modalMainButtonTextColor: 'black',
+		},
+		categories: {
+		necessary: {
+			needed: true,
+			wanted: true,
+			checked: true,
+			language: {
+			locale: {
+				en: {
+				name: 'Strictly Necessary Cookies',
+				description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eu commodo est, nec gravida odio. Suspendisse scelerisque a ex nec semper.',
+				},
+				hu: {
+				name: 'Szükséges sütik',
+				description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eu commodo est, nec gravida odio. Suspendisse scelerisque a ex nec semper.',
+				}
+			}
+			}
+		},
+		various: {
+			needed: false,
+			wanted: false,
+			checked: false,
+			language: {
+			locale: {
+				en: {
+				name: 'Various Cookies',
+				description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+				},
+				hu: {
+				name: 'Egyéb sütik',
+				description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eu commodo est, nec gravida odio. Suspendisse scelerisque a ex nec semper.',
+				}
+			}
+			}
+		}
+		},
+		services: {
+		facebook: {
+			category: 'various',
+			type: 'dynamic-script', // dynamic-script, script-tag, wrapped, localcookie
+			search: 'facebook',
+			language: {
+			locale: {
+				en: {
+				name: 'Facebook'
+				},
+				hu: {
+				name: 'Facebook'
+				}
+			}
+			}
+		},
+		azalead: {
+			category: 'various',
+			type: 'script-tag',
+			search: 'azalead',
+			language: {
+			locale: {
+				en: {
+				name: 'Azalead'
+				},
+				hu: {
+				name: 'Azalead'
+				}
+			}
+			}
+		},
+		wrapped: {
+			category: 'various',
+			type: 'wrapped',
+			search: 'wrapped',
+			language: {
+			locale: {
+				en: {
+				name: 'Wrapped'
+				},
+				hu: {
+				name: 'Csomagolt süti'
+				}
+			}
+			}
+		},
+		localcookie: {
+			category: 'various',
+			type: 'localcookie',
+			search: 'localcookie',
+			language: {
+			locale: {
+				en: {
+				name: 'Local cookie'
+				},
+				hu: {
+				name: 'Helyi süti'
+				}
+			}
+			}
+		}
+		}
 	});
 </script>
 <!-- swipe box js -->
