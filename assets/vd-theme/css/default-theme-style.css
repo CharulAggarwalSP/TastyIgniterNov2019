@@ -4258,7 +4258,6 @@ word-break: break-all;
       position: fixed !important;
     }
   body {
-    overflow-x: hidden;
     margin-bottom: 0 !important;
   }
 
@@ -5470,8 +5469,7 @@ h1, .h1, h2, .h2, h3, .h3{
 }
 
 html{
-	overflow-x:hidden;
- 
+	overflow-x:hidden; 
 }
 
 .home___logo{
