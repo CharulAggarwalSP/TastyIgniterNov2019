@@ -4330,7 +4330,8 @@ word-break: break-all;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      z-index: 999
+      z-index: 999;
+      position: relative;
     }
 
     body .fixed-header .clearfix {
@@ -4499,7 +4500,7 @@ word-break: break-all;
   }
 
   @media(min-width: 767px) {
-
+    
     body .categories.affix-categories,
     body [data-control="cart-box"] {
       position: -webkit-sticky !important;
@@ -4534,6 +4535,10 @@ word-break: break-all;
   }
 
   @media(max-width:767px) {
+
+    body {
+      overflow-x: hidden;
+    }
     body>main { 
       margin: 0 !important;
     }
@@ -5516,4 +5521,7 @@ margin: auto;
 .con-top ul li {
   display: flex;
   align-items: center;
+}
+.banner{
+  overflow:hidden
 }
