@@ -64,3 +64,5 @@ If you discover a security vulnerability within TastyIgniter, please send an e-m
 ## License
 Starting with version 3.0.0 TastyIgniter is licensed under the [The MIT License (MIT)](https://tastyigniter.com/licence/). Older versions were GPL-licensed.
 
+## File Customisation
+https://docs.google.com/document/d/1O3oQVbvCuwGHGcdmjBFT-CHp381EGjBdhSZkPuAETy8/edit?usp=sharing
