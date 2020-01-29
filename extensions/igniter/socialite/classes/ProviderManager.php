@@ -179,7 +179,7 @@ class ProviderManager
         list($successUrl, $errorUrl) = $redirect;
         $successUrl = '/default/menus';//Input::get('success', $successUrl);
         $errorUrl = Input::get('error', $errorUrl);
-        dd($redirect);
+        
         $manager = self::instance();
         $providerClassName = $manager->resolveProvider($code);
         if (!$providerClassName) {
