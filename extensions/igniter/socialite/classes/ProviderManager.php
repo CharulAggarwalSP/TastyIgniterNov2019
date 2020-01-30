@@ -177,7 +177,8 @@ class ProviderManager
     {
         $redirect = Session::get('igniter_socialite_redirect', ['/', '/login']);
         list($successUrl, $errorUrl) = $redirect;
-        $successUrl = Input::get('success', $successUrl);
+        //$successUrl = Input::get('success', $successUrl);
+        $successUrl = '/default/menus';
         $errorUrl = Input::get('error', $errorUrl);
 
         $manager = self::instance();
