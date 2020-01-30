@@ -24,14 +24,14 @@
                                 <p><?= nl2br($menuCategory->description); ?></p>
                             <?php } ?>
 
-                            <?php if ($menuCategory->hasMedia('thumb')) { ?>
+                            <!-- <?php if ($menuCategory->hasMedia('thumb')) { ?>
                                 <div class="image">
                                     <img class="img-responsive" src="<?= $menuCategory->getThumb([
                                                                             'width' => $menuCategoryWidth,
                                                                             'height' => $menuCategoryHeight,
                                                                         ]); ?>" alt="<?= $menuCategory->name; ?>" />
                                 </div>
-                            <?php } ?>
+                            <?php } ?> -->
                         </div>
 
                         <?= partial('@items', ['menuItems' => $menuList]); ?>
