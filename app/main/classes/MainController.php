@@ -36,6 +36,8 @@ use System\Template\Extension\BladeExtension as SystemBladeExtension;
 use System\Traits\AssetMaker;
 use URL;
 use View;
+use System\Models\Settings_model;
+use Admin\Models\Locations_model;
 
 /**
  * Main Controller Class
@@ -949,5 +951,17 @@ class MainController extends BaseController
             throw new ApplicationException($message);
 
         flash()->danger($message);
+    }
+
+    function galleryImage(){
+        $galleryImage = Settings_model::select('value')
+                           ->where('item', 'gallery_image')
+                           ->first();                         
+        return $galleryImage;
+    }
+
+    function locationData(){
+        $locationData = Locations_model::all();                         
+        return $locationData;
     }
 }

@@ -154,6 +154,11 @@ $config['form']['tabs'] = [
             'label' => 'lang:admin::lang.locations.label_fax',
             'type' => 'text',
             'span' => 'right',
+        ],
+        'location_mobile' => [
+            'label' => 'lang:admin::lang.locations.label_mobile',
+            'type' => 'text',
+            'span' => 'right',
         ],        
         'address' => [
             'label' => 'lang:admin::lang.locations.text_tab_title_address',
