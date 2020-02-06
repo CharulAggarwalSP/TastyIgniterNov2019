@@ -566,8 +566,8 @@ function onEnd()
 								<a href="mailto:dosarestaurant@gmail.com" target="_top"><i class="fa fa-envelope-square" ></i>&nbsp;&nbsp;&nbsp;dosarestaurant@gmail.com</a>
 							</li>
 							<li><i class="fa fa-phone" aria-hidden="true" ></i>&nbsp;&nbsp; <?= $contactLocation->getTelephone(); ?> </li>
-							<li><i class="fa fa-mobile" aria-hidden="true"></i> &nbsp;&nbsp;&nbsp;0681936735 </li>
-							<li><i class="fa fa-fax" aria-hidden="true"></i> &nbsp;020-6895073</li>
+							<li><i class="fa fa-mobile" aria-hidden="true"></i> &nbsp;&nbsp;&nbsp;<?= $this->controller->locationData()->location_mobile ?> </li>
+							<li><i class="fa fa-fax" aria-hidden="true"></i> &nbsp;<?= $this->controller->locationData()->location_fax ?></li>
 						</ul>
 						<br>
 						<h4>Opening Times</h4>
