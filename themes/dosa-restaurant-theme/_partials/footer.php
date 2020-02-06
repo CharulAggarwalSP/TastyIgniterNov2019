@@ -10,9 +10,9 @@
 						<li style="    margin-bottom: 10px;
 ">Overtoom 146<br>1054 HS<br>Amsterdam<br>Netherlands</li>
 						<li><a href="mailto:dosarestaurant@gmail.com" target="_top" style="margin-bottom:0"><i class="fa fa-envelope-square" style="color:rgba(255, 255, 255, 0.75);"></i>&nbsp;dosarestaurant@gmail.com</a></li>
-						<li><i class="fa fa-phone" aria-hidden="true" style="color:rgba(255, 255, 255, 0.75)"></i> &nbsp;020-6164838 </li>
-						<li><i class="fa fa-mobile" aria-hidden="true" style="color:rgba(255, 255, 255, 0.75)"></i> &nbsp;&nbsp;0681936735 </li>
-						<li><i class="fa fa-fax" aria-hidden="true" style="color:rgba(255, 255, 255, 0.75)"></i> 020-6895073 </li>
+						<li><i class="fa fa-phone" aria-hidden="true" style="color:rgba(255, 255, 255, 0.75)"></i> &nbsp;<?= $this->controller->locationData()->location_telephone ?> </li>
+						<li><i class="fa fa-mobile" aria-hidden="true" style="color:rgba(255, 255, 255, 0.75)"></i> &nbsp;&nbsp;<?= $this->controller->locationData()->location_mobile ?> </li>
+						<li><i class="fa fa-fax" aria-hidden="true" style="color:rgba(255, 255, 255, 0.75)"></i> <?= $this->controller->locationData()->location_fax ?> </li>
 					</ul>
 				</div> 
 			</div>
