@@ -471,6 +471,7 @@ return [
         'label_longitude' => 'Longitude',
         'label_radius' => 'Delivery Radius',
         'label_telephone' => 'Telephone',
+        'label_mobile' => 'Mobile',
         'label_fax' => 'Fax',
         'label_permalink_slug' => 'Slug',
         'label_image' => 'Image',
