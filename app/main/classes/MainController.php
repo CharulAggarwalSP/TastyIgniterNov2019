@@ -961,7 +961,7 @@ class MainController extends BaseController
     }
 
     function locationData(){
-        $locationData = Locations_model::all();                         
+        $locationData = Locations_model::first();                         
         return $locationData;
     }
 }
