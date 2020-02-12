@@ -322,6 +322,8 @@ return [
         'label_site_language' => 'Default Language',
         'label_customer_group' => 'Customer Group',
         'label_wifi_password' => 'Wi-Fi Password',
+        'label_gallery_image' => 'Gallery Images',
+        'banner_image' => 'Banner Images',
         'label_site_location_mode' => 'Location Mode',
         'label_country' => 'Country',
         'label_maps_api_key' => 'Google Maps API Key',

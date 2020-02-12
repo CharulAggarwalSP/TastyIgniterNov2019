@@ -237,17 +237,22 @@ function onEnd()
 			</div>
 		</div>
 	</div-->
-	<!--end-team section-->		
+	<!--end-team section-->
+	<?php 
+		$img_data = stripslashes($this->controller->galleryImage()->value);
+		$images = explode(',',$img_data);
+	?>		
 	<!--Gallery web-->
 	<div class="gallery d-none d-md-block" id="gallery"> 
 		<div class="container">
 		<h3 class="tittle"><?= sprintf(lang('main::lang.local.text_tab_gallery')) ?></h3>
 		<div class="arrows-serve"><img src=<?= '"' . assets_url(); ?>/vd-theme/images/border.png" alt="border"></div>
 		<div class="gallery-grids">
+			<?php if(isset($images[0]) && $images[0]){ ?>
 			<div class="col-md-6 baner-top wow fadeInRight animated" data-wow-delay=".5s">
-				<a href=<?= '"' . assets_url(); ?>/vd-theme/images/g7.jpg" class="b-link-stripe b-animate-go  swipebox">
+				<a href=<?= str_replace('localhost','192.168.0.146',ltrim($images[0])) ?> class="b-link-stripe b-animate-go  swipebox">
 					<div class="gal-spin-effect vertical ">
-						<img src=<?= '"' . assets_url(); ?>/vd-theme/images/g7.jpg" alt=" " />
+						<img class="equal" src=<?= str_replace('localhost','192.168.0.146',ltrim($images[0])) ?> alt=" " />
 						<div class="gal-text-box">
 							<div class="info-gal-con">
 								<!--h4><?= sprintf(lang('main::lang.gallery.first_image_title')) ?></h4-->
@@ -260,10 +265,13 @@ function onEnd()
 					</div>
 				</a>
 			</div>
+			<?php } 
+				if(isset($images[1]) && $images[1]){
+			?>
 			<div class="col-md-6 baner-top wow fadeInLeft animated" data-wow-delay=".5s">
-				<a href=<?= '"' . assets_url(); ?>/vd-theme/images/c3.jpg" class="b-link-stripe b-animate-go  swipebox">
+				<a href=<?= str_replace('localhost','192.168.0.146',ltrim($images[1])) ?> class="b-link-stripe b-animate-go  swipebox">
 					<div class="gal-spin-effect vertical ">
-						<img class="equal" src=<?= '"' . assets_url(); ?>/vd-theme/images/c3.jpg" alt=" " style="object-position: center center;"/>
+						<img class="equal" src=<?= str_replace('localhost','192.168.0.146',ltrim($images[1])) ?> alt=" " style="object-position: center center;"/>
 						<div class="gal-text-box">
 							<div class="info-gal-con">
 								<!--h4><?= sprintf(lang('main::lang.gallery.second_image_title')) ?></h4-->
@@ -276,10 +284,13 @@ function onEnd()
 					</div>
 				</a>
 			</div>
+			<?php }
+				if(isset($images[2]) && $images[2]){
+			?>
 			<div class="col-md-3 baner-top ban-mar wow fadeInUp animated" data-wow-delay=".5s">
-				<a href=<?= '"' . assets_url(); ?>/vd-theme/images/c4.jpg" class="b-link-stripe b-animate-go  swipebox">
+				<a href=<?= str_replace('localhost','192.168.0.146',ltrim($images[2])) ?> class="b-link-stripe b-animate-go  swipebox">
 					<div class="gal-spin-effect vertical ">
-						<img src=<?= '"' . assets_url(); ?>/vd-theme/images/c4.jpg" alt=" " />
+						<img src=<?= str_replace('localhost','192.168.0.146',ltrim($images[2])) ?> alt=" " />
 						<div class="gal-text-box">
 							<div class="info-gal-con">
 								<!--h4><?= sprintf(lang('main::lang.gallery.third_image_title')) ?></h4-->
@@ -292,10 +303,13 @@ function onEnd()
 					</div>
 				</a>
 			</div>
+			<?php }
+				if(isset($images[3]) && $images[3]){
+			?>
 			<div class="col-md-3 baner-top ban-mar wow fadeInDown animated" data-wow-delay=".5s">
-				<a href=<?= '"' . assets_url(); ?>/vd-theme/images/g8.jpg" class="b-link-stripe b-animate-go  swipebox">
+				<a href=<?= str_replace('localhost','192.168.0.146',ltrim($images[3])) ?> class="b-link-stripe b-animate-go  swipebox">
 					<div class="gal-spin-effect vertical ">
-						<img src=<?= '"' . assets_url(); ?>/vd-theme/images/g8.jpg" alt=" " />
+						<img src=<?= str_replace('localhost','192.168.0.146',ltrim($images[3])) ?> alt=" " />
 						<div class="gal-text-box">
 							<div class="info-gal-con">
 								<!--h4><?= sprintf(lang('main::lang.gallery.fourth_image_title')) ?></h4-->
@@ -308,10 +322,13 @@ function onEnd()
 					</div>
 				</a>
 			</div>
+			<?php }
+				if(isset($images[4]) && $images[4]){
+			?>
 			<div class="col-md-3 baner-top ban-mar wow fadeInUp animated" data-wow-delay=".5s">
-				<a href=<?= '"' . assets_url(); ?>/vd-theme/images/g1.jpg" class="b-link-stripe b-animate-go  swipebox">
+				<a href=<?= str_replace('localhost','192.168.0.146',ltrim($images[4])) ?> class="b-link-stripe b-animate-go  swipebox">
 					<div class="gal-spin-effect vertical ">
-						<img src=<?= '"' . assets_url(); ?>/vd-theme/images/g1.jpg" alt=" " />
+						<img src=<?= str_replace('localhost','192.168.0.146',ltrim($images[4])) ?> alt=" " />
 						<div class="gal-text-box">
 							<div class="info-gal-con">
 								<!--h4><?= sprintf(lang('main::lang.gallery.fifth_image_title')) ?></h4-->
@@ -324,10 +341,13 @@ function onEnd()
 					</div>
 				</a>
 			</div>
+			<?php }
+				if(isset($images[5]) && $images[5]){
+			?>
 			<div class="col-md-3 baner-top ban-mar wow fadeInDown animated" data-wow-delay=".5s">
-				<a href=<?= '"' . assets_url(); ?>/vd-theme/images/g2.jpg" class="b-link-stripe b-animate-go  swipebox">
+				<a href=<?= str_replace('localhost','192.168.0.146',ltrim($images[5])) ?> class="b-link-stripe b-animate-go  swipebox">
 					<div class="gal-spin-effect vertical ">
-						<img src=<?= '"' . assets_url(); ?>/vd-theme/images/g2.jpg" alt=" " />
+						<img src=<?= str_replace('localhost','192.168.0.146',ltrim($images[5])) ?> alt=" " />
 						<div class="gal-text-box">
 							<div class="info-gal-con">
 								<!--h4><?= sprintf(lang('main::lang.gallery.sixth_image_title')) ?></h4-->
@@ -340,10 +360,13 @@ function onEnd()
 					</div>
 				</a>
 			</div>
+			<?php }
+				if(isset($images[6]) && $images[6]){
+			?>
 			<div class="col-md-6 baner-top wow fadeInRight animated" data-wow-delay=".5s">
-				<a href=<?= '"' . assets_url(); ?>/vd-theme/images/c2.jpg" class="b-link-stripe b-animate-go  swipebox">
+				<a href=<?= str_replace('localhost','192.168.0.146',ltrim($images[6])) ?> class="b-link-stripe b-animate-go  swipebox">
 					<div class="gal-spin-effect vertical ">
-						<img src=<?= '"' . assets_url(); ?>/vd-theme/images/c2.jpg" alt=" " />
+						<img class="equal" src=<?= str_replace('localhost','192.168.0.146',ltrim($images[6])) ?> alt=" " />
 						<div class="gal-text-box">
 							<div class="info-gal-con">
 								<!--h4><?= sprintf(lang('main::lang.gallery.seventh_image_title')) ?></h4-->
@@ -356,10 +379,13 @@ function onEnd()
 					</div>
 				</a>
 			</div>
+			<?php }
+				if(isset($images[7]) && $images[7]){
+			?>
 			<div class="col-md-6 baner-top wow fadeInLeft animated" data-wow-delay=".5s">
-				<a href=<?= '"' . assets_url(); ?>/vd-theme/images/c1.jpg" class="b-link-stripe b-animate-go  swipebox">
+				<a href=<?= str_replace('localhost','192.168.0.146',ltrim($images[7])) ?> class="b-link-stripe b-animate-go  swipebox">
 					<div class="gal-spin-effect vertical ">
-						<img class="equal" src=<?= '"' . assets_url(); ?>/vd-theme/images/c1.jpg" alt=" " />
+						<img class="equal" src=<?= str_replace('localhost','192.168.0.146',ltrim($images[7])) ?> alt=" " />
 						<div class="gal-text-box">
 							<div class="info-gal-con">
 								<!--h4><?= sprintf(lang('main::lang.gallery.eighth_image_title')) ?></h4-->
@@ -372,6 +398,7 @@ function onEnd()
 					</div>
 				</a>
 			</div>
+			<?php } ?>
 				<div class="clearfix"> </div>
 			</div>
 		</div>

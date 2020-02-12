@@ -171,6 +171,16 @@ $config['form']['general'] = [
                     'type' => 'select',
                     'default' => 'h:i a',
                 ],
+                'gallery_image' => [
+                    'label' => 'lang:system::lang.settings.label_gallery_image',
+                    'tab' => 'lang:system::lang.settings.text_tab_site',
+                    'type' => 'textarea'
+                ],
+                'banner_image' => [
+                    'label' => 'lang:system::lang.settings.banner_image',
+                    'tab' => 'lang:system::lang.settings.text_tab_site',
+                    'type' => 'textarea'
+                ],
             ],
         ],
         'rules' => [

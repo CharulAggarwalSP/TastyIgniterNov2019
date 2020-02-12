@@ -5221,7 +5221,7 @@ word-break: break-all;
   .gallery .equal{
 	  height: 337px;
 object-fit: cover;
-object-position: center -16vw;
+object-position: center center;
   }
 
   @media(max-width:767px) {

@@ -960,6 +960,13 @@ class MainController extends BaseController
         return $galleryImage;
     }
 
+    function bannerImage(){
+        $bannerImage = Settings_model::select('value')
+                           ->where('item', 'banner_image')
+                           ->first();                         
+        return $bannerImage;
+    }
+
     function locationData(){
         $locationData = Locations_model::first();                         
         return $locationData;

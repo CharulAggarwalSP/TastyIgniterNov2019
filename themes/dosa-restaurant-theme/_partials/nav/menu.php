@@ -44,33 +44,24 @@
                 </div>
             </div>
     </div>
+    <?php 
+		$img_data = stripslashes($this->controller->bannerImage()->value);
+        $images = explode(',',$img_data);
+	?>
     <!--banner Slider starts Here-->
         <div class="banner-slider">
             <div class="callbacks_container">
                 <ul class="rslides" id="slider4">
-                    <li style="background-image:url('<?php echo assets_url()."/vd-theme/images/c3.jpg";?>');">
-                        <div class="banner-info">
-                            <h3 class="wow slideInUp" data-wow-duration="1s" data-wow-delay=".3s"><?=sprintf(lang('main::lang.home.text_step_banner_headline_one'))?></h3>
-                            <p class="wow slideInDown" data-wow-duration="1s" data-wow-delay=".3s"><?=sprintf(lang('main::lang.home.text_step_banner_text_one'))?></p>
-                            <div class="arrows wow slideInDown" data-wow-duration="1s" data-wow-delay=".2s"><img src=<?='"' . assets_url();?>/vd-theme/images/border.png" alt="border" /></div>
-                            <!--span class="wow slideInUp" data-wow-duration="1s" data-wow-delay=".3s"><?=sprintf(lang('main::lang.home.text_ready_to_be_opened'))?></span-->
-                        </div>
-                    </li>
-                    <li style="background-image:url('<?php echo assets_url()."/vd-theme/images/c4.jpg" ?>');">
-                        <div class="banner-info">
-                            <h3 class="wow slideInUp" data-wow-duration="1s" data-wow-delay=".3s"><?=sprintf(lang('main::lang.home.text_step_banner_headline_two'))?></h3>
-                            <p class="wow slideInDown" data-wow-duration="1s" data-wow-delay=".3s"><?=sprintf(lang('main::lang.home.text_step_banner_text_two'))?></p>
-                            <div class="arrows wow slideInDown" data-wow-duration="1s" data-wow-delay=".2s"><img src=<?='"' . assets_url();?>/vd-theme/images/border.png" alt="border" /></div>
-                            <!--span class="wow slideInUp" data-wow-duration="1s" data-wow-delay=".3s"><?=sprintf(lang('main::lang.home.text_ready_to_be_opened'))?></span-->
-                        </div>
-                    </li>
-                    <li style="background-image:url('<?php echo assets_url()."/vd-theme/images/g10.jpeg" ?>');">
-                        <div class="banner-info">
-                            <h3 class="wow slideInUp" data-wow-duration="1s" data-wow-delay=".3s"><?=sprintf(lang('main::lang.home.text_step_banner_headline_three'))?></h3>
-                            <p class="wow slideInDown" data-wow-duration="1s" data-wow-delay=".3s"><?=sprintf(lang('main::lang.home.text_step_banner_text_three'))?></p>
-                            <div class="arrows wow slideInDown" data-wow-duration="1s" data-wow-delay=".2s"><img src=<?='"' . assets_url();?>/vd-theme/images/border.png" alt="border" /></div>                  <!--span class="wow slideInUpslideInLeft" data-wow-duration="1s" data-wow-delay=".3s"><?=sprintf(lang('main::lang.home.text_ready_to_be_opened'))?></span-->
-                        </div>
-                    </li>
+                @foreach($images as $value)
+                <li style="background-image:url('{{ ltrim($value) }}');">
+                    <div class="banner-info">
+                        <h3 class="wow slideInUp" data-wow-duration="1s" data-wow-delay=".3s"><?=sprintf(lang('main::lang.home.text_step_banner_headline_one'))?></h3>
+                        <p class="wow slideInDown" data-wow-duration="1s" data-wow-delay=".3s"><?=sprintf(lang('main::lang.home.text_step_banner_text_one'))?></p>
+                        <div class="arrows wow slideInDown" data-wow-duration="1s" data-wow-delay=".2s"><img src=<?='"' . assets_url();?>/vd-theme/images/border.png" alt="border" /></div>
+                        <!--span class="wow slideInUp" data-wow-duration="1s" data-wow-delay=".3s"><?=sprintf(lang('main::lang.home.text_ready_to_be_opened'))?></span-->
+                    </div>
+                </li>
+                @endforeach
                 </ul>
 				
             </div>

@@ -7,7 +7,7 @@
         autocomplete="off"
         class="form-control field-textarea"
         placeholder="<?= e($field->placeholder) ?>"
-        <?= $field->hasAttribute('maxlength') ? '' : 'maxlength="255"' ?>
+        <?= $field->hasAttribute('maxlength') ? '' : '' ?>
         <?= $field->getAttributes() ?>
     ><?= e($field->value) ?></textarea>
 <?php } ?>
