@@ -210,7 +210,7 @@ class OrderManager
         $order->order_type = $this->location->orderType();
 
         if ($orderDateTime = $this->location->orderDateTime()) {
-            $order->order_date = $orderDateTime->format('Y-m-d');
+            $order->order_date = $orderDateTime->format('Y-m-d H:i');
             $order->order_time = $orderDateTime->format('H:i');
         }
 
