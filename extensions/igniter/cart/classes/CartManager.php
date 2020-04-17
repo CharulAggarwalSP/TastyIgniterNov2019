@@ -247,10 +247,10 @@ class CartManager
 
         if (!$this->location->current()->hasFutureOrder() AND $this->location->isClosed())
             throw new ApplicationException(lang('igniter.cart::default.alert_location_closed'));
-
+        /*
         if (!$this->location->checkOrderType($orderType = $this->location->orderType()))
             throw new ApplicationException(lang('igniter.local::default.alert_'.$orderType.'_unavailable'));
-
+        */
         if ($this->location->orderTypeIsDelivery() AND $this->location->requiresUserPosition() AND !$this->location->userPosition()->isValid())
             throw new ApplicationException(lang('igniter.cart::default.alert_no_search_query'));
     }

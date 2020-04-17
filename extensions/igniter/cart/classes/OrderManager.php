@@ -127,7 +127,13 @@ class OrderManager
         $addressString = implode(' ', array_only($address, [
             'address_1', 'address_2', 'city', 'state', 'postcode', 'country',
         ]));
-
+        
+        if(in_array($address['postcode'], [1053, 1054, 1071, 1075, 1016, 1017, 1052, 1056, 1057, 1058, 1072, 1011, 1012, 1015, 1051, 1055, 1061, 1062, 1073, 1074, 1076, 1077, 1078, 1079, 1091 , 1065, 1081, 1082])){
+            $postCodeFound = true;
+        } else {
+            throw new ApplicationException(lang('igniter.cart::default.checkout.error_covered_area'));
+        }      
+        /*
         $collection = app('geocoder')->geocode($addressString);
         if (!$collection OR $collection->isEmpty())
             throw new ApplicationException(lang('igniter.cart::default.alert_invalid_search_query'));
@@ -139,6 +145,7 @@ class OrderManager
             $this->location->setCoveredArea(new CoveredArea($area));
             throw new ApplicationException(lang('igniter.cart::default.checkout.alert_delivery_area_changed'));
         }
+        */
     }
 
     /**
