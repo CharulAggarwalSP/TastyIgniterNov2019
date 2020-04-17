@@ -127,7 +127,7 @@ class OrderManager
         $addressString = implode(' ', array_only($address, [
             'address_1', 'address_2', 'city', 'state', 'postcode', 'country',
         ]));
-
+        /*
         $collection = app('geocoder')->geocode($addressString);
         if (!$collection OR $collection->isEmpty())
             throw new ApplicationException(lang('igniter.cart::default.alert_invalid_search_query'));
@@ -139,6 +139,7 @@ class OrderManager
             $this->location->setCoveredArea(new CoveredArea($area));
             throw new ApplicationException(lang('igniter.cart::default.checkout.alert_delivery_area_changed'));
         }
+        */
     }
 
     /**
