@@ -29,7 +29,7 @@ class CartBox extends \System\Classes\BaseComponent
             'cartBoxTimeFormat' => [
                 'label' => 'Time format for the delivery and pickup time',
                 'type' => 'text',
-                'default' => 'ddd hh:mm a',
+                'default' => 'ddd HH:mm',
             ],
             'showCartItemThumb' => [
                 'label' => 'Show cart menu item image in the popup',
