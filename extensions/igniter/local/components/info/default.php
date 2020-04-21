@@ -18,7 +18,7 @@
                 <?php if ($location->deliverySchedule()->isOpen()) { ?>
                     <?= sprintf(lang('igniter.local::default.text_in_minutes'), $locationCurrent->deliveryMinutes()); ?>
                 <?php } else if ($location->deliverySchedule()->isOpening()) { ?>
-                    <?= sprintf(lang('igniter.local::default.text_starts'), $location->deliverySchedule()->getOpenTime('H:i a')); ?>
+                    <?= sprintf(lang('igniter.local::default.text_starts'), $location->deliverySchedule()->getOpenTime('H:i')); ?>
                 <?php } else { ?>
                     <?= lang('igniter.local::default.text_closed'); ?>
                 <?php } ?>

@@ -35,6 +35,8 @@ Restaurant: {location_name}
 ## You just received a {order_type} order ({order_number}) from {location_name}.
 
 **Customer name:** <?= ucwords($first_name).' '.ucwords($last_name) ?><br>
+**Customer email:** <?= $email ?><br>
+**Customer contact:** <?= $telephone ?><br>
 **Order date:** {order_date}<br>
 **Requested {order_type} time:** {order_time}<br>
 **Payment Method:** {order_payment}<br>
