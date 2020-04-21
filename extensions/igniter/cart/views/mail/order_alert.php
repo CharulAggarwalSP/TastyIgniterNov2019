@@ -36,7 +36,7 @@ Restaurant: {location_name}
 
 **Customer name:** <?= ucwords($first_name).' '.ucwords($last_name) ?><br>
 **Customer email:** <?= $email ?><br>
-**Customer contact:** <?= '+1'.$telephone ?><br>
+**Customer contact:** <?= $telephone ?><br>
 **Order date:** {order_date}<br>
 **Requested {order_type} time:** {order_time}<br>
 **Payment Method:** {order_payment}<br>
