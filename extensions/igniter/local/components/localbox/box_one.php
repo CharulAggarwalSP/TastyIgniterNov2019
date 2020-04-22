@@ -18,6 +18,6 @@
         </dd>
     <?php } ?>
     <dd>
-        <span class="text-muted"><?= format_address($locationCurrent->getAddress(), FALSE); ?></span>
+        <span class="text-muted">Overtoom 146, 1054HN Amsterdam Netherlands</span>
     </dd>
 </dl>
