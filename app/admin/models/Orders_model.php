@@ -338,7 +338,7 @@ class Orders_model extends Model
 
         $data['order_type'] = ($model->order_type == '1') ? 'delivery' : 'collection';
         $data['order_time'] = date('H:i', strtotime($model->order_time)).' '.$model->order_date->format('d M y');
-        $data['order_date'] = $model->date_added->format('d M y');
+        $data['order_date'] = $model->date_added->format('H:i d M y');
 
         $data['invoice_id'] = $model->invoice_id;
         $data['invoice_date'] = $model->invoice_date ? $model->invoice_date->format('d M y') : null;
