@@ -45,6 +45,8 @@ Your {order_type} order **{order_number}** has been received and will be with yo
 
 [Click here]({order_view_url}) to view your order progress.
 
+If you have any questions about your delivery please call us on 0206164838
+
 **Requested {order_type} time:** {order_time}<br>
 **Payment Method:** {order_payment}<br>
 **Restaurant:** {location_name}<br>
