@@ -14,4 +14,6 @@ Hi <?= ucwords($first_name).' '.ucwords($last_name) ?>,
 
 Your reservation **{reservation_number}** at {location_name} has been booked for {reservation_guest_no} person(s) on {reservation_date} at {reservation_time}.
 
+If you have any questions about your delivery please call us on 0206164838
+
 Thanks for reserving with us online!
