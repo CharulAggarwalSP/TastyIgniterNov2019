@@ -18,7 +18,7 @@ function onEnd()
         <div class="col-md-12">
             <div class="heading-section heading-section-custom">
                 <h2 class="tittle wow slideInDown animated"> <?= $sitePage ? $sitePage->title : null; ?></h2>
-				<div class="arrows-two wow slideInDown animated" data-wow-duration="1s" data-wow-delay=".5s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.5s; animation-name: slideInDown;"><img src="http://192.168.0.146/TastyIgniterNov2019/assets/vd-theme/images/border.png" alt="border"></div>
+				<div class="arrows-two wow slideInDown animated" data-wow-duration="1s" data-wow-delay=".5s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.5s; animation-name: slideInDown;"><img src=<?='"' . assets_url();?>/vd-theme/images/border.png" alt="border"></div>
             </div>
         </div> 
     </div>
