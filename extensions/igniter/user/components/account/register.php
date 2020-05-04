@@ -109,7 +109,7 @@
                     class="custom-control-input" <?= set_checkbox('terms', '1'); ?>
                 >
                 <label class="custom-control-label" for="agree-terms">
-                    <?= sprintf(lang('igniter.user::default.login.label_terms'), $account->getRegistrationTermsUrl()); ?>
+                    <?= sprintf(lang('igniter.user::default.login.label_terms'), page_url('pages/terms')); ?>
                 </label>
             </div>
             <?= form_error('terms', '<span class="text-danger">', '</span>'); ?>
