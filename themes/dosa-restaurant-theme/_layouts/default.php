@@ -49,8 +49,9 @@ function onEnd()
             </div>
         </div>
     </div>    
-    <?= partial('nav/menu'); ?>
-
+    if(!isset($_GET['src']) || $_GET['src'] != 'mob'){ ?>
+        <?= partial('nav/menu'); ?>
+    <?php } ?>
     <main role="main">
         <div id="page-wrapper">
             <?= partial('breadcrumb'); ?>
@@ -61,7 +62,7 @@ function onEnd()
             <?= page(); ?>
         </div>
     </main>
-
+    <?php if(!isset($_GET['src']) || $_GET['src'] != 'mob'){ ?>
     <footer class="footer pt-4">
         <div class="footer-top">
             <!--?= component('newsletter'); ?-->
@@ -76,5 +77,6 @@ function onEnd()
     </div>
     <!-- ?= partial('eucookiebanner'); ?-->
     <?= partial('scripts'); ?>
+    <?php } ?>
 </body>
 </html>
