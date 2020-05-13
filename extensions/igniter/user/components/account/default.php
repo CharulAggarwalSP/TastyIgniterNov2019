@@ -2,7 +2,6 @@
 <div class="card mb-1">
     <div class="card-body">
         <h5 class="mb-0"><?= sprintf(lang('igniter.user::default.text_welcome'), $customer->first_name); ?></h5>
-		<span style="background: #000;color: #fff;padding: 6px 12px;display: inline-block;border-radius: 4px;font-size: 11px;margin-top: 5px;">Wifi Password :  <?= $settings['value']; ?></span>
     </div>
 </div>
 
