@@ -1,0 +1,51 @@
+{
+  "doctype": "html5",
+  "favicon": "dosa-restaurant-theme/assets/images/favicon.ico",
+  "meta": [
+    {
+      "name": "Content-type",
+      "content": "text/html; charset=utf-8",
+      "type": "equiv"
+    },
+    {
+      "name": "X-UA-Compatible",
+      "content": "IE=edge",
+      "type": "equiv"
+    },
+    {
+      "name": "viewport",
+      "content": "width=device-width, initial-scale=1.0",
+      "type": "name"
+    }
+  ],
+  "style": [
+    {
+      "path": "dosa-restaurant-theme/assets/css/app.css",
+      "name": "app-css"
+    }
+  ],
+  "script": [
+    {
+      "path": "dosa-restaurant-theme/assets/js/app.js",
+      "name": "app-js"
+    }
+  ],
+  "bundles": [
+    {
+      "type": "scss",
+      "files": "~/themes/dosa-restaurant-theme/assets/src/scss/app.scss",
+      "destination": "~/themes/dosa-restaurant-theme/assets/css/app.css"
+    },
+    {
+      "type": "js",
+      "files": [
+        "~/app/system/assets/ui/flame.js",
+        "~/themes/dosa-restaurant-theme/assets/src/js/vendor/affix.js",
+        "~/themes/dosa-restaurant-theme/assets/src/js/vendor/select2.min.js",
+        "~/themes/dosa-restaurant-theme/assets/src/js/vendor/jquery.raty.js",
+        "~/themes/dosa-restaurant-theme/assets/src/js/app.js"
+      ],
+      "destination": "~/themes/dosa-restaurant-theme/assets/js/app.js"
+    }
+  ]
+}

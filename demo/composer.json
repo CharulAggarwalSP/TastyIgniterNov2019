@@ -1,0 +1,76 @@
+{
+  "name": "tastyigniter/tastyigniter",
+  "description": "TastyIgniter is a free open source online ordering and restaurant management system",
+  "type": "project",
+  "keywords": [
+    "tastyigniter", "igniter", "restaurant",
+    "ordering", "ecommerce", "opensource"
+  ],
+  "authors": [
+    {
+      "name": "Samuel Adepoyigi",
+      "email": "sam@sampoyigi.com",
+      "role": "Creator"
+    }
+  ],
+  "license": "MIT",
+  "homepage": "https://tastyigniter.com",
+  "support": {
+    "issues": "https://github.com/tastyigniter/TastyIgniter/issues",
+    "forum": "https://forum.tastyigniter.com/",
+    "irc": "irc://irc.freenode.net/tastyigniter",
+    "docs": "https://docs.tastyigniter.com",
+    "source": "https://github.com/tastyigniter/TastyIgniter"
+  },
+  "require": {
+    "php": ">=7.1",
+    "ext-mbstring": "*",
+    "ext-json": "*",
+    "ext-openssl": "*",
+    "composer/installers": "~1.0",
+    "tastyigniter/flame": "~1.0",
+    "laravel/framework": "5.8.*",
+    "wikimedia/composer-merge-plugin": "^1.4"
+  },
+  "require-dev": {
+    "fzaninotto/faker": "~1.7",
+    "phpunit/phpunit": "~7.5"
+  },
+  "replace": {
+    "kriswallsmith/assetic": "*"
+  },
+  "autoload":{
+    "psr-4":{
+     "Igniter\\Flame\\Currency\\":"overrides/tastyigniter/flame/src/Currency/"
+    },
+    "exclude-from-classmap":[
+     "vendor\\tastyigniter\\flame\\src\\Currency\\Currency.php"
+    ]
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "tests"
+    }
+  },
+  "scripts": {
+    "post-create-project-cmd": [
+      "php artisan key:generate"
+    ]
+  },
+  "extra": {
+    "merge-plugin": {
+      "include": [
+        "extensions/*/*/composer.json"
+      ],
+      "replace": false,
+      "recurse": true,
+      "merge-dev": false
+    }
+  },
+  "config": {
+    "preferred-install": "dist",
+    "optimize-autoloader": true
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
